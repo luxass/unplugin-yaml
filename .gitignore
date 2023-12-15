@@ -1,0 +1,16 @@
+# misc
+node_modules
+.DS_Store
+*.tsbuildinfo
+
+# build outputs
+dist
+.turbo
+.next
+
+# env
+.env
+.env.*
+!.env.example
+
+.vite-inspect

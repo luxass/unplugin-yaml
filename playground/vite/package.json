@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build-inspect": "serve .vite-inspect"
+  },
+  "dependencies": {
+    "solid-js": "^1.8.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "unplugin-yaml": "workspace:*",
+    "vite": "^5.0.8",
+    "vite-plugin-inspect": "^0.8.1",
+    "vite-plugin-solid": "^2.8.0"
+  }
+}

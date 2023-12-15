@@ -1,0 +1,12 @@
+{
+  "name": "rollup-playground",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=development"
+  },
+  "devDependencies": {
+    "unplugin-yaml": "workspace:*",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
