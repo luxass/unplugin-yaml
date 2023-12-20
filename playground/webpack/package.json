@@ -1,8 +1,9 @@
 {
   "name": "webpack-playground",
+  "type": "module",
   "private": true,
   "scripts": {
-    "build": "webpack --mode=production"
+    "build": "webpack"
   },
   "devDependencies": {
     "unplugin-yaml": "workspace:*",

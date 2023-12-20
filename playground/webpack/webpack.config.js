@@ -1,6 +1,8 @@
+// @ts-check
 const path = require("node:path");
 const YAMLPlugin = require("../../dist/webpack.cjs");
 
+/** @type {import("webpack").Configuration} */
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -10,16 +12,6 @@ module.exports = {
   plugins: [
     YAMLPlugin(),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.yaml$/,
-        exclude: /node_modules/,
-        use: {
-          loader: path.resolve("./yaml-loader"),
-        },
-      },
-    ],
-  },
+  mode: "production",
   stats: "errors-only",
 };
