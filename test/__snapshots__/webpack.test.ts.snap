@@ -14,12 +14,12 @@ exports[`expect yaml import to be a string 1`] = `
 /******/ 	"use strict";
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./_virtual_virtual%3Ayaml%3A%2FUsers%2Fluxass%2Fdev%2Funplugin-yaml%2Ftests%2Ffixtures%2Fyaml-config.yaml%3Araw
-/* harmony default export */ const _virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftests_2Ffixtures_2Fyaml_config_yaml_3Araw = ("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");
-;// CONCATENATED MODULE: ./tests/fixtures/js-yaml-raw.js
+;// CONCATENATED MODULE: ./_virtual_virtual%3Ayaml%3A%2FUsers%2Fluxass%2Fdev%2Funplugin-yaml%2Ftest%2Ffixtures%2Fyaml-config.yaml%3Araw
+/* harmony default export */ const _virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftest_2Ffixtures_2Fyaml_config_yaml_3Araw = ("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");
+;// CONCATENATED MODULE: ./test/fixtures/js-yaml-raw.js
 
 
-console.log(_virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftests_2Ffixtures_2Fyaml_config_yaml_3Araw);
+console.log(_virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftest_2Ffixtures_2Fyaml_config_yaml_3Araw);
 
 /******/ })()
 ;"
@@ -39,12 +39,12 @@ exports[`expect yml import to be a string 1`] = `
 /******/ 	"use strict";
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./_virtual_virtual%3Ayaml%3A%2FUsers%2Fluxass%2Fdev%2Funplugin-yaml%2Ftests%2Ffixtures%2Fyml-config.yml%3Araw
-/* harmony default export */ const _virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftests_2Ffixtures_2Fyml_config_yml_3Araw = ("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");
-;// CONCATENATED MODULE: ./tests/fixtures/js-yml-raw.js
+;// CONCATENATED MODULE: ./_virtual_virtual%3Ayaml%3A%2FUsers%2Fluxass%2Fdev%2Funplugin-yaml%2Ftest%2Ffixtures%2Fyml-config.yml%3Araw
+/* harmony default export */ const _virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftest_2Ffixtures_2Fyml_config_yml_3Araw = ("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");
+;// CONCATENATED MODULE: ./test/fixtures/js-yml-raw.js
 
 
-console.log(_virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftests_2Ffixtures_2Fyml_config_yml_3Araw);
+console.log(_virtual_virtual_3Ayaml_3A_2FUsers_2Fluxass_2Fdev_2Funplugin_yaml_2Ftest_2Ffixtures_2Fyml_config_yml_3Araw);
 
 /******/ })()
 ;"

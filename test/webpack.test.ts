@@ -37,22 +37,10 @@ async function webpack(config: Configuration): Promise<Stats | undefined> {
 
 it("expect yaml import to be a json object", async () => {
   const result = await webpack({
-    entry: "./tests/fixtures/yaml-config.yaml",
+    entry: "./test/fixtures/yaml-config.yaml",
     plugins: [
       YAMLPlugin(),
     ],
-    // module: {
-    //   rules: [
-    //     {
-    //       test: /\.yaml$/,
-    //       exclude: /node_modules/,
-    //       use: {
-    //         loader: path.resolve("./yaml-loader.cjs"),
-    //       },
-    //       type: "asset/source",
-    //     },
-    //   ],
-    // },
   });
 
   const json = result?.toJson();
@@ -66,7 +54,7 @@ it("expect yaml import to be a json object", async () => {
 
 it("expect yaml import to be a string", async () => {
   const result = await webpack({
-    entry: "./tests/fixtures/js-yaml-raw.js",
+    entry: "./test/fixtures/js-yaml-raw.js",
     plugins: [
       YAMLPlugin(),
     ],
@@ -83,7 +71,7 @@ it("expect yaml import to be a string", async () => {
 
 it("expect yml import to be a json object", async () => {
   const result = await webpack({
-    entry: "./tests/fixtures/yml-config.yml",
+    entry: "./test/fixtures/yml-config.yml",
     plugins: [
       YAMLPlugin(),
     ],
@@ -100,7 +88,7 @@ it("expect yml import to be a json object", async () => {
 
 it("expect yml import to be a string", async () => {
   const result = await webpack({
-    entry: "./tests/fixtures/js-yml-raw.js",
+    entry: "./test/fixtures/js-yml-raw.js",
     plugins: [
       YAMLPlugin(),
     ],
