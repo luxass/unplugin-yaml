@@ -1,8 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`expect yaml import to be a json object 1`] = `
-"// test/fixtures/yaml-config.yaml
-var yaml_config_default = { "pluginDir": "./plugins", "web": { "enabled": true }, "logging": { "type": "stdout", "level": "info" } };
+"var yaml_config_default = { "pluginDir": "./plugins", "web": { "enabled": true }, "logging": { "type": "stdout", "level": "info" } };
 export {
   yaml_config_default as default
 };
@@ -10,17 +9,14 @@ export {
 `;
 
 exports[`expect yaml import to be a string 1`] = `
-"// unplugin-yaml:virtual:yaml:/Users/luxass/dev/unplugin-yaml/test/fixtures/yaml-config.yaml:raw
-var yaml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+"var yaml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
-// test/fixtures/js-yaml-raw.js
 console.log(yaml_config_default);
 "
 `;
 
 exports[`expect yml import to be a json object 1`] = `
-"// test/fixtures/yml-config.yml
-var yml_config_default = { "pluginDir": "./plugins", "web": { "enabled": true }, "logging": { "type": "stdout", "level": "info" } };
+"var yml_config_default = { "pluginDir": "./plugins", "web": { "enabled": true }, "logging": { "type": "stdout", "level": "info" } };
 export {
   yml_config_default as default
 };
@@ -28,10 +24,8 @@ export {
 `;
 
 exports[`expect yml import to be a string 1`] = `
-"// unplugin-yaml:virtual:yaml:/Users/luxass/dev/unplugin-yaml/test/fixtures/yml-config.yml:raw
-var yml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+"var yml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
-// test/fixtures/js-yml-raw.js
 console.log(yml_config_default);
 "
 `;

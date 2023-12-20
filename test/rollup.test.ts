@@ -2,6 +2,7 @@ import { rollup } from "rollup";
 import { expect, it } from "vitest";
 
 import YAMLPlugin from "../src/rollup";
+import { removeComments } from "./utils";
 
 it("expect yaml import to be a json object", async () => {
   const bundle = await rollup({
@@ -15,7 +16,7 @@ it("expect yaml import to be a json object", async () => {
     sourcemap: false,
   });
 
-  expect(output[0].code).toMatchSnapshot();
+  expect(removeComments(output[0].code)).toMatchSnapshot();
 });
 
 it("expect yaml import to be a string", async () => {
@@ -30,7 +31,7 @@ it("expect yaml import to be a string", async () => {
     sourcemap: false,
   });
 
-  expect(output[0].code).toMatchSnapshot();
+  expect(removeComments(output[0].code)).toMatchSnapshot();
 });
 
 it("expect yml import to be a json object", async () => {
@@ -45,7 +46,7 @@ it("expect yml import to be a json object", async () => {
     sourcemap: false,
   });
 
-  expect(output[0].code).toMatchSnapshot();
+  expect(removeComments(output[0].code)).toMatchSnapshot();
 });
 
 it("expect yml import to be a string", async () => {
@@ -60,5 +61,5 @@ it("expect yml import to be a string", async () => {
     sourcemap: false,
   });
 
-  expect(output[0].code).toMatchSnapshot();
+  expect(removeComments(output[0].code)).toMatchSnapshot();
 });

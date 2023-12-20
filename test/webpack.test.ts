@@ -8,6 +8,7 @@ import { expect, it } from "vitest";
 // create output in tmp dir
 
 import YAMLPlugin from "../src/webpack";
+import { removeComments } from "./utils";
 
 const dir = path.join(tmpdir(), "unplugin-yaml-tests");
 
@@ -49,7 +50,7 @@ it("expect yaml import to be a json object", async () => {
   const file = json!.assetsByChunkName!.main;
   const content = await readFile(path.join(dir, file![0]!), "utf-8");
 
-  expect(content).toMatchSnapshot();
+  expect(removeComments(content)).toMatchSnapshot();
 });
 
 it("expect yaml import to be a string", async () => {
@@ -66,7 +67,7 @@ it("expect yaml import to be a string", async () => {
   const file = json!.assetsByChunkName!.main;
   const content = await readFile(path.join(dir, file![0]!), "utf-8");
 
-  expect(content).toMatchSnapshot();
+  expect(removeComments(content)).toMatchSnapshot();
 });
 
 it("expect yml import to be a json object", async () => {
@@ -83,7 +84,7 @@ it("expect yml import to be a json object", async () => {
   const file = json!.assetsByChunkName!.main;
   const content = await readFile(path.join(dir, file![0]!), "utf-8");
 
-  expect(content).toMatchSnapshot();
+  expect(removeComments(content)).toMatchSnapshot();
 });
 
 it("expect yml import to be a string", async () => {
@@ -100,5 +101,5 @@ it("expect yml import to be a string", async () => {
   const file = json!.assetsByChunkName!.main;
   const content = await readFile(path.join(dir, file![0]!), "utf-8");
 
-  expect(content).toMatchSnapshot();
+  expect(removeComments(content)).toMatchSnapshot();
 });
