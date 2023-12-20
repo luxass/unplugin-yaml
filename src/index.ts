@@ -40,6 +40,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
       if (/\.ya?ml\?raw$/.test(id) && importer) {
         const [relativePath] = id.split("?raw");
         const fullPath = join(dirname(importer), relativePath!);
+
         return `virtual:yaml:${fullPath}:raw`;
       }
     },

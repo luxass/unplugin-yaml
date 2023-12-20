@@ -16,7 +16,7 @@ async function webpack(config: Configuration): Promise<Stats | undefined> {
   return new Promise((resolve, reject) => {
     const compiler = createWebpack({
       optimization: {
-        minimize: false,
+        minimize: true,
       },
       output: {
         path: dir,
@@ -38,7 +38,7 @@ async function webpack(config: Configuration): Promise<Stats | undefined> {
 
 it("expect yaml import to be a json object", async () => {
   const result = await webpack({
-    entry: "./test/fixtures/yaml-config.yaml",
+    entry: "./test/fixtures/js-yaml.js",
     plugins: [
       YAMLPlugin(),
     ],
@@ -72,7 +72,7 @@ it("expect yaml import to be a string", async () => {
 
 it("expect yml import to be a json object", async () => {
   const result = await webpack({
-    entry: "./test/fixtures/yml-config.yml",
+    entry: "./test/fixtures/js-yml.js",
     plugins: [
       YAMLPlugin(),
     ],
