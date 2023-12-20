@@ -2,17 +2,16 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: [
-    "./src/index.ts",
-    "./src/vite.ts",
-    "./src/rollup.ts",
-    "./src/webpack.ts",
-    "./src/esbuild.ts",
-    "./src/nuxt.ts",
+    "src/*.ts",
   ],
-  format: ["cjs", "esm"],
+  format: [
+    "esm",
+    "cjs",
+  ],
   clean: true,
   dts: true,
-  treeshake: true,
+  // treeshake: true,
+  splitting: true,
   bundle: true,
   outExtension(ctx) {
     return {
