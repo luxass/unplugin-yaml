@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.12.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -128,7 +128,7 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.8",
     "vite-plugin-inspect": "^0.8.1",
-    "vitest": "1.0.0-beta.2",
+    "vitest": "1.0.4",
     "webpack": "^5.89.0"
   }
 }
