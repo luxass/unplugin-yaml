@@ -8,6 +8,6 @@
   "devDependencies": {
     "unplugin-yaml": "workspace:*",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^5.0.0"
   }
 }
