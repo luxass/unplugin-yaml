@@ -9,7 +9,7 @@ npm i -D unplugin-yaml
 ```
 
 <details>
-<summary>Vite</summary><br>
+<summary>Vite</summary><br/>
 
 ```ts
 // vite.config.ts
@@ -24,10 +24,10 @@ export default defineConfig({
 
 Example: [`playground/vite`](./playground/vite)
 
-<br></details>
+<br/></details>
 
 <details>
-<summary>Rollup</summary><br>
+<summary>Rollup</summary><br/>
 
 ```ts
 // rollup.config.js
@@ -42,10 +42,10 @@ export default {
 
 Example: [`playground/rollup`](./playground/rollup)
 
-<br></details>
+<br/></details>
 
 <details>
-<summary>Webpack</summary><br>
+<summary>Webpack</summary><br/>
 
 ```ts
 // webpack.config.js
@@ -59,10 +59,10 @@ module.exports = {
 
 Example: [`playground/webpack`](./playground/webpack)
 
-<br></details>
+<br/></details>
 
 <details>
-<summary>Nuxt</summary><br>
+<summary>Nuxt</summary><br/>
 
 ```ts
 // nuxt.config.js
@@ -73,10 +73,10 @@ export default defineNuxtConfig({
 });
 ```
 
-<br></details>
+<br/></details>
 
 <details>
-<summary>esbuild</summary><br>
+<summary>esbuild</summary><br/>
 
 ```ts
 // esbuild.config.js
@@ -93,7 +93,7 @@ build({
 });
 ```
 
-<br></details>
+<br/></details>
 
 ## Configuration
 
