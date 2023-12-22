@@ -122,10 +122,6 @@ If you are using TypeScript, you need to add the following to your `tsconfig.jso
 }
 ```
 
-</td>
-</tr>
-</table>
-
 ## 📄 License
 
 Published under [MIT License](./LICENSE).
