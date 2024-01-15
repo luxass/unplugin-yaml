@@ -1,6 +1,6 @@
 // @ts-check
 
-// @ts-expect-error - types is there, but this is not picking them up.
+// eslint-disable-next-line antfu/no-import-dist
 import YAMLPlugin from "../../dist/rollup.mjs";
 
 /** @type {import("rollup").RollupOptions} */
