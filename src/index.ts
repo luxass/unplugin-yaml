@@ -11,12 +11,12 @@ export interface Options {
    * Options to pass to the YAML parser.
    * @see https://github.com/nodeca/js-yaml
    */
-  parserOptions?: LoadOptions
+  parserOptions?: LoadOptions;
 
   /**
    * Include files that match any of these patterns.
    */
-  include?: FilterPattern
+  include?: FilterPattern;
 }
 
 const unplugin = createUnplugin<Options | undefined>((options = {}) => {
