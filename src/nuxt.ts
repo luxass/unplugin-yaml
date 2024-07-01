@@ -3,7 +3,6 @@ import { NUXT_CONFIG_KEY, PLUGIN_NAME } from "./constants";
 import vite from "./vite";
 import webpack from "./webpack";
 import type { YamlOptions } from "./";
-import unplugin from "./";
 import type {} from "@nuxt/schema";
 
 export default defineNuxtModule<YamlOptions>({
