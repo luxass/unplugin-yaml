@@ -35,7 +35,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
     },
     async load(id) {
       if (id.startsWith("virtual:yaml:")) {
-        const [_, __, path, ___] = id.split(":");
+        const path = id.substring("virtual:yaml:".length).split(":", 1)[0];
 
         const content = await readFile(path!, "utf-8");
 
