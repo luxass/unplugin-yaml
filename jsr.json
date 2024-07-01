@@ -11,13 +11,14 @@
     "./vite": "./src/vite.ts",
     "./webpack": "./src/webpack.ts",
     "./esbuild": "./src/esbuild.ts",
-    "./nuxt": "./src/nuxt.ts"
+    "./nuxt": "./src/nuxt.ts",
+    "./types": "./yaml.d.ts"
   },
   "exclude": [
     "tsup.config.ts",
     "eslint.config.js",
     "pnpm-lock.yaml",
-    "tests",
+    "test",
     ".github/**",
     ".nvmrc",
     "tsconfig.json",
