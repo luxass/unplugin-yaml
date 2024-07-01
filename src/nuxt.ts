@@ -1,26 +1,23 @@
-import type { Options } from ".";
-import unplugin from ".";
+import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from "@nuxt/kit";
+import { NUXT_CONFIG_KEY, PLUGIN_NAME } from "./constants";
+import vite from "./vite";
+import webpack from "./webpack";
+import type { YamlOptions } from "./";
+import unplugin from "./";
+import type {} from "@nuxt/schema";
 
-export default function (this: any, options: Options = {}, nuxt: any) {
-  const nuxtApp = this?.nuxt || nuxt;
+export default defineNuxtModule<YamlOptions>({
+  meta: {
+    name: PLUGIN_NAME,
+    configKey: NUXT_CONFIG_KEY,
+  },
+  setup(options, nuxt) {
+    nuxt.options.typescript.tsConfig ||= {};
+    nuxt.options.typescript.tsConfig.compilerOptions ||= {};
+    nuxt.options.typescript.tsConfig.compilerOptions.types ||= [];
+    nuxt.options.typescript.tsConfig.compilerOptions.types.push("unplugin-yaml/types");
 
-  nuxtApp.options.typescript ||= {};
-  nuxtApp.options.typescript.tsConfig ||= {};
-  nuxtApp.options.typescript.tsConfig.compilerOptions ||= {};
-  nuxtApp.options.typescript.tsConfig.compilerOptions.types ||= [];
-  nuxtApp.options.typescript.tsConfig.compilerOptions.types.push("unplugin-yaml/types");
-
-  // install webpack plugin
-  nuxtApp.hook("webpack:config", (configs: any[]) => {
-    configs.forEach((config) => {
-      config.plugins = config.plugins || [];
-      config.plugins.unshift(unplugin.webpack(options));
-    });
-  });
-
-  // install vite plugin
-  nuxtApp.hook("vite:extend", async (vite: any) => {
-    vite.config.plugins = vite.config.plugins || [];
-    vite.config.plugins.push(unplugin.vite(options));
-  });
-}
+    addWebpackPlugin(() => webpack(options));
+    addVitePlugin(() => vite(options));
+  },
+});

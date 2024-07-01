@@ -1,25 +1,13 @@
 import { dirname, join } from "node:path";
 import { readFile } from "node:fs/promises";
-import type { LoadOptions } from "js-yaml";
-import { createUnplugin } from "unplugin";
+import { type UnpluginFactory, createUnplugin } from "unplugin";
 import YAML from "js-yaml";
-import type { FilterPattern } from "@rollup/pluginutils";
 import { createFilter } from "@rollup/pluginutils";
+import type { YamlOptions } from "./types";
 
-export interface Options {
-  /**
-   * Options to pass to the YAML parser.
-   * @see https://github.com/nodeca/js-yaml
-   */
-  parserOptions?: LoadOptions;
+export type { YamlOptions };
 
-  /**
-   * Include files that match any of these patterns.
-   */
-  include?: FilterPattern;
-}
-
-const unplugin = createUnplugin<Options | undefined>((options = {}) => {
+export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (options = {}) => {
   const filter = createFilter(
     options.include || /\.ya?ml(\?raw)?$/,
   );
@@ -57,6 +45,8 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
       }
     },
   };
-});
+};
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory);
 
 export default unplugin;
