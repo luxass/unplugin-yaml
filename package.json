@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luxass/unplugin-yaml.git"
+    "url": "git+https://github.com/luxass/unplugin-yaml.git"
   },
   "bugs": "https://github.com/luxass/unplugin-yaml/issues",
   "keywords": [
