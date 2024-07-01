@@ -31,31 +31,34 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
       if (/\.ya?ml\?raw$/.test(id) && importer) {
         const [relativePath] = id.split("?raw");
         const fullPath = join(dirname(importer), relativePath!);
-        return `${PREFIX}${encodeURIComponent(fullPath)}:raw`;
+        return `${PREFIX}${fullPath}:raw`;
       }
     },
     async load(id) {
-      if (id.startsWith(PREFIX)) {
-        const [_, __, pathPart, ___] = id.split(":");
-        if (!pathPart) {
-          throw new Error("invalid path can't read yaml file");
-        }
-
-        const path = decodeURIComponent(pathPart);
-
-        if (!path) {
-          throw new Error("invalid path can't read yaml file");
-        }
-
-        // eslint-disable-next-line no-console
-        console.log("PATH TO READ", path);
-        const content = (await readFile(path, "utf-8")).replace(/\r\n/g, "\n");
-
-        return {
-          code: `export default ${JSON.stringify(content)}`,
-          map: null,
-        };
+      if (!id.startsWith(PREFIX)) {
+        return;
       }
+
+      id = id.slice(PREFIX.length);
+
+      if (id.endsWith(":raw")) {
+        id = id.slice(0, -4);
+      }
+
+      const path = id;
+
+      if (!path) {
+        throw new Error("invalid path can't read yaml file");
+      }
+
+      // eslint-disable-next-line no-console
+      console.log("PATH TO READ", path);
+      const content = (await readFile(path, "utf-8")).replace(/\r\n/g, "\n");
+
+      return {
+        code: `export default ${JSON.stringify(content)}`,
+        map: null,
+      };
     },
   };
 };
