@@ -38,6 +38,16 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./astro": {
+      "import": {
+        "types": "./dist/astro.d.ts",
+        "default": "./dist/astro.mjs"
+      },
+      "require": {
+        "types": "./dist/astro.d.cts",
+        "default": "./dist/astro.cjs"
+      }
+    },
     "./esbuild": {
       "import": {
         "types": "./dist/esbuild.d.ts",
