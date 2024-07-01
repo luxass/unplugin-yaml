@@ -1,6 +1,6 @@
 import type { YamlOptions } from "./types";
 import { PLUGIN_NAME } from "./constants";
-import unplugin from ".";
+import unplugin from "./";
 
 export default function (options: YamlOptions) {
   return {
