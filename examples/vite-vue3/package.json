@@ -14,7 +14,12 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
+    "unplugin-yaml": "workspace:*",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }
