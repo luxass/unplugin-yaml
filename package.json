@@ -22,7 +22,8 @@
     "webpack",
     "rollup",
     "esbuild",
-    "nuxt"
+    "nuxt",
+    "astro"
   ],
   "workspaces": [
     "playground/*"
