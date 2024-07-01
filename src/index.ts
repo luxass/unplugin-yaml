@@ -49,7 +49,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
 
         // eslint-disable-next-line no-console
         console.log("PATH TO READ", path);
-        const content = await readFile(path!, "utf-8");
+        const content = (await readFile(path, "utf-8")).replace(/\r\n/g, "\n");
 
         return {
           code: `export default ${JSON.stringify(content)}`,
