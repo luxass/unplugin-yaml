@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   @apply antialiased touch-manipulation scroll-smooth text-base;
   text-rendering: optimizeLegibility;
