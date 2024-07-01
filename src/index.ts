@@ -36,7 +36,8 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
     async load(id) {
       if (id.startsWith("virtual:yaml:")) {
         const path = id.substring("virtual:yaml:".length).split(":", 1)[0];
-
+        // eslint-disable-next-line no-console
+        console.log("PATH TO READ", path);
         const content = await readFile(path!, "utf-8");
 
         return {
