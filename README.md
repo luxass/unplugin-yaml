@@ -202,6 +202,10 @@ YAMLPlugin({
 ```
 ### TypeScript
 
+> [!IMPORTANT]
+> If you are using JSR, you need to copy the `yaml.d.ts` file into your project.
+> jsr doesn't support augmentation on global types.
+
 If you are using TypeScript, you need to add the following to your `tsconfig.json` file:
 
 ```json

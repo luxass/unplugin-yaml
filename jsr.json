@@ -11,8 +11,7 @@
     "./vite": "./src/vite.ts",
     "./webpack": "./src/webpack.ts",
     "./esbuild": "./src/esbuild.ts",
-    "./nuxt": "./src/nuxt.ts",
-    "./types": "./yaml.d.ts"
+    "./nuxt": "./src/nuxt.ts"
   },
   "exclude": [
     "tsup.config.ts",
@@ -22,6 +21,7 @@
     ".github/**",
     ".nvmrc",
     "tsconfig.json",
-    "examples"
+    "examples",
+    "yaml.d.ts"
   ]
 }
