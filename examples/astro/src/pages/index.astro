@@ -1,0 +1,13 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { Code } from "astro:components";
+
+import config from "../config.yaml";
+---
+
+<PageLayout title="Import as Module">
+	<Code code={JSON.stringify(config, null, 2)} lang="json" themes={{
+    "dark": "github-dark",
+    "light": "github-light"
+  }} />
+</PageLayout>

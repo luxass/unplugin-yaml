@@ -4,6 +4,7 @@ import { type UnpluginFactory, createUnplugin } from "unplugin";
 import YAML from "js-yaml";
 import { createFilter } from "@rollup/pluginutils";
 import type { YamlOptions } from "./types";
+import { PLUGIN_NAME } from "./constants";
 
 export type { YamlOptions };
 
@@ -13,7 +14,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
   );
 
   return {
-    name: "unplugin-yaml",
+    name: PLUGIN_NAME,
     enforce: "pre",
     transformInclude(id) {
       return filter(id);

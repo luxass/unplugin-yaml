@@ -1,6 +1,14 @@
 # unplugin-yaml
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+
 Allow import YAML file for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by [unplugin](https://github.com/unjs/unplugin).
+
+<p align="center">
+<br>
+<a href="https://stackblitz.com/github/luxass/unplugin-yaml/examples/vite-vue3?file=vite.config.ts"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
+</p>
 
 ## Install
 
@@ -209,3 +217,8 @@ If you are using TypeScript, you need to add the following to your `tsconfig.jso
 ## 📄 License
 
 Published under [MIT License](./LICENSE).
+
+[npm-version-src]: https://img.shields.io/npm/v/unplugin-yaml?style=flat&colorA=18181B&colorB=4169E1
+[npm-version-href]: https://npmjs.com/package/unplugin-yaml
+[npm-downloads-src]: https://img.shields.io/npm/dm/unplugin-yaml?style=flat&colorA=18181B&colorB=4169E1
+[npm-downloads-href]: https://npmjs.com/package/unplugin-yaml

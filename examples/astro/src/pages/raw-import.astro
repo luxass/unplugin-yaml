@@ -1,0 +1,13 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { Code } from "astro:components";
+
+import config from "../config.yaml?raw";
+---
+
+<PageLayout title="Import as Module">
+	<Code code={config} lang="yaml" themes={{
+    "dark": "github-dark",
+    "light": "github-light"
+  }} />
+</PageLayout>

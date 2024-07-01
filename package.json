@@ -147,6 +147,12 @@
     "lint": "eslint .",
     "test": "vitest --run",
     "test:watch": "vitest",
+    "play:nuxt": "pnpm run --filter @unplugin-yaml/nuxt-example dev",
+    "play:vite-vue3": "pnpm run --filter @unplugin-yaml/vite-vue3-example dev",
+    "play:vite-react": "pnpm run --filter @unplugin-yaml/vite-react-example dev",
+    "play:nextjs": "pnpm run --filter @unplugin-yaml/nextjs-example dev",
+    "play:astro": "pnpm run --filter @unplugin-yaml/astro-example dev",
+    "play:rspack": "pnpm run --filter @unplugin-yaml/rspack-example dev",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {

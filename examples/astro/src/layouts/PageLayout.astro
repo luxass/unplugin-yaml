@@ -1,0 +1,34 @@
+---
+import "../styles/globals.css";
+import Link from "../components/Link.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="py-4">
+      <nav>
+        <Link href="/"> Import as Module </Link>
+        <Link href="/raw-import"> Raw Import </Link>
+      </nav>
+    </header>
+    <main>
+      <slot name="before-code" />
+      <slot />
+    </main>
+  </body>
+</html>
