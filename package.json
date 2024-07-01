@@ -1,6 +1,6 @@
 {
   "name": "unplugin-yaml",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Allow importing YAML files as JSON or Strings",
   "type": "module",
   "author": {
