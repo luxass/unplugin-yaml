@@ -8,6 +8,11 @@ Allow import YAML file for Vite, Webpack, Rollup and esbuild. With TypeScript su
 npm i -D unplugin-yaml
 ```
 
+## Usage
+
+> [!TIP]
+> You can view all examples [here](./examples).
+
 <details>
 <summary>Vite</summary><br/>
 
@@ -21,8 +26,6 @@ export default defineConfig({
   ],
 });
 ```
-
-Example: [`playground/vite`](./playground/vite)
 
 <br/></details>
 
@@ -70,6 +73,26 @@ export default defineNuxtConfig({
   modules: [
     ["unplugin-yaml/nuxt", { /* options */ }]
   ],
+});
+```
+
+<br/></details>
+
+<details>
+<summary>Astro</summary><br/>
+
+```ts
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+import YAMLPlugin from "unplugin-yaml/astro";
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [
+    YAMLPlugin({
+      /* options */
+    })
+  ]
 });
 ```
 
