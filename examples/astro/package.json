@@ -18,6 +18,10 @@
     "typescript": "^5.5.2"
   },
   "devDependencies": {
-    "unplugin-yaml": "latest"
+    "unplugin-yaml": "workspace:*"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }
