@@ -43,8 +43,6 @@ export default {
 };
 ```
 
-Example: [`playground/rollup`](./playground/rollup)
-
 <br/></details>
 
 <details>
@@ -59,8 +57,6 @@ module.exports = {
   ],
 };
 ```
-
-Example: [`playground/webpack`](./playground/webpack)
 
 <br/></details>
 
@@ -108,6 +104,71 @@ import YAMLPlugin from "unplugin-yaml/esbuild";
 
 build({
   /* ... */
+  plugins: [
+    YAMLPlugin({
+      /* options */
+    }),
+  ],
+});
+```
+
+<br/></details>
+
+<details>
+<summary>Farm</summary><br/>
+
+```ts
+// farm.config.ts
+import { defineConfig } from "@farmfe/core";
+import vue from "@vitejs/plugin-vue";
+import YAMLPlugin from "unplugin-yaml/farm";
+
+export default defineConfig({
+  vitePlugins: [
+    vue(),
+  ],
+  plugins: [
+    YAMLPlugin({
+      /* options */
+    })
+  ]
+});
+```
+
+<br/></details>
+
+<details>
+<summary>Rspack (Experimental)</summary><br/>
+
+```ts
+// rspack.config.js
+const rspack = require("@rspack/core");
+
+/** @type {import('@rspack/cli').Configuration} */
+const config = {
+  plugins: [
+    new rspack.HtmlRspackPlugin({
+      template: "./index.html"
+    }),
+    require("unplugin-yaml/rspack")(),
+  ],
+
+};
+module.exports = config;
+```
+
+<br/></details>
+
+<details>
+<summary>Rolldown (Experimental)</summary><br/>
+
+```ts
+// rolldown.config.js
+import { defineConfig } from "rolldown";
+import YAMLPlugin from "unplugin-yaml/rolldown";
+
+export default defineConfig({
+  input: "./index.js",
   plugins: [
     YAMLPlugin({
       /* options */
