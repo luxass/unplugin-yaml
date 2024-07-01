@@ -4,29 +4,27 @@ on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20]
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@v4.1.7
 
-      - name: Setup pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
 
-      - name: Setup node
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+      - name: Set node
+        uses: actions/setup-node@v4.0.2
         with:
-          node-version: ${{ matrix.node-version}}
+          node-version: lts/*
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm build
@@ -34,8 +32,37 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: Test
-        run: pnpm test
-
       - name: Typecheck
         run: pnpm typecheck
+
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [20, 18]
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4.1.7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set node ${{ matrix.node }}
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
