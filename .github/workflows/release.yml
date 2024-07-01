@@ -12,18 +12,18 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: pnpm
           registry-url: "https://registry.npmjs.org"
+          node-version: 20
 
       - run: pnpx changelogithub
         env:
@@ -40,3 +40,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
+
+      - name: Publish to JSR
+        run: npx jsr publish --allow-dirty
+
+      - name: Print Dirty Files
+        run: git status --porcelain
