@@ -8,6 +8,8 @@ import { PLUGIN_NAME } from "./constants";
 
 export type { YamlOptions };
 
+const PREFIX = `\0virtual:yaml:`;
+
 export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (options = {}) => {
   const filter = createFilter(
     options.include || /\.ya?ml(\?raw)?$/,
@@ -29,17 +31,17 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
       if (/\.ya?ml\?raw$/.test(id) && importer) {
         const [relativePath] = id.split("?raw");
         const fullPath = join(dirname(importer), relativePath!);
-
-        return `virtual:yaml:${fullPath}:raw`;
+        return `${PREFIX}${encodeURIComponent(fullPath)}:raw`;
       }
     },
     async load(id) {
-      if (id.startsWith("virtual:yaml:")) {
-        let path = id.replace("virtual:yaml:", "");
-
-        if (path.endsWith(":raw")) {
-          path = path.replace(":raw", "");
+      if (id.startsWith(PREFIX)) {
+        const [_, __, pathPart, ___] = id.split(":");
+        if (!pathPart) {
+          throw new Error("invalid path can't read yaml file");
         }
+
+        const path = decodeURIComponent(pathPart);
 
         if (!path) {
           throw new Error("invalid path can't read yaml file");
