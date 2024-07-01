@@ -51,8 +51,6 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
         throw new Error("invalid path can't read yaml file");
       }
 
-      // eslint-disable-next-line no-console
-      console.log("PATH TO READ", path);
       const content = (await readFile(path, "utf-8")).replace(/\r\n/g, "\n");
 
       return {
