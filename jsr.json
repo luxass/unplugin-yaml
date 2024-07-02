@@ -22,6 +22,8 @@
     ".nvmrc",
     "tsconfig.json",
     "examples",
-    "yaml.d.ts"
+    "yaml.d.ts",
+    "pnpm-workspace.yaml",
+    ".npmrc"
   ]
 }
