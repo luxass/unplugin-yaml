@@ -1,5 +1,5 @@
 {
-  "name": "@unplugin-yaml/vite-vue3-example",
+  "name": "@unplugin-yaml/vite-react-example",
   "version": "0.0.0",
   "type": "module",
   "private": true,
