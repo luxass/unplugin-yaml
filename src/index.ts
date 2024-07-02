@@ -1,3 +1,8 @@
+/**
+ * This entry file is for main unplugin.
+ * @module
+ */
+
 import { dirname, join } from "node:path";
 import { readFile } from "node:fs/promises";
 import { type UnpluginFactory, createUnplugin } from "unplugin";
@@ -10,6 +15,9 @@ export type { YamlOptions };
 
 const PREFIX = `\0virtual:yaml:`;
 
+/**
+ * A unplugin factory, used by Unplugin to create a new plugin instance.
+ */
 export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (options = {}) => {
   const filter = createFilter(
     options.include || /\.ya?ml(\?raw)?$/,
@@ -61,6 +69,9 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
   };
 };
 
+/**
+ * The main unplugin instance.
+ */
 export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory);
 
 export default unplugin;
