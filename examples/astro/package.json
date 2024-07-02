@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -18,7 +19,8 @@
     "typescript": "^5.5.2"
   },
   "devDependencies": {
-    "unplugin-yaml": "workspace:*"
+    "unplugin-yaml": "workspace:*",
+    "vite-plugin-inspect": "^0.8.4"
   },
   "stackblitz": {
     "installDependencies": false,

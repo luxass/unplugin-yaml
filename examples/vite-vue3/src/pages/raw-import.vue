@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import PageLayout from "../layouts/PageLayout.vue";
+import { codeToHtml } from "shiki";
+
+import config from "../config.yaml?raw";
+
+const html = await codeToHtml(config, {
+  lang: "yaml",
+  themes: {
+    light: "github-light",
+    dark: "github-dark",
+  },
+});
 </script>
 
 <template>
-  <PageLayout>
-    Hello!
-  </PageLayout>
+  <div v-html="html" />
 </template>
