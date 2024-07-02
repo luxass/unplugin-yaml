@@ -10,8 +10,8 @@ export default defineConfig({
   ],
   clean: true,
   dts: true,
-  // treeshake: true,
   splitting: true,
+  target: "node18",
   bundle: true,
   outExtension(ctx) {
     return {

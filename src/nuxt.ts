@@ -1,3 +1,9 @@
+/**
+ * This entry file is for Nuxt plugin.
+ *
+ * @module
+ */
+
 import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from "@nuxt/kit";
 import { NUXT_CONFIG_KEY, PLUGIN_NAME } from "./constants";
 import vite from "./vite";
@@ -5,6 +11,19 @@ import webpack from "./webpack";
 import type { YamlOptions } from "./";
 import type {} from "@nuxt/schema";
 
+/**
+ * Nuxt plugin
+ *
+ * @example
+ * ```ts
+ * // nuxt.config.ts
+ * import yaml from "unplugin-yaml/nuxt"
+ *
+ * export default defineNuxtConfig({
+ *   plugins: [yaml()],
+ * })
+ * ```
+ */
 export default defineNuxtModule<YamlOptions>({
   meta: {
     name: PLUGIN_NAME,
