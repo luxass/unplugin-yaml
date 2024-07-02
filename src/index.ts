@@ -5,7 +5,7 @@
 
 import { dirname, join } from "node:path";
 import { readFile } from "node:fs/promises";
-import { type UnpluginFactory, createUnplugin } from "unplugin";
+import { type UnpluginFactory, type UnpluginInstance, createUnplugin } from "unplugin";
 import YAML from "js-yaml";
 import { createFilter } from "@rollup/pluginutils";
 import type { YamlOptions } from "./types";
@@ -72,6 +72,6 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
 /**
  * The main unplugin instance.
  */
-export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory);
+export const unplugin: UnpluginInstance<YamlOptions | undefined, boolean> = /* #__PURE__ */ createUnplugin(unpluginFactory);
 
 export default unplugin;
