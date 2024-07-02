@@ -1,4 +1,22 @@
-import { createVitePlugin } from "unplugin";
-import { unpluginFactory } from "./";
+/**
+ * This entry file is for Vite plugin.
+ *
+ * @module
+ */
 
-export default createVitePlugin(unpluginFactory);
+import { unplugin } from "./";
+
+/**
+ * Vite plugin
+ *
+ * @example
+ * ```ts
+ * // vite.config.ts
+ * import yaml from "unplugin-yaml/vite"
+ *
+ * export default defineConfig({
+ *   plugins: [yaml()],
+ * })
+ * ```
+ */
+export default unplugin.vite;

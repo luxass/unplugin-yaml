@@ -1,8 +1,28 @@
+/**
+ * This entry file is for Astro integration.
+ *
+ * @module
+ */
+
+import type { AstroIntegration } from "astro";
 import type { YamlOptions } from "./types";
 import { PLUGIN_NAME } from "./constants";
-import unplugin from "./";
+import { unplugin } from "./";
 
-export default function (options: YamlOptions) {
+/**
+ * Astro integration
+ *
+ * @example
+ * ```ts
+ * // astro.config.mjs
+ * import yaml from "unplugin-yaml/astro"
+ *
+ * export default defineConfig({
+ *   integrations: [yaml()],
+ * })
+ * ```
+ */
+export default function YamlIntegration(options: YamlOptions): AstroIntegration {
   return {
     name: PLUGIN_NAME,
     hooks: {

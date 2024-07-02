@@ -1,4 +1,22 @@
-import { createFarmPlugin } from "unplugin";
-import { unpluginFactory } from "./";
+/**
+ * This entry file is for Farm plugin.
+ *
+ * @module
+ */
 
-export default createFarmPlugin(unpluginFactory);
+import { unplugin } from "./";
+
+/**
+ * Farm plugin
+ *
+ * @example
+ * ```ts
+ * // farm.config.ts
+ * import yaml from "unplugin-yaml/farm"
+ *
+ * export default defineConfig({
+ *   plugins: [yaml()],
+ * }
+ * ```
+ */
+export default unplugin.farm;

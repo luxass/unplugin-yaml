@@ -1,4 +1,22 @@
-import { createRollupPlugin } from "unplugin";
-import { unpluginFactory } from "./";
+/**
+ * This entry file is for Rollup plugin.
+ *
+ * @module
+ */
 
-export default createRollupPlugin(unpluginFactory);
+import { unplugin } from "./";
+
+/**
+ * Rollup plugin
+ *
+ * @example
+ * ```ts
+ * // rollup.config.js
+ * import yaml from "unplugin-yaml/rollup"
+ *
+ * export default {
+ *   plugins: [yaml()],
+ * }
+ * ```
+ */
+export default unplugin.rollup;

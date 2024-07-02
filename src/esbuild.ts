@@ -1,4 +1,22 @@
-import { createEsbuildPlugin } from "unplugin";
-import { unpluginFactory } from "./";
+/**
+ * This entry file is for esbuild plugin. Requires esbuild >= 0.15
+ *
+ * @module
+ */
 
-export default createEsbuildPlugin(unpluginFactory);
+import { unplugin } from "./";
+
+/**
+ * Esbuild plugin
+ *
+ * @example
+ * ```ts
+ * // esbuild.config.js
+ * import { build } from "esbuild";
+ *
+ * build({
+ *   plugins: [require("unplugin-yaml/esbuild")()],
+ * })
+ * ```
+ */
+export default unplugin.esbuild;

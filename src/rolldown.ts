@@ -1,4 +1,22 @@
-import { createRolldownPlugin } from "unplugin";
-import { unpluginFactory } from "./";
+/**
+ * This entry file is for Rolldown plugin.
+ *
+ * @module
+ */
 
-export default createRolldownPlugin(unpluginFactory);
+import { unplugin } from "./";
+
+/**
+ * Rolldown plugin
+ *
+ * @example
+ * ```ts
+ * // rolldown.config.js
+ * import yaml from "unplugin-yaml/rolldown"
+ *
+ * export default {
+ *   plugins: [yaml()],
+ * }
+ * ```
+ */
+export default unplugin.rolldown;
