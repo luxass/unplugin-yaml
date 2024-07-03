@@ -148,7 +148,7 @@ export default defineConfig({
 <details>
 <summary>Rspack (Experimental)</summary><br/>
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Currently Rspack doesn't work, due to rspack not supporting the `resolveId`.
 > It is currently worked on [here](https://github.com/unjs/unplugin/pull/388)
 
