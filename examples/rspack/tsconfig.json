@@ -8,9 +8,19 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "types": [
+      "unplugin-yaml/types"
+    ],
+    "allowImportingTsExtensions": true,
     "strict": true,
+    "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

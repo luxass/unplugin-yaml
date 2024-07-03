@@ -5,16 +5,21 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "generate:types": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.12.3",
+    "shiki": "^1.10.0",
     "vue": "latest"
   },
   "devDependencies": {
-    "unplugin-yaml": "workspace:*"
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "typescript": "^5.5.3",
+    "unplugin-yaml": "workspace:*",
+    "vue-tsc": "^2.0.24"
   },
   "stackblitz": {
     "installDependencies": false,

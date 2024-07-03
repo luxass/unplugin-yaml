@@ -9,6 +9,9 @@
       "@/*": ["./*"]
     },
     "resolveJsonModule": true,
+    "types": [
+      "unplugin-yaml/types"
+    ],
     "allowJs": true,
     "strict": true,
     "noEmit": true,

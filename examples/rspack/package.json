@@ -3,18 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
-    "preview": "rsbuild preview"
+    "dev": "NODE_ENV=development rspack serve",
+    "build": "NODE_ENV=production rspack build",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "^3.4.19"
+    "shiki": "^1.10.0",
+    "vue": "3.4.21",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^0.7.10",
-    "@rsbuild/plugin-vue": "^0.7.10",
-    "typescript": "^5.4.2",
-    "unplugin-yaml": "workspace:*"
+    "@rspack/cli": "1.0.0-alpha.0",
+    "@rspack/core": "1.0.0-alpha.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "unplugin-yaml": "workspace:*",
+    "vue-loader": "^17.2.2",
+    "vue-tsc": "^2.0.21"
   },
   "stackblitz": {
     "installDependencies": false,

@@ -148,17 +148,17 @@
     "test": "vitest --run",
     "test:watch": "vitest",
     "play:nuxt": "pnpm run --filter @unplugin-yaml/nuxt-example dev",
-    "play:vite-vue3": "pnpm run --filter @unplugin-yaml/vite-vue3-example dev",
+    "play:vite-vue": "pnpm run --filter @unplugin-yaml/vite-vue-example dev",
     "play:vite-react": "pnpm run --filter @unplugin-yaml/vite-react-example dev",
     "play:nextjs": "pnpm run --filter @unplugin-yaml/nextjs-example dev",
     "play:astro": "pnpm run --filter @unplugin-yaml/astro-example dev",
     "play:rspack": "pnpm run --filter @unplugin-yaml/rspack-example dev",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && pnpm -r typecheck"
   },
   "peerDependencies": {
     "@nuxt/kit": ">=3",
     "@nuxt/schema": ">=3",
-    "@rspack/core": "^0.7.5",
+    "@rspack/core": "1.0.0-alpha.0",
     "astro": ">=3",
     "esbuild": "*",
     "rolldown": "^0.10.5",
@@ -202,9 +202,9 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.7.0",
-    "@nuxt/kit": "^3.12.2",
-    "@nuxt/schema": "^3.12.2",
-    "@rspack/core": "^0.7.5",
+    "@nuxt/kit": "^3.12.3",
+    "@nuxt/schema": "^3.12.3",
+    "@rspack/core": "1.0.0-alpha.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.9",
     "esbuild": "^0.21.5",
