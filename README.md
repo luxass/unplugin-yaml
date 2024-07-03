@@ -7,7 +7,7 @@ Allow import YAML file for Vite, Webpack, Rollup and esbuild. With TypeScript su
 
 <p align="center">
 <br>
-<a href="https://stackblitz.com/github/luxass/unplugin-yaml/examples/vite-vue3?file=vite.config.ts"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
+<a href="https://stackblitz.com/github/luxass/unplugin-yaml/tree/main/examples/vite-vue3?file=vite.config.ts"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
 </p>
 
 ## Install
@@ -147,6 +147,10 @@ export default defineConfig({
 
 <details>
 <summary>Rspack (Experimental)</summary><br/>
+
+> [!IMPORTANT]
+> Currently Rspack works a little different, due to rspack not supporting the `resolveId`.
+> It is currently worked on [here](https://github.com/unjs/unplugin/pull/388)
 
 ```ts
 // rspack.config.js
