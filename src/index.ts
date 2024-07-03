@@ -43,6 +43,15 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
       }
     },
     async load(id) {
+      if (!/\.ya?ml\?raw$/.test(id) && !id.startsWith(PREFIX)) {
+        return;
+      }
+
+      // TODO: Remove this when Rspack supports resolveId
+      if (/\.ya?ml\?raw$/.test(id) && !id.startsWith(PREFIX)) {
+        id = `${PREFIX}${id.replace(/\?raw$/, "")}:raw`;
+      }
+
       if (!id.startsWith(PREFIX)) {
         return;
       }
