@@ -24,6 +24,7 @@
     "examples",
     "yaml.d.ts",
     "pnpm-workspace.yaml",
-    ".npmrc"
+    ".npmrc",
+    ".vscode"
   ]
 }
