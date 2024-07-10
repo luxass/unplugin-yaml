@@ -201,7 +201,7 @@
     "unplugin": "^1.11.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.7.0",
+    "@luxass/eslint-config": "^4.8.2",
     "@nuxt/kit": "^3.12.3",
     "@nuxt/schema": "^3.12.3",
     "@rspack/core": "1.0.0-alpha.0",
