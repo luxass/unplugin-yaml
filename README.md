@@ -6,7 +6,7 @@
 Allow import YAML file for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by [unplugin](https://github.com/unjs/unplugin).
 
 <p align="center">
-<br>
+<br />
 <a href="https://stackblitz.com/github/luxass/unplugin-yaml/tree/main/examples/vite-vue?file=vite.config.ts"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" /></a>
 </p>
 
