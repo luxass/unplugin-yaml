@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "nuxt": "^3.12.3",
-    "shiki": "^1.10.0",
+    "shiki": "^1.10.3",
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
     "typescript": "^5.5.3",
     "unplugin-yaml": "workspace:*",
-    "vue-tsc": "^2.0.24"
+    "vue-tsc": "^2.0.26"
   },
   "stackblitz": {
     "installDependencies": false,

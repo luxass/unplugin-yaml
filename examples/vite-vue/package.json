@@ -10,22 +10,22 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "^3.4.29",
+    "vue": "^3.4.31",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8",
-    "shiki": "^1.10.0",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.2.2",
+    "postcss": "^8.4.39",
+    "shiki": "^1.10.3",
+    "tailwindcss": "^3.4.5",
+    "typescript": "^5.5.3",
     "unplugin-vue-router": "^0.10.0",
     "unplugin-yaml": "workspace:*",
-    "vite": "^5.3.1",
+    "vite": "^5.3.4",
     "vite-plugin-inspect": "^0.8.4",
-    "vite-plugin-vue-devtools": "^7.3.5",
-    "vue-tsc": "^2.0.21"
+    "vite-plugin-vue-devtools": "^7.3.6",
+    "vue-tsc": "^2.0.26"
   },
   "stackblitz": {
     "installDependencies": false,
