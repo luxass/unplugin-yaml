@@ -1,6 +1,5 @@
 import { build } from "esbuild";
 import { expect, it } from "vitest";
-
 import YAMLPlugin from "../src/esbuild";
 import { removeComments } from "./utils";
 

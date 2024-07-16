@@ -4,9 +4,6 @@ import { readFile } from "node:fs/promises";
 import type { Configuration, Stats } from "webpack";
 import { webpack as createWebpack } from "webpack";
 import { expect, it } from "vitest";
-
-// create output in tmp dir
-
 import YAMLPlugin from "../src/webpack";
 import { removeComments } from "./utils";
 

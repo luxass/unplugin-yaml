@@ -1,6 +1,5 @@
 import { rollup } from "rollup";
 import { expect, it } from "vitest";
-
 import YAMLPlugin from "../src/rollup";
 import { removeComments } from "./utils";
 
