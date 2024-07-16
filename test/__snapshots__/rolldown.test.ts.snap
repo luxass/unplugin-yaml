@@ -2,7 +2,6 @@
 
 exports[`expect yaml import to be a json object 1`] = `
 "
-//#region test/fixtures/yaml-config.yaml
 var yaml_config_default = {
 	'pluginDir': './plugins',
 	'web': {'enabled': true},
@@ -12,25 +11,19 @@ var yaml_config_default = {
 	}
 };
 
-//#endregion
 export { yaml_config_default as default };"
 `;
 
 exports[`expect yaml import to be a string 1`] = `
 "
-//#region \\0virtual:yaml:/Users/luxass/dev/unplugin-yaml/test/fixtures/yaml-config.yaml:raw
 var yaml_config_default = 'pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n';
 
-//#endregion
-//#region test/fixtures/js-yaml-raw.js
 console.log(yaml_config_default);
-
-//#endregion"
+"
 `;
 
 exports[`expect yml import to be a json object 1`] = `
 "
-//#region test/fixtures/yml-config.yml
 var yml_config_default = {
 	'pluginDir': './plugins',
 	'web': {'enabled': true},
@@ -40,18 +33,13 @@ var yml_config_default = {
 	}
 };
 
-//#endregion
 export { yml_config_default as default };"
 `;
 
 exports[`expect yml import to be a string 1`] = `
 "
-//#region \\0virtual:yaml:/Users/luxass/dev/unplugin-yaml/test/fixtures/yml-config.yml:raw
 var yml_config_default = 'pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n';
 
-//#endregion
-//#region test/fixtures/js-yml-raw.js
 console.log(yml_config_default);
-
-//#endregion"
+"
 `;
