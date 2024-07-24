@@ -4,7 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
+import { createVitePlugin } from "unplugin";
+import { unpluginFactory } from "./";
 
 /**
  * Vite plugin
@@ -19,4 +20,4 @@ import { unplugin } from "./";
  * })
  * ```
  */
-export default unplugin.vite;
+export default createVitePlugin(unpluginFactory);

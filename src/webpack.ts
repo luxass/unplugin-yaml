@@ -4,7 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
+import { createWebpackPlugin } from "unplugin";
+import { unpluginFactory } from "./";
 
 /**
  * Webpack plugin
@@ -17,4 +18,4 @@ import { unplugin } from "./";
  * }
  * ```
  */
-export default unplugin.webpack;
+export default createWebpackPlugin(unpluginFactory);

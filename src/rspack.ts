@@ -4,8 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
-
+import { createRspackPlugin } from "unplugin";
+import { unpluginFactory } from "./";
 /**
  * Rspack plugin
  *
@@ -19,4 +19,4 @@ import { unplugin } from "./";
  * })
  * ```
  */
-export default unplugin.rspack;
+export default createRspackPlugin(unpluginFactory);

@@ -4,7 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
+import { createEsbuildPlugin } from "unplugin";
+import { unpluginFactory } from "./";
 
 /**
  * Esbuild plugin
@@ -19,4 +20,4 @@ import { unplugin } from "./";
  * })
  * ```
  */
-export default unplugin.esbuild;
+export default createEsbuildPlugin(unpluginFactory);

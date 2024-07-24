@@ -4,7 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
+import { createFarmPlugin } from "unplugin";
+import { unpluginFactory } from "./";
 
 /**
  * Farm plugin
@@ -19,4 +20,4 @@ import { unplugin } from "./";
  * }
  * ```
  */
-export default unplugin.farm;
+export default createFarmPlugin(unpluginFactory);

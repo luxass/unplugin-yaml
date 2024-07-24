@@ -4,7 +4,8 @@
  * @module
  */
 
-import { unplugin } from "./";
+import { createRollupPlugin } from "unplugin";
+import { unpluginFactory } from "./";
 
 /**
  * Rollup plugin
@@ -19,4 +20,4 @@ import { unplugin } from "./";
  * }
  * ```
  */
-export default unplugin.rollup;
+export default createRollupPlugin(unpluginFactory);
