@@ -7,6 +7,7 @@ it("expect yaml import to be a json object", async () => {
   const bundle = await rolldown({
     input: "./test/fixtures/js-yaml.js",
     plugins: [
+      // @ts-expect-error unplugin has invalid errors?
       YAMLPlugin(),
     ],
   });
@@ -22,6 +23,7 @@ it("expect yaml import to be a string", async () => {
   const bundle = await rolldown({
     input: "./test/fixtures/js-yaml-raw.js",
     plugins: [
+      // @ts-expect-error unplugin has invalid errors?
       YAMLPlugin(),
     ],
   });
@@ -37,6 +39,7 @@ it("expect yml import to be a json object", async () => {
   const bundle = await rolldown({
     input: "./test/fixtures/js-yml.js",
     plugins: [
+      // @ts-expect-error unplugin has invalid errors?
       YAMLPlugin(),
     ],
   });
@@ -52,6 +55,7 @@ it("expect yml import to be a string", async () => {
   const bundle = await rolldown({
     input: "./test/fixtures/js-yml-raw.js",
     plugins: [
+      // @ts-expect-error unplugin has invalid errors?
       YAMLPlugin(),
     ],
   });
