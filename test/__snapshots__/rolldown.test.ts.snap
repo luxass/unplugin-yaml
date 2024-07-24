@@ -1,19 +1,47 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`expect yaml import to be a string 1`] = `
+exports[`expect yaml import to be a json object 1`] = `
 "
-var yaml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+var yaml_config_default = {
+	'pluginDir': './plugins',
+	'web': {'enabled': true},
+	'logging': {
+		'type': 'stdout',
+		'level': 'info'
+	}
+};
 
 console.log(yaml_config_default);
+"
+`;
 
+exports[`expect yaml import to be a string 1`] = `
+"
+var yaml_config_default = 'pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n';
+
+console.log(yaml_config_default);
+"
+`;
+
+exports[`expect yml import to be a json object 1`] = `
+"
+var yml_config_default = {
+	'pluginDir': './plugins',
+	'web': {'enabled': true},
+	'logging': {
+		'type': 'stdout',
+		'level': 'info'
+	}
+};
+
+console.log(yml_config_default);
 "
 `;
 
 exports[`expect yml import to be a string 1`] = `
 "
-var yml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+var yml_config_default = 'pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n';
 
 console.log(yml_config_default);
-
 "
 `;

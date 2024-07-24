@@ -5,7 +5,7 @@ import { removeComments } from "./utils";
 
 it("expect yaml import to be a json object", async () => {
   const bundle = await rollup({
-    input: "./test/fixtures/yaml-config.yaml",
+    input: "./test/fixtures/js-yaml.js",
     plugins: [
       YAMLPlugin(),
     ],
@@ -35,7 +35,7 @@ it("expect yaml import to be a string", async () => {
 
 it("expect yml import to be a json object", async () => {
   const bundle = await rollup({
-    input: "./test/fixtures/yml-config.yml",
+    input: "./test/fixtures/js-yml.js",
     plugins: [
       YAMLPlugin(),
     ],

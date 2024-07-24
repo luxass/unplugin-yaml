@@ -6,7 +6,7 @@ import { removeComments } from "./utils";
 it("expect yaml import to be a json object", async () => {
   const result = await build({
     entryPoints: [
-      "./test/fixtures/yaml-config.yaml",
+      "./test/fixtures/js-yaml.js",
     ],
     format: "esm",
     write: false,
@@ -40,7 +40,7 @@ it("expect yaml import to be a string", async () => {
 it("expect yml import to be a json object", async () => {
   const result = await build({
     entryPoints: [
-      "./test/fixtures/yml-config.yml",
+      "./test/fixtures/js-yml.js",
     ],
     format: "esm",
     write: false,
