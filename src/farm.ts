@@ -5,6 +5,7 @@
  */
 
 import { createFarmPlugin } from "unplugin";
+import type unplugin from "./";
 import { unpluginFactory } from "./";
 
 /**
@@ -20,4 +21,4 @@ import { unpluginFactory } from "./";
  * }
  * ```
  */
-export default createFarmPlugin(unpluginFactory);
+export default createFarmPlugin(unpluginFactory) as typeof unplugin.farm;

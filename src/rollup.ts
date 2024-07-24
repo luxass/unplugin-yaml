@@ -5,6 +5,7 @@
  */
 
 import { createRollupPlugin } from "unplugin";
+import type unplugin from "./";
 import { unpluginFactory } from "./";
 
 /**
@@ -20,4 +21,4 @@ import { unpluginFactory } from "./";
  * }
  * ```
  */
-export default createRollupPlugin(unpluginFactory);
+export default createRollupPlugin(unpluginFactory) as typeof unplugin.rollup;

@@ -5,6 +5,7 @@
  */
 
 import { createRspackPlugin } from "unplugin";
+import type unplugin from "./";
 import { unpluginFactory } from "./";
 /**
  * Rspack plugin
@@ -19,4 +20,4 @@ import { unpluginFactory } from "./";
  * })
  * ```
  */
-export default createRspackPlugin(unpluginFactory);
+export default createRspackPlugin(unpluginFactory) as typeof unplugin.rspack;

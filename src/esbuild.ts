@@ -5,6 +5,7 @@
  */
 
 import { createEsbuildPlugin } from "unplugin";
+import type unplugin from "./";
 import { unpluginFactory } from "./";
 
 /**
@@ -20,4 +21,4 @@ import { unpluginFactory } from "./";
  * })
  * ```
  */
-export default createEsbuildPlugin(unpluginFactory);
+export default createEsbuildPlugin(unpluginFactory) as typeof unplugin.esbuild;
