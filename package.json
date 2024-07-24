@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.6.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -198,24 +198,24 @@
   "dependencies": {
     "@rollup/pluginutils": "^5.1.0",
     "js-yaml": "^4.1.0",
-    "unplugin": "^1.11.0"
+    "unplugin": "^1.12.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",
-    "@nuxt/kit": "^3.12.3",
-    "@nuxt/schema": "^3.12.3",
-    "@rspack/core": "1.0.0-alpha.4",
+    "@nuxt/kit": "^3.12.4",
+    "@nuxt/schema": "^3.12.4",
+    "@rspack/core": "1.0.0-alpha.5",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.10",
     "esbuild": "^0.23.0",
     "eslint": "^9.7.0",
-    "rolldown": "^0.12.1",
-    "rollup": "^4.18.1",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.3",
+    "rolldown": "^0.12.2",
+    "rollup": "^4.19.0",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4",
     "vite": "^5.3.4",
-    "vite-plugin-inspect": "^0.8.4",
-    "vitest": "2.0.3",
+    "vite-plugin-inspect": "^0.8.5",
+    "vitest": "2.0.4",
     "webpack": "^5.93.0"
   }
 }
