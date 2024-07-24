@@ -46,7 +46,7 @@ importers:
         specifier: ^9.7.0
         version: 9.7.0
       rolldown:
-        specifier: 0.12.1
+        specifier: ^0.12.1
         version: 0.12.1
       rollup:
         specifier: ^4.19.0
