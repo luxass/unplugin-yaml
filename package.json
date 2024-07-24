@@ -158,10 +158,10 @@
   "peerDependencies": {
     "@nuxt/kit": ">=3",
     "@nuxt/schema": ">=3",
-    "@rspack/core": "1.0.0-alpha.4",
+    "@rspack/core": "1.0.0-alpha.5",
     "astro": ">=3",
     "esbuild": "*",
-    "rolldown": "^0.10.5",
+    "rolldown": "^0.12.1",
     "rollup": ">=3",
     "vite": ">=3",
     "webpack": "^4 || ^5"
@@ -209,7 +209,7 @@
     "@types/node": "^20.14.10",
     "esbuild": "^0.23.0",
     "eslint": "^9.7.0",
-    "rolldown": "^0.12.2",
+    "rolldown": "0.12.1",
     "rollup": "^4.19.0",
     "tsup": "^8.2.3",
     "typescript": "^5.5.4",
