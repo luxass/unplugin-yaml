@@ -204,7 +204,7 @@
     "@luxass/eslint-config": "^4.9.0",
     "@nuxt/kit": "^3.12.4",
     "@nuxt/schema": "^3.12.4",
-    "@rspack/core": "1.0.0-alpha.5",
+    "@rspack/core": "1.0.0-beta.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.10",
     "esbuild": "^0.23.0",

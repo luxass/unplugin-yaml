@@ -13,8 +13,8 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@rspack/cli": "1.0.0-alpha.4",
-    "@rspack/core": "1.0.0-alpha.4",
+    "@rspack/cli": "1.0.0-beta.0",
+    "@rspack/core": "1.0.0-beta.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "postcss-loader": "^8.1.1",
