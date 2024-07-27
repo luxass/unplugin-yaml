@@ -21,6 +21,14 @@ async function rspack(config: Configuration): Promise<Stats | undefined> {
       },
       mode: "production",
       ...config,
+      experiments: {
+        rspackFuture: {
+          // disables the bundler info
+          bundlerInfo: {
+            force: false,
+          },
+        },
+      },
     });
 
     compiler.run((err, stats) => {
