@@ -215,7 +215,7 @@
     "typescript": "^5.5.4",
     "vite": "^5.3.4",
     "vite-plugin-inspect": "^0.8.5",
-    "vitest": "2.0.4",
+    "vitest": "2.0.5",
     "webpack": "^5.93.0"
   }
 }
