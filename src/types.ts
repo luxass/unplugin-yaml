@@ -1,5 +1,5 @@
-import type { LoadOptions } from "js-yaml";
 import type { FilterPattern } from "@rollup/pluginutils";
+import type { LoadOptions } from "js-yaml";
 
 export interface YamlOptions {
   /**

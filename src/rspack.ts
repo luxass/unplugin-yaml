@@ -5,8 +5,8 @@
  */
 
 import { createRspackPlugin } from "unplugin";
-import type unplugin from "./";
 import { unpluginFactory } from "./";
+import type unplugin from "./";
 /**
  * Rspack plugin
  *

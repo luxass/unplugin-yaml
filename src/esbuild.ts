@@ -5,8 +5,8 @@
  */
 
 import { createEsbuildPlugin } from "unplugin";
-import type unplugin from "./";
 import { unpluginFactory } from "./";
+import type unplugin from "./";
 
 /**
  * Esbuild plugin

@@ -1,12 +1,12 @@
-import "./styles/globals.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  RouterProvider,
   createBrowserRouter,
+  RouterProvider,
 } from "react-router-dom";
 import { ImportAsModule } from "./pages/import-as-module";
 import { RawImport } from "./pages/raw-import";
+import "./styles/globals.css";
 
 const router = createBrowserRouter([
   {

@@ -1,9 +1,9 @@
-import path from "node:path";
-import { tmpdir } from "node:os";
 import { readFile } from "node:fs/promises";
-import type { Configuration, Stats } from "webpack";
-import { webpack as createWebpack } from "webpack";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { expect, it } from "vitest";
+import { webpack as createWebpack } from "webpack";
+import type { Configuration, Stats } from "webpack";
 import YAMLPlugin from "../src/webpack";
 import { removeComments } from "./utils";
 

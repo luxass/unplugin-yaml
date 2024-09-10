@@ -1,5 +1,5 @@
-import { codeToHtml } from "shiki";
 import { useEffect, useState } from "react";
+import { codeToHtml } from "shiki";
 import config from "../config.yaml";
 
 export function ImportAsModule() {

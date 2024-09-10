@@ -3,13 +3,13 @@
  * @module
  */
 
-import { dirname, join } from "node:path";
 import { readFile } from "node:fs/promises";
-import { type UnpluginFactory, type UnpluginInstance, createUnplugin } from "unplugin";
-import YAML from "js-yaml";
+import { dirname, join } from "node:path";
 import { createFilter } from "@rollup/pluginutils";
-import type { YamlOptions } from "./types";
+import YAML from "js-yaml";
+import { createUnplugin, type UnpluginFactory, type UnpluginInstance } from "unplugin";
 import { PLUGIN_NAME } from "./constants";
+import type { YamlOptions } from "./types";
 
 export type { YamlOptions };
 

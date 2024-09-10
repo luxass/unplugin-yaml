@@ -5,8 +5,8 @@
  */
 
 import { createVitePlugin } from "unplugin";
-import type unplugin from "./";
 import { unpluginFactory } from "./";
+import type unplugin from "./";
 
 /**
  * Vite plugin

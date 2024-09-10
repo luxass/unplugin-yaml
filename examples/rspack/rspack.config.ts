@@ -1,7 +1,7 @@
 import { defineConfig } from "@rspack/cli";
-import { type RspackPluginFunction, rspack } from "@rspack/core";
-import { VueLoaderPlugin } from "vue-loader";
+import { rspack, type RspackPluginFunction } from "@rspack/core";
 import YamlPlugin from "unplugin-yaml/rspack";
+import { VueLoaderPlugin } from "vue-loader";
 
 export default defineConfig({
   context: __dirname,

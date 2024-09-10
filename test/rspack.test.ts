@@ -1,9 +1,9 @@
-import path from "node:path";
-import { tmpdir } from "node:os";
 import { readFile } from "node:fs/promises";
-import type { Configuration, Stats } from "@rspack/core";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { rspack as createRspack } from "@rspack/core";
 import { expect, it } from "vitest";
+import type { Configuration, Stats } from "@rspack/core";
 
 import YAMLPlugin from "../src/rspack";
 import { removeComments } from "./utils";
