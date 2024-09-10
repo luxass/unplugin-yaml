@@ -12,20 +12,20 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1"
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "shiki": "^1.10.3",
-    "tailwindcss": "^3.4.5",
-    "typescript": "^5.5.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "shiki": "^1.16.3",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.6.2",
     "unplugin-yaml": "workspace:*",
-    "vite": "^5.3.4",
-    "vite-plugin-inspect": "^0.8.4"
+    "vite": "^5.4.3",
+    "vite-plugin-inspect": "^0.8.7"
   },
   "stackblitz": {
     "installDependencies": false,
