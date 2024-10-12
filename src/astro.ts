@@ -5,9 +5,9 @@
  */
 
 import type { AstroIntegration } from "astro";
+import type { YamlOptions } from "./types";
 import { unplugin } from "./";
 import { PLUGIN_NAME } from "./constants";
-import type { YamlOptions } from "./types";
 
 /**
  * Astro integration

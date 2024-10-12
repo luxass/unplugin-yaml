@@ -4,9 +4,9 @@
  * @module
  */
 
+import type unplugin from "./";
 import { createFarmPlugin } from "unplugin";
 import { unpluginFactory } from "./";
-import type unplugin from "./";
 
 /**
  * Farm plugin
