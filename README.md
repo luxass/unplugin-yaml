@@ -146,27 +146,22 @@ export default defineConfig({
 <br/></details>
 
 <details>
-<summary>Rspack (Experimental)</summary><br/>
-
-> [!IMPORTANT]
-> Currently Rspack works a little different, due to rspack not supporting the `resolveId`.
-> It is currently worked on [here](https://github.com/unjs/unplugin/pull/388)
+<summary>Rspack</summary><br/>
 
 ```ts
-// rspack.config.js
-const rspack = require("@rspack/core");
+// rspack.config.mjs
+import rspack from "@rspack/core";
+import YAMLPlugin from "unplugin-yaml/rspack";
 
-/** @type {import('@rspack/cli').Configuration} */
-const config = {
+/** @type {import('@rspack/core').Configuration} */
+export default {
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: "./index.html"
     }),
-    require("unplugin-yaml/rspack")(),
+    YAMLPlugin()
   ],
-
 };
-module.exports = config;
 ```
 
 <br/></details>
