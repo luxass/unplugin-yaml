@@ -158,7 +158,7 @@
   "peerDependencies": {
     "@nuxt/kit": ">=3",
     "@nuxt/schema": ">=3",
-    "@rspack/core": "1.0.0-alpha.5",
+    "@rspack/core": "^1.0.13",
     "astro": ">=3",
     "esbuild": "*",
     "rolldown": "0.12.1",
@@ -204,7 +204,7 @@
     "@luxass/eslint-config": "^4.12.1",
     "@nuxt/kit": "^3.13.2",
     "@nuxt/schema": "^3.13.2",
-    "@rspack/core": "1.0.10",
+    "@rspack/core": "^1.0.13",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.10",
     "esbuild": "^0.24.0",
