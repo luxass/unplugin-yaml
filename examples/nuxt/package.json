@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
-    "shiki": "^1.23.1",
+    "shiki": "^1.24.0",
     "vue": "latest"
   },
   "devDependencies": {
