@@ -3,7 +3,7 @@ name: Test Build Tools
 on:
   workflow_dispatch:
   schedule:
-      # every sunday at 00:00
+    # every sunday at 00:00
     - cron: "0 0 * * 0"
 
 jobs:
