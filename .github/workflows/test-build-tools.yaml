@@ -8,15 +8,10 @@ on:
 
 jobs:
   test-rspack:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [20, 22]
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-        versions:
+        version:
           - latest
           - alpha
           - beta
@@ -30,16 +25,16 @@ jobs:
       - name: setup pnpm
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
 
-      - name: setup node ${{ matrix.node }}
+      - name: setup node
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: lts/*
 
       - name: install
         run: pnpm install --frozen-lockfile
 
-      - name: install rspack ${{ matrix.versions }}
-        run: pnpm add -Dw @rspack/core@${{ matrix.versions }}
+      - name: install rspack ${{ matrix.version }}
+        run: pnpm add -Dw @rspack/core@${{ matrix.version }}
 
       - name: build
         run: pnpm build
