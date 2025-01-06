@@ -13,30 +13,30 @@ jobs:
       matrix:
         tool:
           # Rspack versions
-          - { name: '@rspack/core', version: 'latest' }
-          - { name: '@rspack/core', version: 'alpha' }
-          - { name: '@rspack/core', version: 'beta' }
-          - { name: '@rspack/core', version: '1.1.8' }
+          - {name: "@rspack/core", version: latest}
+          - {name: "@rspack/core", version: alpha}
+          - {name: "@rspack/core", version: beta}
+          - {name: "@rspack/core", version: 1.1.8}
           # Webpack versions
-          - { name: 'webpack', version: 'latest' }
-          - { name: 'webpack', version: '5.73.0' }
-          - { name: 'webpack', version: '5.60.0' }
+          - {name: webpack, version: latest}
+          - {name: webpack, version: 5.73.0}
+          - {name: webpack, version: 5.60.0}
           # esbuild versions
-          - { name: 'esbuild', version: 'latest' }
-          - { name: 'esbuild', version: '0.19.12' }
+          - {name: esbuild, version: latest}
+          - {name: esbuild, version: 0.19.12}
           # Rollup versions
-          - { name: 'rollup', version: 'latest' }
-          - { name: 'rollup', version: 'beta' }
-          - { name: 'rollup', version: '4.22.5' }
-          - { name: 'rollup', version: '4.17.0' }
+          - {name: rollup, version: latest}
+          - {name: rollup, version: beta}
+          - {name: rollup, version: 4.22.5}
+          - {name: rollup, version: 4.17.0}
           # Rolldown versions
-          - { name: 'rolldown', version: 'latest' }
-          - { name: 'rolldown', version: 'canary' }
-          - { name: 'rolldown', version: 'nightly' }
-          - { name: 'rolldown', version: '0.15.1' }
+          - {name: rolldown, version: latest}
+          - {name: rolldown, version: canary}
+          - {name: rolldown, version: nightly}
+          - {name: rolldown, version: 0.15.1}
           # Vite versions
-          - { name: 'vite', version: 'latest' }
-          - { name: 'vite', version: '6.0.2' }
+          - {name: vite, version: latest}
+          - {name: vite, version: 6.0.2}
       fail-fast: false
 
     steps:
