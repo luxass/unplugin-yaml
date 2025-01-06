@@ -14,28 +14,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
 
-      - name: Install pnpm
+      - name: setup pnpm
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
 
-      - name: Set node
+      - name: setup node
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: lts/*
 
-      - name: Install
+      - name: install
         run: pnpm install --frozen-lockfile
 
-      - name: Build
+      - name: build
         run: pnpm build
 
-      - name: Generate Nuxt Types
+      - name: generate nuxt types
         run: pnpm run --filter @unplugin-yaml/nuxt-example generate:types
 
-      - name: Lint
+      - name: lint
         run: pnpm lint
 
-      - name: Typecheck
+      - name: typecheck
         run: pnpm typecheck
 
   test:
@@ -49,23 +51,24 @@ jobs:
           - macos-latest
           - windows-latest
       fail-fast: false
-
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
 
-      - name: Install pnpm
+      - name: setup pnpm
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
 
-      - name: Set node ${{ matrix.node }}
+      - name: setup node ${{ matrix.node }}
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install
+      - name: install
         run: pnpm install --frozen-lockfile
 
-      - name: Build
+      - name: build
         run: pnpm build
 
-      - name: Test
+      - name: test
         run: pnpm test
