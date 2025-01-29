@@ -1,9 +1,18 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`expect yaml import to be a json object 1`] = `
-"var config = {"pluginDir":"./plugins","web":{"enabled":true},"logging":{"type":"stdout","level":"info"}};
+"var data = {
+  "pluginDir": "./plugins",
+  "web": {
+    "enabled": true
+  },
+  "logging": {
+    "type": "stdout",
+    "level": "info"
+  }
+};
 
-console.log(config);
+console.log(data);
 "
 `;
 
@@ -15,9 +24,18 @@ console.log(config);
 `;
 
 exports[`expect yml import to be a json object 1`] = `
-"var config = {"pluginDir":"./plugins","web":{"enabled":true},"logging":{"type":"stdout","level":"info"}};
+"var data = {
+  "pluginDir": "./plugins",
+  "web": {
+    "enabled": true
+  },
+  "logging": {
+    "type": "stdout",
+    "level": "info"
+  }
+};
 
-console.log(config);
+console.log(data);
 "
 `;
 

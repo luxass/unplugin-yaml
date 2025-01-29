@@ -14,12 +14,12 @@ importers:
       astro:
         specifier: '>=3'
         version: 4.16.16(@types/node@22.10.10)(rollup@4.31.0)(terser@5.37.0)(typescript@5.7.3)
-      js-yaml:
-        specifier: ^4.1.0
-        version: 4.1.0
       unplugin:
         specifier: ^2.0.0
         version: 2.1.2
+      yaml:
+        specifier: ^2.7.0
+        version: 2.7.0
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.14.0
@@ -33,9 +33,6 @@ importers:
       '@rspack/core':
         specifier: ^1.1.4
         version: 1.1.4(@swc/helpers@0.5.13)
-      '@types/js-yaml':
-        specifier: ^4.0.9
-        version: 4.0.9
       '@types/node':
         specifier: ^22.9.0
         version: 22.10.10
@@ -1815,9 +1812,6 @@ packages:
 
   '@types/http-proxy@1.17.15':
     resolution: {integrity: sha512-25g5atgiVNTIv0LBDTg1H74Hvayx0ajtJPLLcYE3whFv75J0pWNtOBzaXJQgDTmrX1bx5U9YC2w/n65BN1HwRQ==}
-
-  '@types/js-yaml@4.0.9':
-    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -8507,8 +8501,6 @@ snapshots:
   '@types/http-proxy@1.17.15':
     dependencies:
       '@types/node': 22.10.10
-
-  '@types/js-yaml@4.0.9': {}
 
   '@types/json-schema@7.0.15': {}
 

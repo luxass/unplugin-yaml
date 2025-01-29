@@ -2,7 +2,7 @@
 
 exports[`expect yaml import to be a json object 1`] = `
 "
-var yaml_config_default = {
+var data = {
 	"pluginDir": "./plugins",
 	"web": { "enabled": true },
 	"logging": {
@@ -10,6 +10,7 @@ var yaml_config_default = {
 		"level": "info"
 	}
 };
+var yaml_config_default = data;
 
 console.log(yaml_config_default);
 "
@@ -25,7 +26,7 @@ console.log(yaml_config_default);
 
 exports[`expect yml import to be a json object 1`] = `
 "
-var yml_config_default = {
+var data = {
 	"pluginDir": "./plugins",
 	"web": { "enabled": true },
 	"logging": {
@@ -33,6 +34,7 @@ var yml_config_default = {
 		"level": "info"
 	}
 };
+var yml_config_default = data;
 
 console.log(yml_config_default);
 "

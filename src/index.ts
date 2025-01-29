@@ -3,15 +3,15 @@
  * @module
  */
 
-import type { YamlOptions } from "./types";
+import type { YamlOptions, YAMLValue } from "./types";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { createFilter } from "@rollup/pluginutils";
-import YAML from "js-yaml";
 import { createUnplugin, type UnpluginFactory, type UnpluginInstance } from "unplugin";
+import { parse, parseAllDocuments } from "yaml";
 import { PLUGIN_NAME } from "./constants";
 
-export type { YamlOptions };
+export type { YamlOptions, YAMLValue };
 
 const PREFIX = `\0virtual:yaml:`;
 
@@ -22,6 +22,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
   const filter = createFilter(
     options.include || /\.ya?ml(\?raw)?$/,
   );
+  const type = options.type || "single";
 
   return {
     name: PLUGIN_NAME,
@@ -33,7 +34,26 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
       if (id.endsWith("?raw")) {
         return `${code}`;
       }
-      return `export default ${JSON.stringify(YAML.load(code, options.parserOptions))};`;
+
+      let parsed = {};
+
+      if (type === "multi") {
+        parsed = parseAllDocuments(code, options.parserOptions).map((doc) => doc.toJSON());
+      } else {
+        parsed = parse(code, options.parserOptions);
+      }
+
+      let content = parsed;
+
+      if (options.transform != null && typeof options.transform === "function") {
+        const transformed = options.transform(content, id);
+
+        if (transformed != null) {
+          content = transformed;
+        }
+      }
+
+      return `var data = ${JSON.stringify(content, null, 2)};\n\nexport default data;`;
     },
     resolveId(id, importer) {
       if (/\.ya?ml\?raw$/.test(id) && importer) {
