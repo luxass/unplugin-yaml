@@ -7,7 +7,13 @@ import { webpack as createWebpack } from "webpack";
 import YAMLPlugin from "../src/webpack";
 import { removeComments } from "./utils";
 
-async function webpack(config: Configuration, testdirPath: string): Promise<Stats | undefined> {
+interface WebpackResult {
+  stats: Stats;
+  json: ReturnType<Stats["toJson"]>;
+  file: string;
+}
+
+async function webpack(config: Configuration, testdirPath: string): Promise<WebpackResult> {
   return new Promise((resolve, reject) => {
     const compiler = createWebpack({
       optimization: {
@@ -26,7 +32,21 @@ async function webpack(config: Configuration, testdirPath: string): Promise<Stat
         reject(err);
       }
 
-      resolve(stats);
+      if (!stats) {
+        reject(new Error("webpack stats not available"));
+        return;
+      }
+
+      const json = stats.toJson();
+      const files = json.assetsByChunkName?.main;
+      if (!files || !Array.isArray(files) || files[0] == null) {
+        reject(new Error("main chunk not found"));
+        return;
+      }
+
+      const file = files[0];
+
+      resolve({ stats, json, file });
     });
   });
 }
@@ -37,18 +57,14 @@ describe("handles yaml", () => {
 
     expect(testdirPath).toBeDefined();
 
-    const result = await webpack({
+    const { file } = await webpack({
       entry: join(testdirPath, "basic.js"),
       plugins: [
         YAMLPlugin(),
       ],
     }, testdirPath);
 
-    const json = result?.toJson();
-    expect(json).toBeDefined();
-
-    const file = json!.assetsByChunkName!.main;
-    const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -58,18 +74,14 @@ describe("handles yaml", () => {
 
     expect(testdirPath).toBeDefined();
 
-    const result = await webpack({
+    const { file } = await webpack({
       entry: join(testdirPath, "basic-raw.js"),
       plugins: [
         YAMLPlugin(),
       ],
     }, testdirPath);
 
-    const json = result?.toJson();
-    expect(json).toBeDefined();
-
-    const file = json!.assetsByChunkName!.main;
-    const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -81,18 +93,14 @@ describe("handle yml", () => {
 
     expect(testdirPath).toBeDefined();
 
-    const result = await webpack({
+    const { file } = await webpack({
       entry: join(testdirPath, "basic.js"),
       plugins: [
         YAMLPlugin(),
       ],
     }, testdirPath);
 
-    const json = result?.toJson();
-    expect(json).toBeDefined();
-
-    const file = json!.assetsByChunkName!.main;
-    const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -102,18 +110,14 @@ describe("handle yml", () => {
 
     expect(testdirPath).toBeDefined();
 
-    const result = await webpack({
+    const { file } = await webpack({
       entry: join(testdirPath, "basic-raw.js"),
       plugins: [
         YAMLPlugin(),
       ],
     }, testdirPath);
 
-    const json = result?.toJson();
-    expect(json).toBeDefined();
-
-    const file = json!.assetsByChunkName!.main;
-    const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -124,7 +128,7 @@ it("handle multi document", async () => {
 
   expect(testdirPath).toBeDefined();
 
-  const result = await webpack({
+  const { file } = await webpack({
     entry: join(testdirPath, "multi.js"),
     plugins: [
       YAMLPlugin({
@@ -133,11 +137,7 @@ it("handle multi document", async () => {
     ],
   }, testdirPath);
 
-  const json = result?.toJson();
-  expect(json).toBeDefined();
-
-  const file = json!.assetsByChunkName!.main;
-  const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+  const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
   expect(removeComments(content)).toMatchSnapshot();
 });
@@ -147,7 +147,7 @@ it("handle transforms", async () => {
 
   expect(testdirPath).toBeDefined();
 
-  const result = await webpack({
+  const { file } = await webpack({
     entry: join(testdirPath, "transform.js"),
     plugins: [
       YAMLPlugin({
@@ -162,11 +162,7 @@ it("handle transforms", async () => {
     ],
   }, testdirPath);
 
-  const json = result?.toJson();
-  expect(json).toBeDefined();
-
-  const file = json!.assetsByChunkName!.main;
-  const content = await readFile(path.join(testdirPath, "dist", file![0]!), "utf-8");
+  const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
 
   expect(removeComments(content)).toMatchSnapshot();
 });
