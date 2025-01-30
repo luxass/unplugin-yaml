@@ -1,6 +1,91 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`expect yaml import to be a json object 1`] = `
+exports[`handle multi document 1`] = `
+"var data = [
+  {
+    "apiVersion": "batch/v1",
+    "kind": "CronJob",
+    "metadata": {
+      "name": "first-cronjob",
+      "namespace": "default"
+    },
+    "spec": {
+      "schedule": "*/10 * * * *",
+      "concurrencyPolicy": "Forbid",
+      "successfulJobsHistoryLimit": 3,
+      "failedJobsHistoryLimit": 1,
+      "jobTemplate": {
+        "spec": {
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "first-job",
+                  "image": "busybox:latest",
+                  "command": [
+                    "/bin/sh",
+                    "-c",
+                    "echo \\"First job running\\"; date"
+                  ]
+                }
+              ],
+              "restartPolicy": "OnFailure"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion": "batch/v1",
+    "kind": "CronJob",
+    "metadata": {
+      "name": "second-cronjob",
+      "namespace": "default"
+    },
+    "spec": {
+      "schedule": "0 0 * * *",
+      "concurrencyPolicy": "Forbid",
+      "successfulJobsHistoryLimit": 3,
+      "failedJobsHistoryLimit": 1,
+      "jobTemplate": {
+        "spec": {
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "second-job",
+                  "image": "busybox:latest",
+                  "command": [
+                    "/bin/sh",
+                    "-c",
+                    "echo \\"Second job running\\"; date"
+                  ]
+                }
+              ],
+              "restartPolicy": "OnFailure"
+            }
+          }
+        }
+      }
+    }
+  }
+];
+
+console.log(data);
+"
+`;
+
+exports[`handle transforms 1`] = `
+"var data = {
+  "this": "transformed"
+};
+
+console.log(data);
+"
+`;
+
+exports[`handle yml > expect yml import to be a json object 1`] = `
 "var data = {
   "pluginDir": "./plugins",
   "web": {
@@ -16,14 +101,14 @@ console.log(data);
 "
 `;
 
-exports[`expect yaml import to be a string 1`] = `
+exports[`handle yml > expect yml import to be a string 1`] = `
 "var config = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
 console.log(config);
 "
 `;
 
-exports[`expect yml import to be a json object 1`] = `
+exports[`handles yaml > expect yaml import to be a json object 1`] = `
 "var data = {
   "pluginDir": "./plugins",
   "web": {
@@ -39,7 +124,7 @@ console.log(data);
 "
 `;
 
-exports[`expect yml import to be a string 1`] = `
+exports[`handles yaml > expect yaml import to be a string 1`] = `
 "var config = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
 console.log(config);
