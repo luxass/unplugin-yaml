@@ -1,70 +1,118 @@
 import { build } from "esbuild";
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import YAMLPlugin from "../src/esbuild";
 import { removeComments } from "./utils";
 
-it("expect yaml import to be a json object", async () => {
+describe("handles yaml", () => {
+  it("expect yaml import to be a json object", async () => {
+    const result = await build({
+      entryPoints: [
+        "./test/fixtures/basic/yaml/basic.js",
+      ],
+      format: "esm",
+      write: false,
+      bundle: true,
+      minifySyntax: false,
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
+  });
+
+  it("expect yaml import to be a string", async () => {
+    const result = await build({
+      entryPoints: [
+        "./test/fixtures/basic/yaml/basic-raw.js",
+      ],
+      format: "esm",
+      write: false,
+      bundle: true,
+      minifySyntax: false,
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
+  });
+});
+
+describe("handles yml", () => {
+  it("expect yml import to be a json object", async () => {
+    const result = await build({
+      entryPoints: [
+        "./test/fixtures/basic/yml/basic.js",
+      ],
+      format: "esm",
+      write: false,
+      bundle: true,
+      minifySyntax: false,
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
+  });
+
+  it("expect yml import to be a string", async () => {
+    const result = await build({
+      entryPoints: [
+        "./test/fixtures/basic/yml/basic-raw.js",
+      ],
+      format: "esm",
+      write: false,
+      bundle: true,
+      minifySyntax: false,
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
+  });
+});
+
+it("handle multi document", async () => {
   const result = await build({
     entryPoints: [
-      "./test/fixtures/js-yaml.js",
+      "./test/fixtures/multi/multi.js",
     ],
     format: "esm",
     write: false,
     bundle: true,
     minifySyntax: false,
     plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        type: "multi",
+      }),
     ],
   });
 
   expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
 });
 
-it("expect yaml import to be a string", async () => {
+it("handle transforms", async () => {
   const result = await build({
     entryPoints: [
-      "./test/fixtures/js-yaml-raw.js",
+      "./test/fixtures/transform/transform.js",
     ],
     format: "esm",
     write: false,
     bundle: true,
     minifySyntax: false,
     plugins: [
-      YAMLPlugin(),
-    ],
-  });
-
-  expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
-});
-
-it("expect yml import to be a json object", async () => {
-  const result = await build({
-    entryPoints: [
-      "./test/fixtures/js-yml.js",
-    ],
-    format: "esm",
-    write: false,
-    bundle: true,
-    minifySyntax: false,
-    plugins: [
-      YAMLPlugin(),
-    ],
-  });
-
-  expect(removeComments(result.outputFiles[0]?.text)).toMatchSnapshot();
-});
-
-it("expect yml import to be a string", async () => {
-  const result = await build({
-    entryPoints: [
-      "./test/fixtures/js-yml-raw.js",
-    ],
-    format: "esm",
-    write: false,
-    bundle: true,
-    minifySyntax: false,
-    plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        transform(data) {
+          if (data != null && typeof data === "object" && "this" in data) {
+            return {
+              this: "transformed",
+            };
+          }
+        },
+      }),
     ],
   });
 

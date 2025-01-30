@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { rspack as createRspack } from "@rspack/core";
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import YAMLPlugin from "../src/rspack";
 import { removeComments } from "./utils";
@@ -41,11 +41,85 @@ async function rspack(config: Configuration): Promise<Stats | undefined> {
   });
 }
 
-it("expect yaml import to be a json object", async () => {
+describe("handles yaml", () => {
+  it("expect yaml import to be a json object", async () => {
+    const result = await rspack({
+      entry: "./test/fixtures/basic/yaml/basic.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    const json = result?.toJson();
+    expect(json).toBeDefined();
+
+    const file = json!.assetsByChunkName!.main;
+    const content = await readFile(path.join(dir, file![0]!), "utf-8");
+
+    expect(removeComments(content)).toMatchSnapshot();
+  });
+
+  it("expect yaml import to be a string", async () => {
+    const result = await rspack({
+      entry: "./test/fixtures/basic/yaml/basic-raw.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    const json = result?.toJson();
+    expect(json).toBeDefined();
+
+    const file = json!.assetsByChunkName!.main;
+    const content = await readFile(path.join(dir, file![0]!), "utf-8");
+
+    expect(removeComments(content)).toMatchSnapshot();
+  });
+});
+
+describe("handle yml", () => {
+  it("expect yml import to be a json object", async () => {
+    const result = await rspack({
+      entry: "./test/fixtures/basic/yml/basic.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    const json = result?.toJson();
+    expect(json).toBeDefined();
+
+    const file = json!.assetsByChunkName!.main;
+    const content = await readFile(path.join(dir, file![0]!), "utf-8");
+
+    expect(removeComments(content)).toMatchSnapshot();
+  });
+
+  it("expect yml import to be a string", async () => {
+    const result = await rspack({
+      entry: "./test/fixtures/basic/yml/basic-raw.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+
+    const json = result?.toJson();
+    expect(json).toBeDefined();
+
+    const file = json!.assetsByChunkName!.main;
+    const content = await readFile(path.join(dir, file![0]!), "utf-8");
+
+    expect(removeComments(content)).toMatchSnapshot();
+  });
+});
+
+it("handle multi document", async () => {
   const result = await rspack({
-    entry: "./test/fixtures/js-yaml.js",
+    entry: "./test/fixtures/multi/multi.js",
     plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        type: "multi",
+      }),
     ],
   });
 
@@ -58,45 +132,19 @@ it("expect yaml import to be a json object", async () => {
   expect(removeComments(content)).toMatchSnapshot();
 });
 
-it("expect yaml import to be a string", async () => {
+it("handle transforms", async () => {
   const result = await rspack({
-    entry: "./test/fixtures/js-yaml-raw.js",
+    entry: "./test/fixtures/transform/transform.js",
     plugins: [
-      YAMLPlugin(),
-    ],
-  });
-
-  const json = result?.toJson();
-  expect(json).toBeDefined();
-
-  const file = json!.assetsByChunkName!.main;
-  const content = await readFile(path.join(dir, file![0]!), "utf-8");
-
-  expect(removeComments(content)).toMatchSnapshot();
-});
-
-it("expect yml import to be a json object", async () => {
-  const result = await rspack({
-    entry: "./test/fixtures/js-yml.js",
-    plugins: [
-      YAMLPlugin(),
-    ],
-  });
-
-  const json = result?.toJson();
-  expect(json).toBeDefined();
-
-  const file = json!.assetsByChunkName!.main;
-  const content = await readFile(path.join(dir, file![0]!), "utf-8");
-
-  expect(removeComments(content)).toMatchSnapshot();
-});
-
-it("expect yml import to be a string", async () => {
-  const result = await rspack({
-    entry: "./test/fixtures/js-yml-raw.js",
-    plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        transform(data) {
+          if (data != null && typeof data === "object" && "this" in data) {
+            return {
+              this: "transformed",
+            };
+          }
+        },
+      }),
     ],
   });
 

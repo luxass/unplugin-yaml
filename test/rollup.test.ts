@@ -1,13 +1,79 @@
 import { rollup } from "rollup";
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import YAMLPlugin from "../src/rollup";
 import { removeComments } from "./utils";
 
-it("expect yaml import to be a json object", async () => {
+describe("handles yaml", () => {
+  it("expect yaml import to be a json object", async () => {
+    const bundle = await rollup({
+      input: "./test/fixtures/basic/yaml/basic.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+    const { output } = await bundle.generate({
+      format: "esm",
+      sourcemap: false,
+    });
+
+    expect(removeComments(output[0].code)).toMatchSnapshot();
+  });
+
+  it("expect yaml import to be a string", async () => {
+    const bundle = await rollup({
+      input: "./test/fixtures/basic/yaml/basic-raw.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+    const { output } = await bundle.generate({
+      format: "esm",
+      sourcemap: false,
+    });
+
+    expect(removeComments(output[0].code)).toMatchSnapshot();
+  });
+});
+
+describe("handle yml", () => {
+  it("expect yml import to be a json object", async () => {
+    const bundle = await rollup({
+      input: "./test/fixtures/basic/yml/basic.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+    const { output } = await bundle.generate({
+      format: "esm",
+      sourcemap: false,
+    });
+
+    expect(removeComments(output[0].code)).toMatchSnapshot();
+  });
+
+  it("expect yml import to be a string", async () => {
+    const bundle = await rollup({
+      input: "./test/fixtures/basic/yml/basic-raw.js",
+      plugins: [
+        YAMLPlugin(),
+      ],
+    });
+    const { output } = await bundle.generate({
+      format: "esm",
+      sourcemap: false,
+    });
+
+    expect(removeComments(output[0].code)).toMatchSnapshot();
+  });
+});
+
+it("handle multi document", async () => {
   const bundle = await rollup({
-    input: "./test/fixtures/js-yaml.js",
+    input: "./test/fixtures/multi/multi.js",
     plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        type: "multi",
+      }),
     ],
   });
   const { output } = await bundle.generate({
@@ -18,41 +84,19 @@ it("expect yaml import to be a json object", async () => {
   expect(removeComments(output[0].code)).toMatchSnapshot();
 });
 
-it("expect yaml import to be a string", async () => {
+it("handle transforms", async () => {
   const bundle = await rollup({
-    input: "./test/fixtures/js-yaml-raw.js",
+    input: "./test/fixtures/transform/transform.js",
     plugins: [
-      YAMLPlugin(),
-    ],
-  });
-  const { output } = await bundle.generate({
-    format: "esm",
-    sourcemap: false,
-  });
-
-  expect(removeComments(output[0].code)).toMatchSnapshot();
-});
-
-it("expect yml import to be a json object", async () => {
-  const bundle = await rollup({
-    input: "./test/fixtures/js-yml.js",
-    plugins: [
-      YAMLPlugin(),
-    ],
-  });
-  const { output } = await bundle.generate({
-    format: "esm",
-    sourcemap: false,
-  });
-
-  expect(removeComments(output[0].code)).toMatchSnapshot();
-});
-
-it("expect yml import to be a string", async () => {
-  const bundle = await rollup({
-    input: "./test/fixtures/js-yml-raw.js",
-    plugins: [
-      YAMLPlugin(),
+      YAMLPlugin({
+        transform(data) {
+          if (data != null && typeof data === "object" && "this" in data) {
+            return {
+              this: "transformed",
+            };
+          }
+        },
+      }),
     ],
   });
   const { output } = await bundle.generate({
