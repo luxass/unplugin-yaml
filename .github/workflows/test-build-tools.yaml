@@ -6,6 +6,9 @@ on:
     # every sunday at 00:00
     - cron: "0 0 * * 0"
 
+# remove all permission
+permissions: {}
+
 jobs:
   test-build-tools:
     runs-on: ubuntu-latest
