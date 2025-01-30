@@ -1,0 +1,45 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: first-cronjob
+  namespace: default
+spec:
+  schedule: "*/10 * * * *" # Runs every 10 minutes
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: first-job
+              image: busybox:latest
+              command:
+                - /bin/sh
+                - -c
+                - echo "First job running"; date
+          restartPolicy: OnFailure
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: second-cronjob
+  namespace: default
+spec:
+  schedule: "0 0 * * *" # Runs daily at midnight
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: second-job
+              image: busybox:latest
+              command:
+                - /bin/sh
+                - -c
+                - echo "Second job running"; date
+          restartPolicy: OnFailure
