@@ -1,9 +1,8 @@
 import { join } from "node:path";
 import { build } from "vite";
 import { describe, expect, it } from "vitest";
-import { fromFileSystem, testdir, type TestdirFromOptions, type TestdirOptions } from "vitest-testdirs";
+import { testdir } from "vitest-testdirs";
 import YAMLPlugin from "../src/vite";
-import { removeComments } from "./utils";
 
 describe("handles yaml", () => {
   it("expect yaml import to be a json object", async () => {
