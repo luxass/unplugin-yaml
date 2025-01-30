@@ -1,6 +1,6 @@
 import type { Configuration, Stats } from "@rspack/core";
 import { readFile } from "node:fs/promises";
-import path, { join } from "node:path";
+import { join } from "node:path";
 import { rspack as createRspack } from "@rspack/core";
 import { describe, expect, it } from "vitest";
 import { testdir } from "vitest-testdirs";
@@ -72,7 +72,7 @@ describe("handles yaml", () => {
       ],
     }, testdirPath);
 
-    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+    const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -89,7 +89,7 @@ describe("handles yaml", () => {
       ],
     }, testdirPath);
 
-    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+    const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -108,7 +108,7 @@ describe("handle yml", () => {
       ],
     }, testdirPath);
 
-    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+    const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -125,7 +125,7 @@ describe("handle yml", () => {
       ],
     }, testdirPath);
 
-    const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+    const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
     expect(removeComments(content)).toMatchSnapshot();
   });
@@ -145,7 +145,7 @@ it("handle multi document", async () => {
     ],
   }, testdirPath);
 
-  const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+  const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
   expect(removeComments(content)).toMatchSnapshot();
 });
@@ -170,7 +170,7 @@ it("handle transforms", async () => {
     ],
   }, testdirPath);
 
-  const content = await readFile(path.join(testdirPath, "dist", file), "utf-8");
+  const content = await readFile(join(testdirPath, "dist", file), "utf-8");
 
   expect(removeComments(content)).toMatchSnapshot();
 });
