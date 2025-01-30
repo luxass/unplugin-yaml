@@ -1,13 +1,19 @@
+import { join } from "node:path";
 import { build } from "esbuild";
 import { describe, expect, it } from "vitest";
+import { testdir } from "vitest-testdirs";
 import YAMLPlugin from "../src/esbuild";
 import { removeComments } from "./utils";
 
 describe("handles yaml", () => {
   it("expect yaml import to be a json object", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yaml"));
+
+    expect(testdirPath).toBeDefined();
+
     const result = await build({
       entryPoints: [
-        "./test/fixtures/basic/yaml/basic.js",
+        join(testdirPath, "basic.js"),
       ],
       format: "esm",
       write: false,
@@ -22,9 +28,13 @@ describe("handles yaml", () => {
   });
 
   it("expect yaml import to be a string", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yaml"));
+
+    expect(testdirPath).toBeDefined();
+
     const result = await build({
       entryPoints: [
-        "./test/fixtures/basic/yaml/basic-raw.js",
+        join(testdirPath, "basic-raw.js"),
       ],
       format: "esm",
       write: false,
@@ -41,9 +51,13 @@ describe("handles yaml", () => {
 
 describe("handles yml", () => {
   it("expect yml import to be a json object", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yml"));
+
+    expect(testdirPath).toBeDefined();
+
     const result = await build({
       entryPoints: [
-        "./test/fixtures/basic/yml/basic.js",
+        join(testdirPath, "basic.js"),
       ],
       format: "esm",
       write: false,
@@ -58,9 +72,13 @@ describe("handles yml", () => {
   });
 
   it("expect yml import to be a string", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yml"));
+
+    expect(testdirPath).toBeDefined();
+
     const result = await build({
       entryPoints: [
-        "./test/fixtures/basic/yml/basic-raw.js",
+        join(testdirPath, "basic-raw.js"),
       ],
       format: "esm",
       write: false,
@@ -76,9 +94,13 @@ describe("handles yml", () => {
 });
 
 it("handle multi document", async () => {
+  const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/multi"));
+
+  expect(testdirPath).toBeDefined();
+
   const result = await build({
     entryPoints: [
-      "./test/fixtures/multi/multi.js",
+      join(testdirPath, "multi.js"),
     ],
     format: "esm",
     write: false,
@@ -95,9 +117,13 @@ it("handle multi document", async () => {
 });
 
 it("handle transforms", async () => {
+  const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/transform"));
+
+  expect(testdirPath).toBeDefined();
+
   const result = await build({
     entryPoints: [
-      "./test/fixtures/transform/transform.js",
+      join(testdirPath, "transform.js"),
     ],
     format: "esm",
     write: false,

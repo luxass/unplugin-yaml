@@ -1,12 +1,18 @@
+import { join } from "node:path";
 import { rollup } from "rollup";
 import { describe, expect, it } from "vitest";
+import { testdir } from "vitest-testdirs";
 import YAMLPlugin from "../src/rollup";
 import { removeComments } from "./utils";
 
 describe("handles yaml", () => {
   it("expect yaml import to be a json object", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yaml"));
+
+    expect(testdirPath).toBeDefined();
+
     const bundle = await rollup({
-      input: "./test/fixtures/basic/yaml/basic.js",
+      input: join(testdirPath, "basic.js"),
       plugins: [
         YAMLPlugin(),
       ],
@@ -20,8 +26,12 @@ describe("handles yaml", () => {
   });
 
   it("expect yaml import to be a string", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yaml"));
+
+    expect(testdirPath).toBeDefined();
+
     const bundle = await rollup({
-      input: "./test/fixtures/basic/yaml/basic-raw.js",
+      input: join(testdirPath, "basic-raw.js"),
       plugins: [
         YAMLPlugin(),
       ],
@@ -37,8 +47,12 @@ describe("handles yaml", () => {
 
 describe("handle yml", () => {
   it("expect yml import to be a json object", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yml"));
+
+    expect(testdirPath).toBeDefined();
+
     const bundle = await rollup({
-      input: "./test/fixtures/basic/yml/basic.js",
+      input: join(testdirPath, "basic.js"),
       plugins: [
         YAMLPlugin(),
       ],
@@ -52,8 +66,12 @@ describe("handle yml", () => {
   });
 
   it("expect yml import to be a string", async () => {
+    const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic/yml"));
+
+    expect(testdirPath).toBeDefined();
+
     const bundle = await rollup({
-      input: "./test/fixtures/basic/yml/basic-raw.js",
+      input: join(testdirPath, "basic-raw.js"),
       plugins: [
         YAMLPlugin(),
       ],
@@ -68,8 +86,12 @@ describe("handle yml", () => {
 });
 
 it("handle multi document", async () => {
+  const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/multi"));
+
+  expect(testdirPath).toBeDefined();
+
   const bundle = await rollup({
-    input: "./test/fixtures/multi/multi.js",
+    input: join(testdirPath, "multi.js"),
     plugins: [
       YAMLPlugin({
         type: "multi",
@@ -85,8 +107,12 @@ it("handle multi document", async () => {
 });
 
 it("handle transforms", async () => {
+  const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/transform"));
+
+  expect(testdirPath).toBeDefined();
+
   const bundle = await rollup({
-    input: "./test/fixtures/transform/transform.js",
+    input: join(testdirPath, "transform.js"),
     plugins: [
       YAMLPlugin({
         transform(data) {

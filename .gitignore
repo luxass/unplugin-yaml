@@ -14,3 +14,4 @@ dist
 !.env.example
 
 .vite-inspect
+.vitest-testdirs

@@ -63,6 +63,9 @@ importers:
       vitest:
         specifier: ^2.1.6
         version: 2.1.8(@types/node@22.10.10)(terser@5.37.0)
+      vitest-testdirs:
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.1.8(@types/node@22.10.10)(terser@5.37.0))
       webpack:
         specifier: ^5.96.1
         version: 5.97.1(esbuild@0.24.2)
@@ -5870,6 +5873,10 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  testdirs@0.1.4:
+    resolution: {integrity: sha512-6ITYziGX1OmfR2HGJgjFwxnKIWdytUuVZV3JwkCal7m2v9kw+r+CZcwjIzjn5Q8Bxdm60a3L3tLDhUOuEwklsQ==}
+    engines: {node: '>=20'}
+
   text-decoder@1.2.1:
     resolution: {integrity: sha512-x9v3H/lTKIJKQQe7RPQkLfKAnc9lUTkWDypIQgTzPJAq+5/GCDHonmshfvlsNSj58yyshbIJJDLmU15qNERrXQ==}
 
@@ -6419,6 +6426,12 @@ packages:
     peerDependenciesMeta:
       vite:
         optional: true
+
+  vitest-testdirs@2.1.1:
+    resolution: {integrity: sha512-1bVjra7vT07fFasVYmpWYBYvvGBogrvjBOBk3UVhCD4ESwhU+CcLBEnpo21jBDgM1KWvWQsg3HZgerMnnBDcsQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      vitest: '>=2.0.5 <4.0.0'
 
   vitest@2.1.8:
     resolution: {integrity: sha512-1vBKTZskHw/aosXqQUlVWWlGUxSJR8YtiyZDJAFeW2kPAeX6S3Sool0mjspO+kXLuxVWlEDDowBAeqeAQefqLQ==}
@@ -13515,6 +13528,8 @@ snapshots:
       commander: 2.20.3
       source-map-support: 0.5.21
 
+  testdirs@0.1.4: {}
+
   text-decoder@1.2.1: {}
 
   thenify-all@1.6.0:
@@ -14109,6 +14124,11 @@ snapshots:
   vitefu@1.0.4(vite@5.4.14(@types/node@22.10.10)(terser@5.37.0)):
     optionalDependencies:
       vite: 5.4.14(@types/node@22.10.10)(terser@5.37.0)
+
+  vitest-testdirs@2.1.1(vitest@2.1.8(@types/node@22.10.10)(terser@5.37.0)):
+    dependencies:
+      testdirs: 0.1.4
+      vitest: 2.1.8(@types/node@22.10.10)(terser@5.37.0)
 
   vitest@2.1.8(@types/node@22.10.10)(terser@5.37.0):
     dependencies:
