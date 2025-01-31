@@ -11,8 +11,8 @@ catalog:
   "@rspack/cli": 1.2.2
   "@rspack/core": ^1.1.4
   "@types/node": ^22.9.0
-  "@types/react": ^18.3.12
-  "@types/react-dom": ^18.3.1
+  "@types/react": ^19.0.0
+  "@types/react-dom": ^19.0.0
   "@vitejs/plugin-react": ^4.3.4
   "@vitejs/plugin-vue": ^5.2.1
   astro: ^4.16.16
@@ -23,8 +23,8 @@ catalog:
   nuxt: ^3.14.1592
   postcss: ^8.4.49
   postcss-loader: ^8.1.1
-  react: ^18.3.1
-  react-dom: ^18.3.1
+  react: ^19.0.0
+  react-dom: ^19.0.0
   react-router-dom: ^7.0.1
   rolldown: ^0.15.0
   rollup: ^4.27.4
