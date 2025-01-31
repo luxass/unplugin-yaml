@@ -91,8 +91,8 @@ catalogs:
       specifier: ^1.24.0
       version: 1.29.1
     tailwindcss:
-      specifier: ^3.4.15
-      version: 3.4.17
+      specifier: ^4.0.0
+      version: 4.0.1
     ts-node:
       specifier: ^10.9.2
       version: 10.9.2
@@ -215,13 +215,13 @@ importers:
         version: 0.9.4(typescript@5.7.3)
       '@astrojs/tailwind':
         specifier: 'catalog:'
-        version: 5.1.5(astro@4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 5.1.5(astro@4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3))(tailwindcss@4.0.1)(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
       astro:
         specifier: 'catalog:'
         version: 4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 4.0.1
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -262,7 +262,7 @@ importers:
         version: 1.29.1
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 4.0.1
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -284,7 +284,7 @@ importers:
     devDependencies:
       '@nuxtjs/tailwindcss':
         specifier: 'catalog:'
-        version: 6.13.1(magicast@0.3.5)(rollup@4.32.1)
+        version: 6.13.1(magicast@0.3.5)(rollup@4.32.1)(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -324,7 +324,7 @@ importers:
         version: 8.1.1(@rspack/core@1.2.2(@swc/helpers@0.5.13))(postcss@8.5.1)(typescript@5.7.3)(webpack@5.97.1(esbuild@0.24.2))
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 4.0.1
       ts-node:
         specifier: 'catalog:'
         version: 10.9.2(@types/node@22.12.0)(typescript@5.7.3)
@@ -373,7 +373,7 @@ importers:
         version: 1.29.1
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 4.0.1
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -410,7 +410,7 @@ importers:
         version: 1.29.1
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+        version: 4.0.1
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -5997,6 +5997,9 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  tailwindcss@4.0.1:
+    resolution: {integrity: sha512-UK5Biiit/e+r3i0O223bisoS5+y7ZT1PM8Ojn0MxRHzXN1VPZ2KY6Lo6fhu1dOfCfyUAlK7Lt6wSxowRabATBw==}
+
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
@@ -7107,13 +7110,13 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/tailwind@5.1.5(astro@4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))':
+  '@astrojs/tailwind@5.1.5(astro@4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3))(tailwindcss@4.0.1)(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))':
     dependencies:
       astro: 4.16.16(@types/node@22.12.0)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
-      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
+      tailwindcss: 4.0.1
     transitivePeerDependencies:
       - ts-node
 
@@ -8168,7 +8171,7 @@ snapshots:
       - vue-tsc
       - yaml
 
-  '@nuxtjs/tailwindcss@6.13.1(magicast@0.3.5)(rollup@4.32.1)':
+  '@nuxtjs/tailwindcss@6.13.1(magicast@0.3.5)(rollup@4.32.1)(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))':
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.32.1)
       autoprefixer: 10.4.20(postcss@8.5.1)
@@ -8180,7 +8183,7 @@ snapshots:
       pathe: 2.0.2
       postcss: 8.5.1
       postcss-nesting: 13.0.1(postcss@8.5.1)
-      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.17)
+      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3)))
       tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))
       ufo: 1.5.4
       unctx: 2.4.1
@@ -13569,7 +13572,7 @@ snapshots:
 
   system-architecture@0.1.0: {}
 
-  tailwind-config-viewer@2.0.4(tailwindcss@3.4.17):
+  tailwind-config-viewer@2.0.4(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))):
     dependencies:
       '@koa/router': 12.0.2
       commander: 6.2.1
@@ -13609,6 +13612,8 @@ snapshots:
       sucrase: 3.35.0
     transitivePeerDependencies:
       - ts-node
+
+  tailwindcss@4.0.1: {}
 
   tapable@2.2.1: {}
 
