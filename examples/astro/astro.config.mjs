@@ -9,6 +9,6 @@ export default defineConfig({
     YamlPlugin(),
   ],
   vite: {
-    plugins: [Inspect(), tailwindcss()],
+    plugins: [tailwindcss(), Inspect()],
   },
 });
