@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/tailwind": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
