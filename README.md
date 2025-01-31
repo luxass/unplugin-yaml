@@ -194,9 +194,8 @@ YAMLPlugin({
     /\.yamlcustom$/, // .yamlcustom
   ],
   parserOptions: {
-    // see js-yaml load options
+    // see yaml load options
   }
-
 });
 ```
 ### TypeScript
