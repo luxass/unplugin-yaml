@@ -38,7 +38,7 @@ catalog:
   vite: ^6.0.1
   vite-plugin-inspect: ^0.10.1
   vite-plugin-vue-devtools: ^7.6.7
-  vitest: ^2.1.6
+  vitest: ^3.0.0
   vitest-testdirs: ^2.1.1
   vue: ^3.5.13
   vue-loader: ^17.4.2
