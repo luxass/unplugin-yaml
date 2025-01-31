@@ -19,7 +19,7 @@ catalog:
   autoprefixer: ^10.4.20
   esbuild: ^0.24.0
   eslint: ^9.15.0
-  next: 15.0.3
+  next: 15.1.2
   nuxt: ^3.14.1592
   postcss: ^8.4.49
   postcss-loader: ^8.1.1
