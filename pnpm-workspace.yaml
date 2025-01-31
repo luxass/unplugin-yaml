@@ -2,7 +2,7 @@ packages:
   - examples/**
 catalog:
   "@astrojs/check": ^0.9.4
-  "@astrojs/tailwind": ^5.1.2
+  "@astrojs/tailwind": ^6.0.0
   "@luxass/eslint-config": ^4.14.0
   "@nuxt/kit": ^3.14.1592
   "@nuxt/schema": ^3.14.1592
