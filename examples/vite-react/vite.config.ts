@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import yaml from "unplugin-yaml/vite";
 import { defineConfig } from "vite";
@@ -8,6 +9,7 @@ export default defineConfig({
   plugins: [
     react(),
     yaml(),
+    tailwindcss(),
     inspect(),
   ],
 });
