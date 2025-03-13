@@ -1,20 +1,20 @@
 packages:
   - examples/**
 catalog:
-  '@astrojs/check': ^0.9.4
-  '@luxass/eslint-config': ^4.16.0
-  '@tailwindcss/vite': ^4.0.14
-  '@nuxt/kit': ^3.16.0
-  '@nuxt/schema': ^3.16.0
-  '@nuxtjs/tailwindcss': ^6.13.2
-  '@rollup/pluginutils': ^5.1.4
-  '@rspack/cli': 1.2.8
-  '@rspack/core': ^1.2.8
-  '@types/node': ^22.9.0
-  '@types/react': ^19.0.10
-  '@types/react-dom': ^19.0.4
-  '@vitejs/plugin-react': ^4.3.4
-  '@vitejs/plugin-vue': ^5.2.1
+  "@astrojs/check": ^0.9.4
+  "@luxass/eslint-config": ^4.16.0
+  "@tailwindcss/vite": ^4.0.14
+  "@nuxt/kit": ^3.16.0
+  "@nuxt/schema": ^3.16.0
+  "@nuxtjs/tailwindcss": ^6.13.2
+  "@rollup/pluginutils": ^5.1.4
+  "@rspack/cli": 1.2.8
+  "@rspack/core": ^1.2.8
+  "@types/node": ^22.9.0
+  "@types/react": ^19.0.10
+  "@types/react-dom": ^19.0.4
+  "@vitejs/plugin-react": ^4.3.4
+  "@vitejs/plugin-vue": ^5.2.1
   astro: ^5.5.2
   autoprefixer: ^10.4.21
   esbuild: ^0.25.1

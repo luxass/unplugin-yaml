@@ -3,11 +3,12 @@
  * @module
  */
 
+import type { UnpluginFactory, UnpluginInstance } from "unplugin";
 import type { YamlOptions, YAMLValue } from "./types";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { createFilter } from "@rollup/pluginutils";
-import { createUnplugin, type UnpluginFactory, type UnpluginInstance } from "unplugin";
+import { createUnplugin } from "unplugin";
 import { parse, parseAllDocuments } from "yaml";
 import { PLUGIN_NAME } from "./constants";
 

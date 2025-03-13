@@ -1,5 +1,6 @@
+import type { RspackPluginFunction } from "@rspack/core";
 import { defineConfig } from "@rspack/cli";
-import { rspack, type RspackPluginFunction } from "@rspack/core";
+import { rspack } from "@rspack/core";
 import YamlPlugin from "unplugin-yaml/rspack";
 import { VueLoaderPlugin } from "vue-loader";
 
