@@ -1,13 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`handle multi document 1`] = `"console.log([{apiVersion:"batch/v1",kind:"CronJob",metadata:{name:"first-cronjob",namespace:"default"},spec:{schedule:"*/10 * * * *",concurrencyPolicy:"Forbid",successfulJobsHistoryLimit:3,failedJobsHistoryLimit:1,jobTemplate:{spec:{template:{spec:{containers:[{name:"first-job",image:"busybox:latest",command:["/bin/sh","-c",'echo "First job running"; date']}],restartPolicy:"OnFailure"}}}}}},{apiVersion:"batch/v1",kind:"CronJob",metadata:{name:"second-cronjob",namespace:"default"},spec:{schedule:"0 0 * * *",concurrencyPolicy:"Forbid",successfulJobsHistoryLimit:3,failedJobsHistoryLimit:1,jobTemplate:{spec:{template:{spec:{containers:[{name:"second-job",image:"busybox:latest",command:["/bin/sh","-c",'echo "Second job running"; date']}],restartPolicy:"OnFailure"}}}}}}]);"`;
+exports[`handle multi document 1`] = `"(()=>{"use strict";console.log([{apiVersion:"batch/v1",kind:"CronJob",metadata:{name:"first-cronjob",namespace:"default"},spec:{schedule:"*/10 * * * *",concurrencyPolicy:"Forbid",successfulJobsHistoryLimit:3,failedJobsHistoryLimit:1,jobTemplate:{spec:{template:{spec:{containers:[{name:"first-job",image:"busybox:latest",command:["/bin/sh","-c",'echo "First job running"; date']}],restartPolicy:"OnFailure"}}}}}},{apiVersion:"batch/v1",kind:"CronJob",metadata:{name:"second-cronjob",namespace:"default"},spec:{schedule:"0 0 * * *",concurrencyPolicy:"Forbid",successfulJobsHistoryLimit:3,failedJobsHistoryLimit:1,jobTemplate:{spec:{template:{spec:{containers:[{name:"second-job",image:"busybox:latest",command:["/bin/sh","-c",'echo "Second job running"; date']}],restartPolicy:"OnFailure"}}}}}}])})();"`;
 
-exports[`handle transforms 1`] = `"console.log({this:"transformed"});"`;
+exports[`handle transforms 1`] = `"(()=>{"use strict";console.log({this:"transformed"})})();"`;
 
-exports[`handle yml > expect yml import to be a json object 1`] = `"console.log({pluginDir:"./plugins",web:{enabled:!0},logging:{type:"stdout",level:"info"}});"`;
+exports[`handle yml > expect yml import to be a json object 1`] = `"(()=>{"use strict";console.log({pluginDir:"./plugins",web:{enabled:!0},logging:{type:"stdout",level:"info"}})})();"`;
 
-exports[`handle yml > expect yml import to be a string 1`] = `"console.log("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");"`;
+exports[`handle yml > expect yml import to be a string 1`] = `"(()=>{"use strict";console.log("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n")})();"`;
 
-exports[`handles yaml > expect yaml import to be a json object 1`] = `"console.log({pluginDir:"./plugins",web:{enabled:!0},logging:{type:"stdout",level:"info"}});"`;
+exports[`handles yaml > expect yaml import to be a json object 1`] = `"(()=>{"use strict";console.log({pluginDir:"./plugins",web:{enabled:!0},logging:{type:"stdout",level:"info"}})})();"`;
 
-exports[`handles yaml > expect yaml import to be a string 1`] = `"console.log("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n");"`;
+exports[`handles yaml > expect yaml import to be a string 1`] = `"(()=>{"use strict";console.log("pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n")})();"`;
