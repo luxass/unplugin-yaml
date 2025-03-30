@@ -196,26 +196,25 @@
     }
   },
   "dependencies": {
-    "@rollup/pluginutils": "catalog:",
-    "unplugin": "catalog:",
-    "yaml": "catalog:"
+    "@rollup/pluginutils": "catalog:prod",
+    "unplugin": "catalog:prod",
+    "yaml": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@nuxt/kit": "catalog:",
-    "@nuxt/schema": "catalog:",
-    "@rspack/core": "catalog:",
-    "@types/node": "catalog:",
-    "esbuild": "catalog:",
-    "eslint": "catalog:",
-    "rolldown": "catalog:",
-    "rollup": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vite-plugin-inspect": "catalog:",
-    "vitest": "catalog:",
-    "vitest-testdirs": "catalog:",
-    "webpack": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@nuxt/kit": "catalog:dev",
+    "@nuxt/schema": "catalog:dev",
+    "@rspack/core": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "esbuild": "catalog:dev",
+    "eslint": "catalog:dev",
+    "rolldown": "catalog:dev",
+    "rollup": "catalog:dev",
+    "tsup": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev",
+    "vitest": "catalog:dev",
+    "vitest-testdirs": "catalog:dev",
+    "webpack": "catalog:dev"
   }
 }

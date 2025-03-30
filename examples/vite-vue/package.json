@@ -10,22 +10,22 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "catalog:",
-    "vue-router": "catalog:"
+    "vue": "catalog:example",
+    "vue-router": "catalog:example"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "catalog:",
-    "autoprefixer": "catalog:",
-    "postcss": "catalog:",
-    "shiki": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "unplugin-vue-router": "catalog:",
+    "@vitejs/plugin-vue": "catalog:example",
+    "autoprefixer": "catalog:example",
+    "postcss": "catalog:example",
+    "shiki": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:dev",
+    "unplugin-vue-router": "catalog:example",
     "unplugin-yaml": "workspace:*",
-    "vite": "catalog:",
-    "vite-plugin-inspect": "catalog:",
-    "vite-plugin-vue-devtools": "catalog:",
-    "vue-tsc": "catalog:"
+    "vite": "catalog:dev",
+    "vite-plugin-inspect": "catalog:example",
+    "vite-plugin-vue-devtools": "catalog:example",
+    "vue-tsc": "catalog:example"
   },
   "stackblitz": {
     "installDependencies": false,

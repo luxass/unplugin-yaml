@@ -8,22 +8,22 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "shiki": "catalog:",
-    "vue": "catalog:",
-    "vue-router": "catalog:"
+    "shiki": "catalog:example",
+    "vue": "catalog:example",
+    "vue-router": "catalog:example"
   },
   "devDependencies": {
-    "@rspack/cli": "catalog:",
-    "@rspack/core": "catalog:",
-    "autoprefixer": "catalog:",
-    "postcss": "catalog:",
-    "postcss-loader": "catalog:",
-    "tailwindcss": "catalog:",
-    "ts-node": "catalog:",
-    "typescript": "catalog:",
+    "@rspack/cli": "catalog:example",
+    "@rspack/core": "catalog:dev",
+    "autoprefixer": "catalog:example",
+    "postcss": "catalog:example",
+    "postcss-loader": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "ts-node": "catalog:example",
+    "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
-    "vue-loader": "catalog:",
-    "vue-tsc": "catalog:"
+    "vue-loader": "catalog:example",
+    "vue-tsc": "catalog:example"
   },
   "stackblitz": {
     "installDependencies": false,

@@ -10,23 +10,23 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "react-router-dom": "catalog:"
+    "react": "catalog:example",
+    "react-dom": "catalog:example",
+    "react-router-dom": "catalog:example"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
-    "autoprefixer": "catalog:",
-    "postcss": "catalog:",
-    "shiki": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
+    "@tailwindcss/vite": "catalog:example",
+    "@types/react": "catalog:dev",
+    "@types/react-dom": "catalog:dev",
+    "@vitejs/plugin-react": "catalog:example",
+    "autoprefixer": "catalog:example",
+    "postcss": "catalog:example",
+    "shiki": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
-    "vite": "catalog:",
-    "vite-plugin-inspect": "catalog:"
+    "vite": "catalog:dev",
+    "vite-plugin-inspect": "catalog:example"
   },
   "stackblitz": {
     "installDependencies": false,

@@ -12,15 +12,15 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/check": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "astro": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:"
+    "@astrojs/check": "catalog:example",
+    "@tailwindcss/vite": "catalog:example",
+    "astro": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:dev"
   },
   "devDependencies": {
     "unplugin-yaml": "workspace:*",
-    "vite-plugin-inspect": "catalog:"
+    "vite-plugin-inspect": "catalog:example"
   },
   "stackblitz": {
     "installDependencies": false,

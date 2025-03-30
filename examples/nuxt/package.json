@@ -11,15 +11,15 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "nuxt": "catalog:",
-    "shiki": "catalog:",
-    "vue": "catalog:"
+    "nuxt": "catalog:example",
+    "shiki": "catalog:example",
+    "vue": "catalog:example"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "catalog:",
-    "typescript": "catalog:",
+    "@nuxtjs/tailwindcss": "catalog:example",
+    "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
-    "vue-tsc": "catalog:"
+    "vue-tsc": "catalog:example"
   },
   "stackblitz": {
     "installDependencies": false,

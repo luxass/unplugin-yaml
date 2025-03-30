@@ -10,18 +10,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "next": "catalog:example",
+    "react": "catalog:example",
+    "react-dom": "catalog:example"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "postcss": "catalog:",
-    "shiki": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
+    "@types/node": "catalog:dev",
+    "@types/react": "catalog:dev",
+    "@types/react-dom": "catalog:dev",
+    "postcss": "catalog:example",
+    "shiki": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*"
   },
   "stackblitz": {
