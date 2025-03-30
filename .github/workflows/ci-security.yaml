@@ -7,13 +7,13 @@ on:
   pull_request:
     types: [opened, synchronize]
     paths:
-      - '.github/workflows/**'
+      - ".github/workflows/**"
   push:
     branches:
       - main
-      - 'renovate/**'
+      - "renovate/**"
     paths:
-      - '.github/workflows/**'
+      - ".github/workflows/**"
 
 jobs:
   zizmor:
