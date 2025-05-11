@@ -29,7 +29,7 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "default": "./dist/index.js"
       },
       "require": {
         "types": "./dist/index.d.cts",
@@ -39,7 +39,7 @@
     "./astro": {
       "import": {
         "types": "./dist/astro.d.ts",
-        "default": "./dist/astro.mjs"
+        "default": "./dist/astro.js"
       },
       "require": {
         "types": "./dist/astro.d.cts",
@@ -49,7 +49,7 @@
     "./farm": {
       "import": {
         "types": "./dist/farm.d.ts",
-        "default": "./dist/farm.mjs"
+        "default": "./dist/farm.js"
       },
       "require": {
         "types": "./dist/farm.d.cts",
@@ -59,7 +59,7 @@
     "./rspack": {
       "import": {
         "types": "./dist/rspack.d.ts",
-        "default": "./dist/rspack.mjs"
+        "default": "./dist/rspack.js"
       },
       "require": {
         "types": "./dist/rspack.d.cts",
@@ -69,7 +69,7 @@
     "./rolldown": {
       "import": {
         "types": "./dist/rolldown.d.ts",
-        "default": "./dist/rolldown.mjs"
+        "default": "./dist/rolldown.js"
       },
       "require": {
         "types": "./dist/rolldown.d.cts",
@@ -79,7 +79,7 @@
     "./esbuild": {
       "import": {
         "types": "./dist/esbuild.d.ts",
-        "default": "./dist/esbuild.mjs"
+        "default": "./dist/esbuild.js"
       },
       "require": {
         "types": "./dist/esbuild.d.cts",
@@ -89,7 +89,7 @@
     "./nuxt": {
       "import": {
         "types": "./dist/nuxt.d.ts",
-        "default": "./dist/nuxt.mjs"
+        "default": "./dist/nuxt.js"
       },
       "require": {
         "types": "./dist/nuxt.d.cts",
@@ -99,7 +99,7 @@
     "./rollup": {
       "import": {
         "types": "./dist/rollup.d.ts",
-        "default": "./dist/rollup.mjs"
+        "default": "./dist/rollup.js"
       },
       "require": {
         "types": "./dist/rollup.d.cts",
@@ -109,7 +109,7 @@
     "./vite": {
       "import": {
         "types": "./dist/vite.d.ts",
-        "default": "./dist/vite.mjs"
+        "default": "./dist/vite.js"
       },
       "require": {
         "types": "./dist/vite.d.cts",
@@ -119,7 +119,7 @@
     "./webpack": {
       "import": {
         "types": "./dist/webpack.d.ts",
-        "default": "./dist/webpack.mjs"
+        "default": "./dist/webpack.js"
       },
       "require": {
         "types": "./dist/webpack.d.cts",
@@ -132,7 +132,7 @@
     "./package.json": "./package.json"
   },
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -145,8 +145,8 @@
     "playground/*"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "lint": "eslint .",
     "test": "vitest --run",
     "test:watch": "vitest",
@@ -211,9 +211,10 @@
     "@types/node": "catalog:dev",
     "esbuild": "catalog:dev",
     "eslint": "catalog:dev",
+    "publint": "catalog:dev",
     "rolldown": "catalog:dev",
     "rollup": "catalog:dev",
-    "tsup": "catalog:dev",
+    "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "vite": "catalog:dev",
     "vitest": "catalog:dev",
