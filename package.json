@@ -25,9 +25,6 @@
     "nuxt",
     "astro"
   ],
-  "workspaces": [
-    "playground/*"
-  ],
   "exports": {
     ".": {
       "import": {
@@ -140,6 +137,12 @@
   "files": [
     "dist",
     "yaml.d.ts"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "playground/*"
   ],
   "scripts": {
     "build": "tsup",
