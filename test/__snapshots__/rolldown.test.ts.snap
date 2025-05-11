@@ -1,8 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`handle multi document 1`] = `
-"
-var data = [{
+"var data = [{
 	"apiVersion": "batch/v1",
 	"kind": "CronJob",
 	"metadata": {
@@ -60,8 +59,7 @@ console.log(cronjobs_default);
 `;
 
 exports[`handle transforms 1`] = `
-"
-var data = { "this": "transformed" };
+"var data = { "this": "transformed" };
 var config_default = data;
 
 console.log(config_default);
@@ -69,8 +67,7 @@ console.log(config_default);
 `;
 
 exports[`handle yml > expect yml import to be a json object 1`] = `
-"
-var data = {
+"var data = {
 	"pluginDir": "./plugins",
 	"web": { "enabled": true },
 	"logging": {
@@ -85,16 +82,14 @@ console.log(yml_config_default);
 `;
 
 exports[`handle yml > expect yml import to be a string 1`] = `
-"
-var yml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+"var yml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
 console.log(yml_config_default);
 "
 `;
 
 exports[`handles yaml > expect yaml import to be a json object 1`] = `
-"
-var data = {
+"var data = {
 	"pluginDir": "./plugins",
 	"web": { "enabled": true },
 	"logging": {
@@ -109,8 +104,7 @@ console.log(yaml_config_default);
 `;
 
 exports[`handles yaml > expect yaml import to be a string 1`] = `
-"
-var yaml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
+"var yaml_config_default = "pluginDir: ./plugins\\n\\nweb:\\n  enabled: true\\n\\nlogging:\\n  type: stdout\\n  level: info\\n";
 
 console.log(yaml_config_default);
 "
