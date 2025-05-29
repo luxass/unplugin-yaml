@@ -205,6 +205,7 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "catalog:dev",
+    "@luxass/utils": "catalog:dev",
     "@nuxt/kit": "catalog:dev",
     "@nuxt/schema": "catalog:dev",
     "@rspack/core": "catalog:dev",

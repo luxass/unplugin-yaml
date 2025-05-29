@@ -9,6 +9,9 @@ catalogs:
     '@luxass/eslint-config':
       specifier: ^4.18.1
       version: 4.18.1
+    '@luxass/utils':
+      specifier: ^2.2.1
+      version: 2.2.1
     '@nuxt/kit':
       specifier: ^3.17.4
       version: 3.17.4
@@ -167,6 +170,9 @@ importers:
       '@luxass/eslint-config':
         specifier: catalog:dev
         version: 4.18.1(@typescript-eslint/utils@8.32.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.15)(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.4(@types/debug@4.1.12)(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))
+      '@luxass/utils':
+        specifier: catalog:dev
+        version: 2.2.1
       '@nuxt/kit':
         specifier: catalog:dev
         version: 3.17.4(magicast@0.3.5)
@@ -1495,6 +1501,10 @@ packages:
         optional: true
       prettier-plugin-astro:
         optional: true
+
+  '@luxass/utils@2.2.1':
+    resolution: {integrity: sha512-riQdjsEXmHxaPDcWappVi1YYF/rsveZTvSIsev1m7qYQrRq6aRNYWTVVPhye3Pdf0NCWUNIKIdtrtpHhx+SgYA==}
+    engines: {node: '>=20'}
 
   '@mapbox/node-pre-gyp@1.0.11':
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
@@ -9244,6 +9254,8 @@ snapshots:
       - supports-color
       - typescript
       - vitest
+
+  '@luxass/utils@2.2.1': {}
 
   '@mapbox/node-pre-gyp@1.0.11':
     dependencies:
