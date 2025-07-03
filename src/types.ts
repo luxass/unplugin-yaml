@@ -6,13 +6,13 @@ import type {
   ToJSOptions,
 } from "yaml";
 
-export type YAMLValue =
-  | number
-  | string
-  | boolean
-  | null
-  | { [key: string]: YAMLValue }
-  | YAMLValue[];
+export type YAMLValue
+  = | number
+    | string
+    | boolean
+    | null
+    | { [key: string]: YAMLValue }
+    | YAMLValue[];
 
 export interface YamlOptions {
   /**
