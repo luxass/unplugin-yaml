@@ -27,6 +27,10 @@ async function webpack(config: Configuration, testdirPath: string): Promise<null
       ...config,
     });
 
+    if (compiler == null) {
+      throw new Error("webpack compiler is not defined");
+    }
+
     compiler.run((err, stats) => {
       if (err) {
         reject(err);
