@@ -14,9 +14,9 @@ catalogs:
     esbuild: ^0.25.8
     eslint: ^9.32.0
     publint: ^0.3.12
-    rolldown: 1.0.0-beta.30
+    rolldown: 1.0.0-beta.33
     rollup: ^4.46.2
-    tsdown: ^0.13.0
+    tsdown: ^0.14.0
     typescript: ^5.9.2
     vite: ^7.0.6
     vitest: ^3.2.4
@@ -32,7 +32,7 @@ catalogs:
     "@vitejs/plugin-vue": ^6.0.1
     astro: ^5.12.7
     autoprefixer: ^10.4.21
-    next: 15.4.5
+    next: 15.4.6
     nuxt: ^4.0.2
     postcss: ^8.5.6
     postcss-loader: ^8.1.1
@@ -42,7 +42,7 @@ catalogs:
     shiki: ^3.9.1
     tailwindcss: ^4.1.11
     ts-node: ^10.9.2
-    unplugin-vue-router: ^0.14.0
+    unplugin-vue-router: ^0.15.0
     vite-plugin-inspect: ^11.3.2
     vite-plugin-vue-devtools: ^8.0.0
     vue: ^3.5.18
