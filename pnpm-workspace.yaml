@@ -3,57 +3,57 @@ packages:
 
 catalogs:
   dev:
-    "@luxass/eslint-config": ^5.2.5
-    "@luxass/utils": ^2.6.2
-    "@nuxt/kit": ^4.0.2
-    "@nuxt/schema": ^4.0.2
-    "@rspack/core": ^1.4.11
+    "@luxass/eslint-config": ^5.3.0
+    "@luxass/utils": ^2.7.0
+    "@nuxt/kit": ^4.0.3
+    "@nuxt/schema": ^4.0.3
+    "@rspack/core": ^1.5.1
     "@types/node": ^22.9.0
-    "@types/react": ^19.1.9
-    "@types/react-dom": ^19.1.7
-    esbuild: ^0.25.8
-    eslint: ^9.32.0
+    "@types/react": ^19.1.12
+    "@types/react-dom": ^19.1.9
+    esbuild: ^0.25.9
+    eslint: ^9.34.0
     publint: ^0.3.12
-    rolldown: 1.0.0-beta.30
-    rollup: ^4.46.2
-    tsdown: ^0.13.0
+    rolldown: 1.0.0-beta.34
+    rollup: ^4.49.0
+    tsdown: ^0.14.2
     typescript: ^5.9.2
-    vite: ^7.0.6
+    vite: ^7.1.3
     vitest: ^3.2.4
-    vitest-testdirs: ^4.0.1
-    webpack: ^5.101.0
+    vitest-testdirs: ^4.2.0
+    webpack: ^5.101.3
 
   example:
     "@astrojs/check": ^0.9.4
     "@nuxtjs/tailwindcss": ^6.14.0
-    "@rspack/cli": 1.4.11
-    "@tailwindcss/vite": ^4.1.11
-    "@vitejs/plugin-react": ^4.7.0
+    "@rspack/cli": 1.5.1
+    "@tailwindcss/vite": ^4.1.12
+    "@vitejs/plugin-react": ^5.0.2
     "@vitejs/plugin-vue": ^6.0.1
-    astro: ^5.12.7
+    astro: ^5.13.4
     autoprefixer: ^10.4.21
-    next: 15.4.5
-    nuxt: ^4.0.2
+    next: 15.5.2
+    nuxt: ^4.0.3
     postcss: ^8.5.6
     postcss-loader: ^8.1.1
     react: ^19.1.1
     react-dom: ^19.1.1
-    react-router-dom: ^7.7.1
-    shiki: ^3.9.1
-    tailwindcss: ^4.1.11
+    react-router-dom: ^7.8.2
+    shiki: ^3.12.0
+    tailwindcss: ^4.1.12
     ts-node: ^10.9.2
-    unplugin-vue-router: ^0.14.0
-    vite-plugin-inspect: ^11.3.2
-    vite-plugin-vue-devtools: ^8.0.0
-    vue: ^3.5.18
+    unplugin-vue-router: ^0.15.0
+    vite-plugin-inspect: ^11.3.3
+    vite-plugin-vue-devtools: ^8.0.1
+    vue: ^3.5.20
     vue-loader: ^17.4.2
     vue-router: ^4.5.1
-    vue-tsc: ^3.0.4
+    vue-tsc: ^3.0.6
 
   prod:
     "@rollup/pluginutils": ^5.2.0
-    unplugin: ^2.3.5
-    yaml: ^2.8.0
+    unplugin: ^2.3.9
+    yaml: ^2.8.1
 
 onlyBuiltDependencies:
   - esbuild
