@@ -26,7 +26,7 @@ catalogs:
   example:
     "@astrojs/check": ^0.9.4
     "@nuxtjs/tailwindcss": ^6.14.0
-    "@rspack/cli": 1.5.1
+    "@rspack/cli": 1.5.2
     "@tailwindcss/vite": ^4.1.12
     "@vitejs/plugin-react": ^5.0.2
     "@vitejs/plugin-vue": ^6.0.1
