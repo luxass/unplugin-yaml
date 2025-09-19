@@ -8,13 +8,13 @@ catalogs:
     "@nuxt/kit": ^4.1.2
     "@nuxt/schema": ^4.1.2
     "@rspack/core": ^1.5.3
-    "@types/node": ^22.9.0
+    "@types/node": ^22.18.1
     "@types/react": ^19.1.13
     "@types/react-dom": ^19.1.9
     esbuild: ^0.25.9
     eslint: ^9.35.0
     publint: ^0.3.12
-    rolldown: 1.0.0-beta.37
+    rolldown: 1.0.0-beta.38
     rollup: ^4.50.1
     tsdown: ^0.15.1
     typescript: ^5.9.2
@@ -26,7 +26,7 @@ catalogs:
   example:
     "@astrojs/check": ^0.9.4
     "@nuxtjs/tailwindcss": ^6.14.0
-    "@rspack/cli": 1.5.3
+    "@rspack/cli": 1.5.5
     "@tailwindcss/vite": ^4.1.13
     "@vitejs/plugin-react": ^5.0.2
     "@vitejs/plugin-vue": ^6.0.1
