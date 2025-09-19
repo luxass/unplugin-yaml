@@ -25,10 +25,10 @@ catalogs:
       specifier: ^22.18.1
       version: 22.18.1
     '@types/react':
-      specifier: ^19.1.13
+      specifier: 19.1.13
       version: 19.1.13
     '@types/react-dom':
-      specifier: ^19.1.9
+      specifier: 19.1.9
       version: 19.1.9
     esbuild:
       specifier: ^0.25.9
