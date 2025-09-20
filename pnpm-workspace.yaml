@@ -8,7 +8,7 @@ catalogs:
     "@nuxt/kit": 4.1.2
     "@nuxt/schema": 4.1.2
     "@rspack/core": 1.5.3
-    "@types/node": 22.18.1
+    "@types/node": 22.18.3
     "@types/react": 19.1.13
     "@types/react-dom": 19.1.9
     esbuild: 0.25.9
@@ -20,7 +20,7 @@ catalogs:
     typescript: 5.9.2
     vite: ^7.1.5
     vitest: ^3.2.4
-    vitest-testdirs: 4.2.0
+    vitest-testdirs: 4.2.1
     webpack: 5.101.3
 
   example:
