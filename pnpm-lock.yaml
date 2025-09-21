@@ -55,7 +55,7 @@ catalogs:
       specifier: 7.1.6
       version: 7.1.6
     vitest:
-      specifier: ^3.2.4
+      specifier: 3.2.4
       version: 3.2.4
     vitest-testdirs:
       specifier: 4.2.0
