@@ -7,20 +7,20 @@ catalogs:
     "@luxass/utils": 2.7.2
     "@nuxt/kit": 4.1.2
     "@nuxt/schema": 4.1.2
-    "@rspack/core": 1.5.3
-    "@types/node": 22.18.1
+    "@rspack/core": 1.5.5
+    "@types/node": 22.18.6
     "@types/react": 19.1.13
     "@types/react-dom": 19.1.9
-    esbuild: 0.25.9
+    esbuild: 0.25.10
     eslint: ^9.35.0
-    publint: 0.3.12
+    publint: 0.3.13
     rolldown: 1.0.0-beta.38
-    rollup: 4.50.2
-    tsdown: 0.15.1
+    rollup: 4.52.0
+    tsdown: 0.15.3
     typescript: 5.9.2
     vite: 7.1.6
     vitest: 3.2.4
-    vitest-testdirs: 4.2.0
+    vitest-testdirs: 4.2.1
     webpack: 5.101.3
 
   example:
@@ -30,7 +30,7 @@ catalogs:
     "@tailwindcss/vite": 4.1.13
     "@vitejs/plugin-react": 5.0.3
     "@vitejs/plugin-vue": 6.0.1
-    astro: 5.13.7
+    astro: 5.13.9
     autoprefixer: 10.4.21
     next: 15.5.3
     nuxt: 4.1.2
@@ -39,7 +39,7 @@ catalogs:
     react: 19.1.1
     react-dom: 19.1.1
     react-router-dom: 7.9.1
-    shiki: 3.12.2
+    shiki: 3.13.0
     tailwindcss: 4.1.13
     ts-node: 10.9.2
     unplugin-vue-router: 0.15.0
