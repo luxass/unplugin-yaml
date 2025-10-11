@@ -30,7 +30,7 @@ catalogs:
     "@tailwindcss/vite": 4.1.13
     "@vitejs/plugin-react": 5.0.3
     "@vitejs/plugin-vue": 6.0.1
-    astro: 5.13.7
+    astro: 5.14.3
     autoprefixer: 10.4.21
     next: 15.5.3
     nuxt: 4.1.2
