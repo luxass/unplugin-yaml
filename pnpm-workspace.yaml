@@ -18,7 +18,7 @@ catalogs:
     rollup: 4.50.2
     tsdown: 0.15.1
     typescript: 5.9.2
-    vite: 7.1.6
+    vite: 7.1.11
     vitest: 3.2.4
     vitest-testdirs: 4.2.0
     webpack: 5.101.3
