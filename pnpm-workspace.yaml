@@ -8,7 +8,7 @@ catalogs:
     "@nuxt/kit": 4.2.0
     "@nuxt/schema": 4.2.0
     "@rspack/core": 1.5.8
-    "@types/node": 22.18.1
+    "@types/node": 22.18.12
     "@types/react": 19.2.2
     "@types/react-dom": 19.2.2
     esbuild: 0.25.11
@@ -16,7 +16,7 @@ catalogs:
     publint: 0.3.15
     rolldown: 1.0.0-beta.45
     rollup: 4.52.5
-    tsdown: 0.15.10
+    tsdown: 0.15.11
     typescript: 5.9.3
     vite: 7.1.12
     vitest: 4.0.4
