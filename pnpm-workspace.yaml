@@ -18,7 +18,7 @@ catalogs:
     rollup: 4.52.5
     tsdown: 0.15.11
     typescript: 5.9.3
-    vite: 7.1.12
+    vite: 7.2.2
     vitest: 4.0.4
     vitest-testdirs: 4.3.0
     webpack: 5.102.1
@@ -28,7 +28,7 @@ catalogs:
     "@nuxtjs/tailwindcss": 6.14.0
     "@rspack/cli": 1.5.8
     "@tailwindcss/vite": 4.1.16
-    "@vitejs/plugin-react": 5.1.0
+    "@vitejs/plugin-react": 5.1.1
     "@vitejs/plugin-vue": 6.0.1
     astro: 5.15.6
     autoprefixer: 10.4.21
