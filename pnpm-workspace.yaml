@@ -3,20 +3,20 @@ packages:
 
 catalogs:
   dev:
-    "@luxass/eslint-config": 6.0.1
+    "@luxass/eslint-config": 6.0.3
     "@luxass/utils": 2.7.2
-    "@nuxt/kit": 4.2.0
-    "@nuxt/schema": 4.2.0
-    "@rspack/core": 1.5.8
-    "@types/node": 22.18.12
-    "@types/react": 19.2.2
-    "@types/react-dom": 19.2.2
-    esbuild: 0.25.11
+    "@nuxt/kit": 4.2.1
+    "@nuxt/schema": 4.2.1
+    "@rspack/core": 1.6.3
+    "@types/node": 22.19.1
+    "@types/react": 19.2.5
+    "@types/react-dom": 19.2.3
+    esbuild: 0.27.0
     eslint: 9.38.0
     publint: 0.3.15
-    rolldown: 1.0.0-beta.45
-    rollup: 4.52.5
-    tsdown: 0.15.11
+    rolldown: 1.0.0-beta.50
+    rollup: 4.53.2
+    tsdown: 0.16.5
     typescript: 5.9.3
     vite: 7.1.12
     vitest: 4.0.4
@@ -26,29 +26,29 @@ catalogs:
   example:
     "@astrojs/check": 0.9.5
     "@nuxtjs/tailwindcss": 6.14.0
-    "@rspack/cli": 1.5.8
-    "@tailwindcss/vite": 4.1.16
+    "@rspack/cli": 1.6.3
+    "@tailwindcss/vite": 4.1.17
     "@vitejs/plugin-react": 5.1.0
     "@vitejs/plugin-vue": 6.0.1
     astro: 5.15.9
-    autoprefixer: 10.4.21
-    next: 16.0.0
-    nuxt: 4.2.0
+    autoprefixer: 10.4.22
+    next: 16.0.3
+    nuxt: 4.2.1
     postcss: 8.5.6
     postcss-loader: 8.2.0
     react: 19.2.0
     react-dom: 19.2.0
-    react-router-dom: 7.9.4
-    shiki: 3.14.0
-    tailwindcss: 4.1.16
+    react-router-dom: 7.9.6
+    shiki: 3.15.0
+    tailwindcss: 4.1.17
     ts-node: 10.9.2
-    unplugin-vue-router: 0.16.0
+    unplugin-vue-router: 0.17.0
     vite-plugin-inspect: 11.3.3
     vite-plugin-vue-devtools: 8.0.3
-    vue: 3.5.22
+    vue: 3.5.24
     vue-loader: 17.4.2
     vue-router: 4.6.3
-    vue-tsc: 3.1.2
+    vue-tsc: 3.1.4
 
   prod:
     "@rollup/pluginutils": 5.3.0
