@@ -8,7 +8,7 @@ catalogs:
     "@nuxt/kit": 4.2.0
     "@nuxt/schema": 4.2.0
     "@rspack/core": 1.5.8
-    "@types/node": 22.18.12
+    "@types/node": 24.10.9
     "@types/react": 19.2.2
     "@types/react-dom": 19.2.2
     esbuild: 0.25.11
