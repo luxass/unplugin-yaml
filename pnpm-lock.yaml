@@ -144,8 +144,8 @@ catalogs:
       specifier: 5.3.0
       version: 5.3.0
     unplugin:
-      specifier: 2.3.10
-      version: 2.3.10
+      specifier: 3.0.0
+      version: 3.0.0
     yaml:
       specifier: 2.8.1
       version: 2.8.1
@@ -162,7 +162,7 @@ importers:
         version: 5.15.9(@netlify/blobs@9.1.2)(@types/node@22.18.12)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.5)(terser@5.43.1)(typescript@5.9.3)(yaml@2.8.1)
       unplugin:
         specifier: catalog:prod
-        version: 2.3.10
+        version: 3.0.0
       yaml:
         specifier: catalog:prod
         version: 2.8.1
@@ -6787,6 +6787,10 @@ packages:
   unplugin@2.3.10:
     resolution: {integrity: sha512-6NCPkv1ClwH+/BGE9QeoTIl09nuiAt0gS28nn1PvYXsGKRwM2TCbFA2QiilmehPDTXIe684k4rZI1yl3A1PCUw==}
     engines: {node: '>=18.12.0'}
+
+  unplugin@3.0.0:
+    resolution: {integrity: sha512-0Mqk3AT2TZCXWKdcoaufeXNukv2mTrEZExeXlHIOZXdqYoHHr4n51pymnwV8x2BOVxwXbK2HLlI7usrqMpycdg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   unrun@0.2.0:
     resolution: {integrity: sha512-iaCxWG/6kmjP3wUTBheowjFm6LuI8fd/A3Uz7DbMoz8HvQsJThh7tWZKWJfVltOSK3LuIJFzepr7g6fbuhUasw==}
@@ -15008,6 +15012,12 @@ snapshots:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       acorn: 8.15.0
+      picomatch: 4.0.3
+      webpack-virtual-modules: 0.6.2
+
+  unplugin@3.0.0:
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
       picomatch: 4.0.3
       webpack-virtual-modules: 0.6.2
 
