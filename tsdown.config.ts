@@ -2,7 +2,7 @@ import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: ["src/*.ts"],
-  format: ["cjs", "esm"],
+  format: ["esm"],
   clean: true,
   dts: true,
   treeshake: true,
@@ -10,4 +10,5 @@ export default defineConfig({
   outputOptions: {
     exports: "named",
   },
+  exports: true,
 });
