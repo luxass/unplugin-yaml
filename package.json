@@ -35,7 +35,9 @@
     "./rolldown": "./dist/rolldown.mjs",
     "./rollup": "./dist/rollup.mjs",
     "./rspack": "./dist/rspack.mjs",
-    "./types": "./dist/types.mjs",
+    "./types": {
+      "types": "./yaml.d.ts"
+    },
     "./vite": "./dist/vite.mjs",
     "./webpack": "./dist/webpack.mjs",
     "./package.json": "./package.json"

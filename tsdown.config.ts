@@ -10,5 +10,13 @@ export default defineConfig({
   outputOptions: {
     exports: "named",
   },
-  exports: true,
+  exports: {
+    packageJson: false,
+    customExports(exports) {
+      exports["./types"] = { types: "./yaml.d.ts" };
+      exports["./package.json"] = "./package.json";
+
+      return exports;
+    },
+  },
 });
