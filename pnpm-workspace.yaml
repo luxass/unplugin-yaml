@@ -21,7 +21,7 @@ catalogs:
     vite: 7.1.12
     vitest: 4.0.4
     vitest-testdirs: 4.3.0
-    webpack: 5.102.1
+    webpack: 5.104.1
 
   example:
     "@astrojs/check": 0.9.5
