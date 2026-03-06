@@ -41,7 +41,7 @@ catalogs:
     react: 19.2.4
     react-dom: 19.2.4
     react-router-dom: 7.13.0
-    shiki: 3.22.0
+    shiki: 4.0.0
     tailwindcss: 4.2.0
     ts-node: 10.9.2
     unplugin-vue-router: 0.19.2
