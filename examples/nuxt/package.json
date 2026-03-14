@@ -16,7 +16,8 @@
     "vue": "catalog:example"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "catalog:example",
+    "@tailwindcss/vite": "catalog:example",
+    "tailwindcss": "catalog:example",
     "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
     "vue-tsc": "catalog:example"

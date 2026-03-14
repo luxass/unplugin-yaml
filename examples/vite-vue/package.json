@@ -14,13 +14,13 @@
     "vue-router": "catalog:example"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "catalog:example",
     "@vitejs/plugin-vue": "catalog:example",
     "autoprefixer": "catalog:example",
     "postcss": "catalog:example",
     "shiki": "catalog:example",
     "tailwindcss": "catalog:example",
     "typescript": "catalog:dev",
-    "unplugin-vue-router": "catalog:example",
     "unplugin-yaml": "workspace:*",
     "vite": "catalog:dev",
     "vite-plugin-inspect": "catalog:example",

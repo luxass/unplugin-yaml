@@ -15,6 +15,7 @@
     "react-dom": "catalog:example"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "catalog:example",
     "@types/node": "catalog:dev",
     "@types/react": "catalog:dev",
     "@types/react-dom": "catalog:dev",

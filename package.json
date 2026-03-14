@@ -75,7 +75,7 @@
     "esbuild": "*",
     "rolldown": ">=0.14.0",
     "rollup": ">=3",
-    "vite": ">=3",
+    "vite": ">=5",
     "webpack": "^4 || ^5"
   },
   "peerDependenciesMeta": {

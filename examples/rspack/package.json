@@ -15,6 +15,7 @@
   "devDependencies": {
     "@rspack/cli": "catalog:example",
     "@rspack/core": "catalog:dev",
+    "@tailwindcss/postcss": "catalog:example",
     "autoprefixer": "catalog:example",
     "postcss": "catalog:example",
     "postcss-loader": "catalog:example",
