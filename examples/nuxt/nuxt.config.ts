@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  css: ["~/app/assets/css/main.css"],
+  css: ["./app/assets/css/main.css"],
   compatibilityDate: "2024-07-03",
   modules: ["unplugin-yaml/nuxt"],
   future: {
