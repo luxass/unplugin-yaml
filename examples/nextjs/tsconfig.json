@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "incremental": true,
+    "target": "ES2017",
     "jsx": "react-jsx",
     "lib": [
       "dom",
@@ -28,8 +29,7 @@
       {
         "name": "next"
       }
-    ],
-    "target": "ES2017"
+    ]
   },
   "include": [
     "next-env.d.ts",
