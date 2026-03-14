@@ -30,7 +30,6 @@
     "./astro": "./dist/astro.mjs",
     "./constants": "./dist/constants.mjs",
     "./esbuild": "./dist/esbuild.mjs",
-    "./farm": "./dist/farm.mjs",
     "./nuxt": "./dist/nuxt.mjs",
     "./rolldown": "./dist/rolldown.mjs",
     "./rollup": "./dist/rollup.mjs",
