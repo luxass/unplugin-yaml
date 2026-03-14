@@ -15,13 +15,16 @@ import { PLUGIN_NAME } from "./constants";
 export type { YamlOptions, YAMLValue };
 
 const PREFIX = `\0virtual:yaml:`;
+const DEFAULT_INCLUDE_RE = /\.ya?ml(\?raw)?$/;
+const RAW_IMPORT_RE = /\.ya?ml\?raw$/;
+const CRLF_RE = /\r\n/g;
 
 /**
  * A unplugin factory, used by Unplugin to create a new plugin instance.
  */
 export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (options = {}) => {
   const filter = createFilter(
-    options.include || /\.ya?ml(\?raw)?$/,
+    options.include || DEFAULT_INCLUDE_RE,
   );
   const type = options.type || "single";
 
@@ -57,7 +60,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
       return `var data = ${JSON.stringify(content, null, 2)};\n\nexport default data;`;
     },
     resolveId(id, importer) {
-      if (/\.ya?ml\?raw$/.test(id) && importer) {
+      if (RAW_IMPORT_RE.test(id) && importer) {
         const [relativePath] = id.split("?raw");
         const fullPath = join(dirname(importer), relativePath!);
         return `${PREFIX}${fullPath}:raw`;
@@ -80,7 +83,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
         throw new Error("invalid path can't read yaml file");
       }
 
-      const content = (await readFile(path, "utf-8")).replace(/\r\n/g, "\n");
+      const content = (await readFile(path, "utf-8")).replace(CRLF_RE, "\n");
 
       return {
         code: `export default ${JSON.stringify(content)}`,
