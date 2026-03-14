@@ -27,8 +27,8 @@ catalogs:
 
   example:
     "@astrojs/check": 0.9.7
-    "@nuxtjs/tailwindcss": 6.14.0
     "@rspack/cli": 1.7.8
+    "@tailwindcss/postcss": 4.2.1
     "@tailwindcss/vite": 4.2.1
     "@vitejs/plugin-react": 6.0.1
     "@vitejs/plugin-vue": 6.0.5
@@ -44,7 +44,6 @@ catalogs:
     shiki: 4.0.2
     tailwindcss: 4.2.1
     ts-node: 10.9.2
-    unplugin-vue-router: 0.19.2
     vite-plugin-inspect: 11.3.3
     vite-plugin-vue-devtools: 8.1.0
     vue: 3.5.30
