@@ -34,7 +34,7 @@
     "schemaVersion": 1,
     "vite": { "type": "compatible", "versions": ">=5" },
     "rollup": { "type": "compatible", "versions": ">=3" },
-    "rolldown": { "type": "compatible", "versions": ">=0.14.0" }
+    "rolldown": { "type": "compatible", "versions": ">=1.0.0-rc.10" }
   },
   "exports": {
     ".": "./dist/index.mjs",
@@ -83,7 +83,7 @@
     "@rspack/core": "^1.0.13",
     "astro": ">=3",
     "esbuild": "*",
-    "rolldown": ">=0.14.0",
+    "rolldown": ">=1.0.0-rc.10",
     "rollup": ">=3",
     "vite": ">=5",
     "webpack": "^4 || ^5"
