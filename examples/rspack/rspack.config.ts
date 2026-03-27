@@ -1,11 +1,13 @@
-import type { RspackPluginFunction } from "@rspack/core";
+import type { RspackPluginFunction, SwcLoaderOptions } from "@rspack/core";
 import { defineConfig } from "@rspack/cli";
 import { rspack } from "@rspack/core";
-import YamlPlugin from "unplugin-yaml/rspack";
-import { VueLoaderPlugin } from "vue-loader";
+import { VueLoaderPlugin } from "rspack-vue-loader";
+import yaml from "unplugin-yaml/rspack";
+
+// Target browsers, see: https://github.com/browserslist/browserslist
+const targets = ["last 2 versions", "> 0.2%", "not dead", "Firefox ESR"];
 
 export default defineConfig({
-  context: __dirname,
   entry: {
     main: "./src/main.ts",
   },
@@ -13,8 +15,7 @@ export default defineConfig({
     extensions: ["...", ".ts", ".vue"],
   },
   plugins: [
-    // @ts-expect-error asd
-    YamlPlugin(),
+    yaml(),
     new VueLoaderPlugin() as RspackPluginFunction,
     new rspack.HtmlRspackPlugin({
       template: "./index.html",
@@ -28,7 +29,7 @@ export default defineConfig({
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: "rspack-vue-loader",
         options: {
           experimentalInlineMatchResource: true,
         },
@@ -39,21 +40,13 @@ export default defineConfig({
           {
             loader: "builtin:swc-loader",
             options: {
-              sourceMap: true,
               jsc: {
                 parser: {
                   syntax: "typescript",
                 },
               },
-              env: {
-                targets: [
-                  "chrome >= 87",
-                  "edge >= 88",
-                  "firefox >= 78",
-                  "safari >= 14",
-                ],
-              },
-            },
+              env: { targets },
+            } satisfies SwcLoaderOptions,
           },
         ],
       },
@@ -63,18 +56,7 @@ export default defineConfig({
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: {
-                  "@tailwindcss/postcss": {},
-                },
-              },
-            },
-          },
-        ],
+        use: ["postcss-loader"],
         type: "css",
       },
     ],

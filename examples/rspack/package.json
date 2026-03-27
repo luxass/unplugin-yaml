@@ -19,11 +19,11 @@
     "autoprefixer": "catalog:example",
     "postcss": "catalog:example",
     "postcss-loader": "catalog:example",
+    "rspack-vue-loader": "catalog:example",
     "tailwindcss": "catalog:example",
     "ts-node": "catalog:example",
     "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
-    "vue-loader": "catalog:example",
     "vue-tsc": "catalog:example"
   }
 }
