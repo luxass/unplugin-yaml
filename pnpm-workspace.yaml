@@ -10,7 +10,7 @@ catalogs:
     "@nuxt/kit": 4.4.2
     "@nuxt/schema": 4.4.2
     "@rspack/core": 1.7.10
-    "@types/node": 22.18.12
+    "@types/node": 22.19.15
     "@types/react": 19.2.14
     "@types/react-dom": 19.2.3
     esbuild: 0.27.4
@@ -37,7 +37,7 @@ catalogs:
     react: 19.2.4
     react-dom: 19.2.4
     react-router-dom: 7.13.2
-    rspack-vue-loader: 17.4.5
+    rspack-vue-loader: 17.5.0
     shiki: 4.0.2
     tailwindcss: 4.2.2
     ts-node: 10.9.2
