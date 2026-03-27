@@ -26,9 +26,5 @@
     "vite-plugin-inspect": "catalog:example",
     "vite-plugin-vue-devtools": "catalog:example",
     "vue-tsc": "catalog:example"
-  },
-  "stackblitz": {
-    "installDependencies": false,
-    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }

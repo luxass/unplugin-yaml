@@ -25,9 +25,5 @@
     "unplugin-yaml": "workspace:*",
     "vue-loader": "catalog:example",
     "vue-tsc": "catalog:example"
-  },
-  "stackblitz": {
-    "installDependencies": false,
-    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }

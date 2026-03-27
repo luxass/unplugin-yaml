@@ -27,9 +27,5 @@
     "unplugin-yaml": "workspace:*",
     "vite": "catalog:dev",
     "vite-plugin-inspect": "catalog:example"
-  },
-  "stackblitz": {
-    "installDependencies": false,
-    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }
