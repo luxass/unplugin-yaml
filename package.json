@@ -19,8 +19,12 @@
     "yaml",
     "unplugin",
     "vite",
+    "vite-plugin",
     "webpack",
     "rollup",
+    "rollup-plugin",
+    "rolldown",
+    "rolldown-plugin",
     "esbuild",
     "nuxt",
     "astro"
