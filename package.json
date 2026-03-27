@@ -51,7 +51,7 @@
     "yaml.d.ts"
   ],
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "workspaces": [
     "playground/*"
