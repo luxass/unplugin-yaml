@@ -1,5 +1,10 @@
-shellEmulator: true
+ignoreScripts: true
+catalogMode: prefer
+minimumReleaseAge: 5760
 trustPolicy: no-downgrade
+strictDepBuilds: true
+blockExoticSubdeps: true
+shellEmulator: true
 packages:
   - examples/**
 
