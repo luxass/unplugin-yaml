@@ -36,7 +36,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
     },
     transform(code, id) {
       if (id.endsWith("?raw")) {
-        return `${code}`;
+        return code;
       }
 
       let parsed = {};
@@ -59,16 +59,18 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
 
       return `var data = ${JSON.stringify(content, null, 2)};\n\nexport default data;`;
     },
-    resolveId(id, importer) {
+    resolveId(id, importer): string | undefined {
       if (RAW_IMPORT_RE.test(id) && importer) {
         const [relativePath] = id.split("?raw");
         const fullPath = join(dirname(importer), relativePath!);
         return `${PREFIX}${fullPath}:raw`;
       }
+
+      return undefined;
     },
-    async load(id) {
+    async load(id): Promise<{ code: string; map: null } | undefined> {
       if (!id.startsWith(PREFIX)) {
-        return;
+        return undefined;
       }
 
       id = id.slice(PREFIX.length);
@@ -96,7 +98,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
 /**
  * The main unplugin instance.
  */
-export const unplugin: UnpluginInstance<YamlOptions | undefined, boolean> =
+export const unplugin: UnpluginInstance<YamlOptions | undefined> =
   /* #__PURE__ */ createUnplugin(unpluginFactory);
 
 export default unplugin;

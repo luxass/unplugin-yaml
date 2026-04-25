@@ -6,7 +6,6 @@
 
 import { createVitePlugin } from "unplugin";
 
-import type unplugin from "./";
 import { unpluginFactory } from "./";
 
 /**
@@ -22,4 +21,4 @@ import { unpluginFactory } from "./";
  * })
  * ```
  */
-export default createVitePlugin(unpluginFactory) as typeof unplugin.vite;
+export default createVitePlugin(unpluginFactory);

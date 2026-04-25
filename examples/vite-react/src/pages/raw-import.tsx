@@ -22,7 +22,7 @@ export function RawImport() {
       }
     };
 
-    highlightCode();
+    void highlightCode();
   });
 
   return (

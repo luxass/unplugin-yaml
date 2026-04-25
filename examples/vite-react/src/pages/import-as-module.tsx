@@ -22,7 +22,7 @@ export function ImportAsModule() {
       }
     };
 
-    highlightCode();
+    void highlightCode();
   });
 
   return (

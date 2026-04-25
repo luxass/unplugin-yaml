@@ -124,6 +124,8 @@ describe("rspack", () => {
                   this: "transformed",
                 };
               }
+
+              return data;
             },
           }),
         ],

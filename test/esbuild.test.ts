@@ -86,6 +86,8 @@ describe("esbuild", () => {
                 this: "transformed",
               };
             }
+
+            return data;
           },
         }),
       ],

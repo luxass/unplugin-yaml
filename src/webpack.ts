@@ -6,7 +6,6 @@
 
 import { createWebpackPlugin } from "unplugin";
 
-import type unplugin from "./";
 import { unpluginFactory } from "./";
 
 /**
@@ -20,4 +19,4 @@ import { unpluginFactory } from "./";
  * }
  * ```
  */
-export default createWebpackPlugin(unpluginFactory) as typeof unplugin.webpack;
+export default createWebpackPlugin(unpluginFactory);

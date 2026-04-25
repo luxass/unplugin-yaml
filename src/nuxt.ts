@@ -5,7 +5,6 @@
  */
 
 import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from "@nuxt/kit";
-import type { NuxtModule } from "@nuxt/schema";
 
 import type { YamlOptions } from "./";
 import { NUXT_CONFIG_KEY, PLUGIN_NAME } from "./constants";
@@ -39,4 +38,4 @@ export default defineNuxtModule<YamlOptions>({
     addWebpackPlugin(() => webpack(options));
     addVitePlugin(() => vite(options));
   },
-}) as NuxtModule<YamlOptions>;
+});
