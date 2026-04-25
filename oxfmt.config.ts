@@ -15,12 +15,5 @@ export default defineConfig({
     newlinesBetween: true,
     order: "asc",
   },
-  overrides: [
-    {
-      files: ["**/headers/generated/**/*.test.ts"],
-      options: {
-        printWidth: 200,
-      },
-    },
-  ],
+  ignorePatterns: ["typed-router.d.ts"],
 });
