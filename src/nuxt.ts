@@ -4,9 +4,10 @@
  * @module
  */
 
-import type { NuxtModule } from "@nuxt/schema";
-import type { YamlOptions } from "./";
 import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from "@nuxt/kit";
+import type { NuxtModule } from "@nuxt/schema";
+
+import type { YamlOptions } from "./";
 import { NUXT_CONFIG_KEY, PLUGIN_NAME } from "./constants";
 import vite from "./vite";
 import webpack from "./webpack";

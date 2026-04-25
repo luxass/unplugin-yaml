@@ -2,33 +2,40 @@
   "name": "unplugin-yaml",
   "version": "4.1.0",
   "description": "Allow importing YAML files as JSON or Strings",
-  "type": "module",
+  "keywords": [
+    "astro",
+    "esbuild",
+    "nuxt",
+    "rolldown",
+    "rolldown-plugin",
+    "rollup",
+    "rollup-plugin",
+    "unplugin",
+    "vite",
+    "vite-plugin",
+    "webpack",
+    "yaml"
+  ],
+  "bugs": "https://github.com/luxass/unplugin-yaml/issues",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.33.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/unplugin-yaml.git"
   },
-  "bugs": "https://github.com/luxass/unplugin-yaml/issues",
-  "keywords": [
-    "yaml",
-    "unplugin",
-    "vite",
-    "vite-plugin",
-    "webpack",
-    "rollup",
-    "rollup-plugin",
-    "rolldown",
-    "rolldown-plugin",
-    "esbuild",
-    "nuxt",
-    "astro"
+  "workspaces": [
+    "playground/*"
   ],
+  "files": [
+    "dist",
+    "yaml.d.ts"
+  ],
+  "type": "module",
+  "types": "dist/index.d.mts",
   "exports": {
     ".": "./dist/index.mjs",
     "./astro": "./dist/astro.mjs",
@@ -45,17 +52,6 @@
     "./webpack": "./dist/webpack.mjs",
     "./package.json": "./package.json"
   },
-  "types": "dist/index.d.mts",
-  "files": [
-    "dist",
-    "yaml.d.ts"
-  ],
-  "engines": {
-    "node": ">=22"
-  },
-  "workspaces": [
-    "playground/*"
-  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
@@ -72,6 +68,31 @@
     "play:astro": "pnpm run --filter @unplugin-yaml/astro-example dev",
     "play:rspack": "pnpm run --filter @unplugin-yaml/rspack-example dev",
     "typecheck": "tsc --noEmit && pnpm -r typecheck"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "catalog:runtime",
+    "unplugin": "catalog:runtime",
+    "yaml": "catalog:runtime"
+  },
+  "devDependencies": {
+    "@luxass/utils": "catalog:dev",
+    "@nuxt/kit": "catalog:dev",
+    "@nuxt/schema": "catalog:dev",
+    "@rspack/core": "catalog:dev",
+    "@types/node": "catalog:types",
+    "esbuild": "catalog:dev",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
+    "publint": "catalog:dev",
+    "rolldown": "catalog:dev",
+    "rollup": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev",
+    "vitest": "catalog:dev",
+    "vitest-testdirs": "catalog:dev",
+    "webpack": "catalog:dev"
   },
   "peerDependencies": {
     "@nuxt/kit": "catalog:peer",
@@ -113,29 +134,8 @@
       "optional": true
     }
   },
-  "dependencies": {
-    "@rollup/pluginutils": "catalog:runtime",
-    "unplugin": "catalog:runtime",
-    "yaml": "catalog:runtime"
+  "engines": {
+    "node": ">=22"
   },
-  "devDependencies": {
-    "@luxass/utils": "catalog:dev",
-    "@nuxt/kit": "catalog:dev",
-    "@nuxt/schema": "catalog:dev",
-    "@rspack/core": "catalog:dev",
-    "@types/node": "catalog:types",
-    "esbuild": "catalog:dev",
-    "oxfmt": "catalog:dev",
-    "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev",
-    "publint": "catalog:dev",
-    "rolldown": "catalog:dev",
-    "rollup": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vite": "catalog:dev",
-    "vitest": "catalog:dev",
-    "vitest-testdirs": "catalog:dev",
-    "webpack": "catalog:dev"
-  }
+  "packageManager": "pnpm@10.33.0"
 }

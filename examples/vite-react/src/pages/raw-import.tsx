@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { codeToHtml } from "shiki";
+
 import config from "../config.yaml?raw";
 
 export function RawImport() {
@@ -25,9 +26,10 @@ export function RawImport() {
   });
 
   return (
-    <div dangerouslySetInnerHTML={{
-      __html: highlightedCode,
-    }}
+    <div
+      dangerouslySetInnerHTML={{
+        __html: highlightedCode,
+      }}
     />
   );
 }

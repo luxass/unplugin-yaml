@@ -3,14 +3,16 @@
  * @module
  */
 
-import type { UnpluginFactory, UnpluginInstance } from "unplugin";
-import type { YamlOptions, YAMLValue } from "./types";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+
 import { createFilter } from "@rollup/pluginutils";
+import type { UnpluginFactory, UnpluginInstance } from "unplugin";
 import { createUnplugin } from "unplugin";
 import { parse, parseAllDocuments } from "yaml";
+
 import { PLUGIN_NAME } from "./constants";
+import type { YamlOptions, YAMLValue } from "./types";
 
 export type { YamlOptions, YAMLValue };
 
@@ -23,9 +25,7 @@ const CRLF_RE = /\r\n/g;
  * A unplugin factory, used by Unplugin to create a new plugin instance.
  */
 export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (options = {}) => {
-  const filter = createFilter(
-    options.include || DEFAULT_INCLUDE_RE,
-  );
+  const filter = createFilter(options.include || DEFAULT_INCLUDE_RE);
   const type = options.type || "single";
 
   return {
@@ -96,6 +96,7 @@ export const unpluginFactory: UnpluginFactory<YamlOptions | undefined> = (option
 /**
  * The main unplugin instance.
  */
-export const unplugin: UnpluginInstance<YamlOptions | undefined, boolean> = /* #__PURE__ */ createUnplugin(unpluginFactory);
+export const unplugin: UnpluginInstance<YamlOptions | undefined, boolean> =
+  /* #__PURE__ */ createUnplugin(unpluginFactory);
 
 export default unplugin;

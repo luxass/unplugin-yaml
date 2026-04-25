@@ -25,7 +25,9 @@ import YAMLPlugin from "unplugin-yaml/vite";
 
 export default defineConfig({
   plugins: [
-    YAMLPlugin({ /* options */ }),
+    YAMLPlugin({
+      /* options */
+    }),
   ],
 });
 ```
@@ -41,7 +43,9 @@ import YAMLPlugin from "unplugin-yaml/rollup";
 
 export default {
   plugins: [
-    YAMLPlugin({ /* options */ }),
+    YAMLPlugin({
+      /* options */
+    }),
   ],
 };
 ```
@@ -56,7 +60,9 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require("unplugin-yaml/webpack").default({ /* options */ }),
+    require("unplugin-yaml/webpack").default({
+      /* options */
+    }),
   ],
 };
 ```
@@ -70,7 +76,12 @@ module.exports = {
 // nuxt.config.js
 export default defineNuxtConfig({
   modules: [
-    ["unplugin-yaml/nuxt", { /* options */ }]
+    [
+      "unplugin-yaml/nuxt",
+      {
+        /* options */
+      },
+    ],
   ],
 });
 ```
@@ -90,8 +101,8 @@ export default defineConfig({
   integrations: [
     YAMLPlugin({
       /* options */
-    })
-  ]
+    }),
+  ],
 });
 ```
 
@@ -129,9 +140,9 @@ import YAMLPlugin from "unplugin-yaml/rspack";
 export default {
   plugins: [
     new rspack.HtmlRspackPlugin({
-      template: "./index.html"
+      template: "./index.html",
     }),
-    YAMLPlugin()
+    YAMLPlugin(),
   ],
 };
 ```
@@ -167,9 +178,10 @@ YAMLPlugin({
   ],
   parserOptions: {
     // see yaml load options
-  }
+  },
 });
 ```
+
 ### TypeScript
 
 If you are using TypeScript, you need to add the following to your `tsconfig.json` file:
@@ -177,9 +189,7 @@ If you are using TypeScript, you need to add the following to your `tsconfig.jso
 ```json
 {
   "compilerOptions": {
-    "types": [
-      "unplugin-yaml/types"
-    ]
+    "types": ["unplugin-yaml/types"]
   }
 }
 ```

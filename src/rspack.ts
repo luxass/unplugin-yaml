@@ -4,8 +4,9 @@
  * @module
  */
 
-import type unplugin from "./";
 import { createRspackPlugin } from "unplugin";
+
+import type unplugin from "./";
 import { unpluginFactory } from "./";
 /**
  * Rspack plugin

@@ -1,8 +1,10 @@
 import { join } from "node:path";
+
 import { dedent } from "@luxass/utils";
 import { rolldown } from "rolldown";
 import { describe, expect, it } from "vitest";
 import { testdir } from "vitest-testdirs";
+
 import YAMLPlugin from "../src/rolldown";
 
 describe("rolldown", () => {
@@ -13,9 +15,7 @@ describe("rolldown", () => {
 
     const bundle = await rolldown({
       input: join(testdirPath, "basic.js"),
-      plugins: [
-        YAMLPlugin(),
-      ],
+      plugins: [YAMLPlugin()],
     });
 
     await bundle.write({
@@ -44,9 +44,7 @@ describe("rolldown", () => {
 
     const bundle = await rolldown({
       input: join(testdirPath, "basic-raw.js"),
-      plugins: [
-        YAMLPlugin(),
-      ],
+      plugins: [YAMLPlugin()],
     });
 
     await bundle.write({
@@ -147,11 +145,7 @@ describe("rolldown", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"First job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "First job running"; date'],
                       image: "busybox:latest",
                       name: "first-job",
                     },
@@ -181,11 +175,7 @@ describe("rolldown", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"Second job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "Second job running"; date'],
                       image: "busybox:latest",
                       name: "second-job",
                     },

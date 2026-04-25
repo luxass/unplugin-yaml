@@ -7,12 +7,5 @@ import VueDevTools from "vite-plugin-vue-devtools";
 import VueRouter from "vue-router/unplugin";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    VueRouter.vite(),
-    Vue(),
-    VueDevTools(),
-    YamlPlugin(),
-    tailwindcss(),
-    Inspect(),
-  ],
+  plugins: [VueRouter.vite(), Vue(), VueDevTools(), YamlPlugin(), tailwindcss(), Inspect()],
 });

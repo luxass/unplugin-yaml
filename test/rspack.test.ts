@@ -1,9 +1,11 @@
-import type { Configuration } from "@rspack/core";
 import { join } from "node:path";
+
 import { dedent } from "@luxass/utils";
+import type { Configuration } from "@rspack/core";
 import { rspack as createRspack } from "@rspack/core";
 import { describe, expect, it } from "vitest";
 import { testdir } from "vitest-testdirs";
+
 import YAMLPlugin from "../src/rspack";
 
 async function rspack(config: Configuration, testdirPath: string): Promise<null> {
@@ -54,12 +56,13 @@ describe("rspack", () => {
 
     expect(testdirPath).toBeDefined();
 
-    await rspack({
-      entry: join(testdirPath, "basic.js"),
-      plugins: [
-        YAMLPlugin(),
-      ],
-    }, testdirPath);
+    await rspack(
+      {
+        entry: join(testdirPath, "basic.js"),
+        plugins: [YAMLPlugin()],
+      },
+      testdirPath,
+    );
 
     const module = await import(join(testdirPath, "dist/bundle.js")).then((m) => m);
     expect(module).toBeDefined();
@@ -79,12 +82,13 @@ describe("rspack", () => {
 
     expect(testdirPath).toBeDefined();
 
-    await rspack({
-      entry: join(testdirPath, "basic-raw.js"),
-      plugins: [
-        YAMLPlugin(),
-      ],
-    }, testdirPath);
+    await rspack(
+      {
+        entry: join(testdirPath, "basic-raw.js"),
+        plugins: [YAMLPlugin()],
+      },
+      testdirPath,
+    );
 
     const module = await import(join(testdirPath, "dist/bundle.js")).then((m) => m);
     expect(module).toBeDefined();
@@ -109,20 +113,23 @@ describe("rspack", () => {
 
     expect(testdirPath).toBeDefined();
 
-    await rspack({
-      entry: join(testdirPath, "transform.js"),
-      plugins: [
-        YAMLPlugin({
-          transform(data) {
-            if (data != null && typeof data === "object" && "this" in data) {
-              return {
-                this: "transformed",
-              };
-            }
-          },
-        }),
-      ],
-    }, testdirPath);
+    await rspack(
+      {
+        entry: join(testdirPath, "transform.js"),
+        plugins: [
+          YAMLPlugin({
+            transform(data) {
+              if (data != null && typeof data === "object" && "this" in data) {
+                return {
+                  this: "transformed",
+                };
+              }
+            },
+          }),
+        ],
+      },
+      testdirPath,
+    );
 
     const config = await import(join(testdirPath, "dist/bundle.js")).then((m) => m.config);
     expect(config).toBeDefined();
@@ -137,14 +144,17 @@ describe("rspack", () => {
 
     expect(testdirPath).toBeDefined();
 
-    await rspack({
-      entry: join(testdirPath, "multi.js"),
-      plugins: [
-        YAMLPlugin({
-          type: "multi",
-        }),
-      ],
-    }, testdirPath);
+    await rspack(
+      {
+        entry: join(testdirPath, "multi.js"),
+        plugins: [
+          YAMLPlugin({
+            type: "multi",
+          }),
+        ],
+      },
+      testdirPath,
+    );
 
     const cronjobs = await import(join(testdirPath, "dist/bundle.js")).then((m) => m.cronjobs);
     expect(cronjobs).toBeDefined();
@@ -166,11 +176,7 @@ describe("rspack", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"First job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "First job running"; date'],
                       image: "busybox:latest",
                       name: "first-job",
                     },
@@ -200,11 +206,7 @@ describe("rspack", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"Second job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "Second job running"; date'],
                       image: "busybox:latest",
                       name: "second-job",
                     },

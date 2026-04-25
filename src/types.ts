@@ -1,18 +1,13 @@
 import type { FilterPattern } from "@rollup/pluginutils";
-import type {
-  DocumentOptions,
-  ParseOptions,
-  SchemaOptions,
-  ToJSOptions,
-} from "yaml";
+import type { DocumentOptions, ParseOptions, SchemaOptions, ToJSOptions } from "yaml";
 
-export type YAMLValue
-  = | number
-    | string
-    | boolean
-    | null
-    | { [key: string]: YAMLValue }
-    | YAMLValue[];
+export type YAMLValue =
+  | number
+  | string
+  | boolean
+  | null
+  | { [key: string]: YAMLValue }
+  | YAMLValue[];
 
 export interface YamlOptions {
   /**

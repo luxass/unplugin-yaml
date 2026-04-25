@@ -1,8 +1,10 @@
 import { join } from "node:path";
+
 import { dedent } from "@luxass/utils";
 import { build } from "vite";
 import { describe, expect, it } from "vitest";
 import { testdir } from "vitest-testdirs";
+
 import YAMLPlugin from "../src/vite";
 
 describe("vite", () => {
@@ -103,15 +105,17 @@ describe("vite", () => {
         outDir: join(testdirPath, "dist"),
         minify: false,
       },
-      plugins: [YAMLPlugin({
-        transform(data) {
-          if (data != null && typeof data === "object" && "this" in data) {
-            return {
-              this: "transformed",
-            };
-          }
-        },
-      })],
+      plugins: [
+        YAMLPlugin({
+          transform(data) {
+            if (data != null && typeof data === "object" && "this" in data) {
+              return {
+                this: "transformed",
+              };
+            }
+          },
+        }),
+      ],
     });
 
     if (!Array.isArray(result)) {
@@ -144,9 +148,11 @@ describe("vite", () => {
         outDir: join(testdirPath, "dist"),
         minify: false,
       },
-      plugins: [YAMLPlugin({
-        type: "multi",
-      })],
+      plugins: [
+        YAMLPlugin({
+          type: "multi",
+        }),
+      ],
     });
 
     if (!Array.isArray(result)) {
@@ -175,11 +181,7 @@ describe("vite", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"First job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "First job running"; date'],
                       image: "busybox:latest",
                       name: "first-job",
                     },
@@ -209,11 +211,7 @@ describe("vite", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"Second job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "Second job running"; date'],
                       image: "busybox:latest",
                       name: "second-job",
                     },

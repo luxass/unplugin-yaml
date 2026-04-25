@@ -16,34 +16,34 @@ jobs:
       matrix:
         tool:
           # rspack
-          - {name: "@rspack/core", version: latest}
-          - {name: "@rspack/core", version: 1.3.9}
-          - {name: "@rspack/core", version: 1.2.0}
+          - { name: "@rspack/core", version: latest }
+          - { name: "@rspack/core", version: 1.3.9 }
+          - { name: "@rspack/core", version: 1.2.0 }
 
           # webpack
-          - {name: webpack, version: latest}
-          - {name: webpack, version: 5.73.0}
+          - { name: webpack, version: latest }
+          - { name: webpack, version: 5.73.0 }
 
           # esbuild
-          - {name: esbuild, version: latest}
-          - {name: esbuild, version: 0.19.12}
+          - { name: esbuild, version: latest }
+          - { name: esbuild, version: 0.19.12 }
 
           # rollup
-          - {name: rollup, version: latest}
-          - {name: rollup, version: beta}
-          - {name: rollup, version: 4.22.5}
-          - {name: rollup, version: 4.17.0}
+          - { name: rollup, version: latest }
+          - { name: rollup, version: beta }
+          - { name: rollup, version: 4.22.5 }
+          - { name: rollup, version: 4.17.0 }
 
           # rolldown
-          - {name: rolldown, version: latest}
-          - {name: rolldown, version: canary}
-          - {name: rolldown, version: nightly}
-          - {name: rolldown, version: 1.0.0-beta.7}
+          - { name: rolldown, version: latest }
+          - { name: rolldown, version: canary }
+          - { name: rolldown, version: nightly }
+          - { name: rolldown, version: 1.0.0-beta.7 }
 
           # vite
-          - {name: vite, version: latest}
-          - {name: vite, version: 7.3.2}
-          - {name: vite, version: 6.0.2}
+          - { name: vite, version: latest }
+          - { name: vite, version: 7.3.2 }
+          - { name: vite, version: 6.0.2 }
       fail-fast: false
 
     steps:

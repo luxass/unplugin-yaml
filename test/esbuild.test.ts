@@ -1,8 +1,10 @@
 import { join } from "node:path";
+
 import { dedent } from "@luxass/utils";
 import { build } from "esbuild";
 import { describe, expect, it } from "vitest";
 import { testdir } from "vitest-testdirs";
+
 import YAMLPlugin from "../src/esbuild";
 
 describe("esbuild", () => {
@@ -12,16 +14,12 @@ describe("esbuild", () => {
     expect(testdirPath).toBeDefined();
 
     await build({
-      entryPoints: [
-        join(testdirPath, "basic.js"),
-      ],
+      entryPoints: [join(testdirPath, "basic.js")],
       format: "esm",
       outfile: join(testdirPath, "output.js"),
       bundle: true,
       minifySyntax: false,
-      plugins: [
-        YAMLPlugin(),
-      ],
+      plugins: [YAMLPlugin()],
     });
 
     const module = await import(join(testdirPath, "output.js")).then((m) => m);
@@ -43,16 +41,12 @@ describe("esbuild", () => {
     expect(testdirPath).toBeDefined();
 
     await build({
-      entryPoints: [
-        join(testdirPath, "basic-raw.js"),
-      ],
+      entryPoints: [join(testdirPath, "basic-raw.js")],
       format: "esm",
       outfile: join(testdirPath, "output-raw.js"),
       bundle: true,
       minifySyntax: false,
-      plugins: [
-        YAMLPlugin(),
-      ],
+      plugins: [YAMLPlugin()],
     });
 
     const module = await import(join(testdirPath, "output-raw.js")).then((m) => m);
@@ -79,9 +73,7 @@ describe("esbuild", () => {
     expect(testdirPath).toBeDefined();
 
     await build({
-      entryPoints: [
-        join(testdirPath, "transform.js"),
-      ],
+      entryPoints: [join(testdirPath, "transform.js")],
       format: "esm",
       outfile: join(testdirPath, "output-transform.js"),
       bundle: true,
@@ -113,9 +105,7 @@ describe("esbuild", () => {
     expect(testdirPath).toBeDefined();
 
     await build({
-      entryPoints: [
-        join(testdirPath, "multi.js"),
-      ],
+      entryPoints: [join(testdirPath, "multi.js")],
       format: "esm",
       outfile: join(testdirPath, "output-multi.js"),
       bundle: true,
@@ -147,11 +137,7 @@ describe("esbuild", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"First job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "First job running"; date'],
                       image: "busybox:latest",
                       name: "first-job",
                     },
@@ -181,11 +167,7 @@ describe("esbuild", () => {
                 spec: {
                   containers: [
                     {
-                      command: [
-                        "/bin/sh",
-                        "-c",
-                        "echo \"Second job running\"; date",
-                      ],
+                      command: ["/bin/sh", "-c", 'echo "Second job running"; date'],
                       image: "busybox:latest",
                       name: "second-job",
                     },
