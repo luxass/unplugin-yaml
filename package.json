@@ -59,7 +59,10 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "lint": "eslint .",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "test": "vitest --run",
     "test:watch": "vitest",
     "play:nuxt": "pnpm run --filter @unplugin-yaml/nuxt-example dev",
@@ -71,15 +74,15 @@
     "typecheck": "tsc --noEmit && pnpm -r typecheck"
   },
   "peerDependencies": {
-    "@nuxt/kit": "^3.0.0 || ^4.0.0",
-    "@nuxt/schema": "^3.0.0 || ^4.0.0",
-    "@rspack/core": "^1.5.0",
-    "astro": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
-    "esbuild": "*",
-    "rolldown": "^1.0.0-rc.5",
-    "rollup": ">=4",
-    "vite": "^6.0.0 || ^7.0.0 || ^8.0.0",
-    "webpack": "^4 || ^5"
+    "@nuxt/kit": "catalog:peer",
+    "@nuxt/schema": "catalog:peer",
+    "@rspack/core": "catalog:peer",
+    "astro": "catalog:peer",
+    "esbuild": "catalog:peer",
+    "rolldown": "catalog:peer",
+    "rollup": "catalog:peer",
+    "vite": "catalog:peer",
+    "webpack": "catalog:peer"
   },
   "peerDependenciesMeta": {
     "@nuxt/kit": {
@@ -111,19 +114,20 @@
     }
   },
   "dependencies": {
-    "@rollup/pluginutils": "catalog:prod",
-    "unplugin": "catalog:prod",
-    "yaml": "catalog:prod"
+    "@rollup/pluginutils": "catalog:runtime",
+    "unplugin": "catalog:runtime",
+    "yaml": "catalog:runtime"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@luxass/utils": "catalog:dev",
     "@nuxt/kit": "catalog:dev",
     "@nuxt/schema": "catalog:dev",
     "@rspack/core": "catalog:dev",
-    "@types/node": "catalog:dev",
+    "@types/node": "catalog:types",
     "esbuild": "catalog:dev",
-    "eslint": "catalog:dev",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "publint": "catalog:dev",
     "rolldown": "catalog:dev",
     "rollup": "catalog:dev",

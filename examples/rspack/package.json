@@ -24,6 +24,6 @@
     "ts-node": "catalog:example",
     "typescript": "catalog:dev",
     "unplugin-yaml": "workspace:*",
-    "vue-tsc": "catalog:example"
+    "vue-tsc": "catalog:types"
   }
 }

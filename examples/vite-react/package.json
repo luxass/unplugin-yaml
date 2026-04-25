@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "catalog:example",
-    "@types/react": "catalog:dev",
-    "@types/react-dom": "catalog:dev",
+    "@types/react": "catalog:types",
+    "@types/react-dom": "catalog:types",
     "@vitejs/plugin-react": "catalog:example",
     "autoprefixer": "catalog:example",
     "postcss": "catalog:example",

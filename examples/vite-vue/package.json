@@ -25,6 +25,6 @@
     "vite": "catalog:dev",
     "vite-plugin-inspect": "catalog:example",
     "vite-plugin-vue-devtools": "catalog:example",
-    "vue-tsc": "catalog:example"
+    "vue-tsc": "catalog:types"
   }
 }
