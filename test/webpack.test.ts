@@ -25,6 +25,10 @@ async function webpack(config: Configuration, testdirPath: string): Promise<null
         path: join(testdirPath, "dist"),
         filename: "bundle.js",
       },
+      stats: "none",
+      infrastructureLogging: {
+        level: "none",
+      },
       mode: "production",
       ...config,
     });
