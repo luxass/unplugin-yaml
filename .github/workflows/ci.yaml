@@ -18,7 +18,6 @@ jobs:
     uses: luxass/shared-workflows/.github/workflows/reusable-ci.yaml@ce9e8e27eebe8940214594f75f503742a4db8150 # v0.6.0
     with:
       build-script: "build"
-      post-build-script: "run --filter @unplugin-yaml/nuxt-example generate:types"
       lint-script: "lint"
       fmt: true
       fmt-script: "fmt:check"
