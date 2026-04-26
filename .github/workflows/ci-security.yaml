@@ -1,0 +1,26 @@
+name: GitHub Actions Security Analysis
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - ".github/workflows/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+
+permissions: {}
+
+jobs:
+  zizmor:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+      id-token: write
+    uses: luxass/shared-workflows/.github/workflows/reusable-ci-security.yaml@ce9e8e27eebe8940214594f75f503742a4db8150 # v0.6.0
