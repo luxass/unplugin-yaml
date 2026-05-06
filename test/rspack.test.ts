@@ -21,6 +21,10 @@ async function rspack(config: Configuration, testdirPath: string): Promise<null>
         library: {
           type: "module",
         },
+        module: true,
+        bundlerInfo: {
+          force: false,
+        }
       },
       stats: "none",
       infrastructureLogging: {
@@ -28,15 +32,6 @@ async function rspack(config: Configuration, testdirPath: string): Promise<null>
       },
       mode: "production",
       ...config,
-      experiments: {
-        outputModule: true,
-        rspackFuture: {
-          // disables the bundler info
-          bundlerInfo: {
-            force: false,
-          },
-        },
-      },
     });
 
     compiler.run((err, stats) => {
