@@ -4,26 +4,26 @@ minimumReleaseAge: 5760
 trustPolicy: no-downgrade
 strictDepBuilds: true
 blockExoticSubdeps: true
-shellEmulator: true
+
 packages:
   - examples/**
 
 catalogs:
   dev:
     "@luxass/utils": 2.7.3
-    "@nuxt/kit": 4.4.2
-    "@nuxt/schema": 4.4.2
-    "@rspack/core": 1.7.11
+    "@nuxt/kit": 4.4.4
+    "@nuxt/schema": 4.4.4
+    "@rspack/core": 2.0.1
     esbuild: 0.28.0
-    oxfmt: 0.46.0
-    oxlint: 1.61.0
-    oxlint-tsgolint: 0.21.1
+    oxfmt: 0.47.0
+    oxlint: 1.62.0
+    oxlint-tsgolint: 0.22.1
     publint: 0.3.18
-    rolldown: 1.0.0-rc.16
+    rolldown: 1.0.0-rc.18
     rollup: 4.60.2
-    tsdown: 0.21.9
+    tsdown: 0.21.10
     typescript: 6.0.3
-    vite: 8.0.9
+    vite: 8.0.10
     vitest: 4.1.5
     vitest-testdirs: 4.4.3
     webpack: 5.106.2
@@ -35,13 +35,13 @@ catalogs:
     vue-tsc: 3.2.7
 
   example:
-    "@rspack/cli": 1.7.11
+    "@rspack/cli": 2.0.1
     "@tailwindcss/postcss": 4.2.4
     "@tailwindcss/vite": 4.2.4
     "@vitejs/plugin-react": 6.0.1
     "@vitejs/plugin-vue": 6.0.6
     autoprefixer: 10.5.0
-    postcss: 8.5.10
+    postcss: 8.5.13
     postcss-loader: 8.2.1
     react: 19.2.5
     react-dom: 19.2.5
@@ -52,8 +52,8 @@ catalogs:
     ts-node: 10.9.2
     vite-plugin-inspect: 11.3.3
     vite-plugin-vue-devtools: 8.1.1
-    vue: 3.5.32
-    vue-router: 5.0.4
+    vue: 3.5.33
+    vue-router: 5.0.6
 
   runtime:
     "@rollup/pluginutils": 5.3.0
