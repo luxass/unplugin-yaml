@@ -24,7 +24,7 @@ async function rspack(config: Configuration, testdirPath: string): Promise<null>
         module: true,
         bundlerInfo: {
           force: false,
-        }
+        },
       },
       stats: "none",
       infrastructureLogging: {
