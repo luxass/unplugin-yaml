@@ -24,8 +24,8 @@ describe("rolldown", () => {
       sourcemap: false,
     });
 
-    const module = await import(join(testdirPath, "dist/basic.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "dist/basic.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const matchedCfg = {
       pluginDir: "./plugins",
@@ -53,8 +53,8 @@ describe("rolldown", () => {
       sourcemap: false,
     });
 
-    const module = await import(join(testdirPath, "dist/basic-raw.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "dist/basic-raw.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const expectedString = dedent`
       pluginDir: ./plugins
@@ -99,10 +99,10 @@ describe("rolldown", () => {
       sourcemap: false,
     });
 
-    const config = await import(join(testdirPath, "dist/transform.js")).then((m) => m.config);
-    expect(config).toBeDefined();
+    const module = await import(join(testdirPath, "dist/transform.js"));
+    expect(Object.keys(module)).toEqual(["config"]);
 
-    expect(config).toEqual({
+    expect(module.config).toEqual({
       this: "transformed",
     });
   });
@@ -127,10 +127,10 @@ describe("rolldown", () => {
       sourcemap: false,
     });
 
-    const cronjobs = await import(join(testdirPath, "dist/multi.js")).then((m) => m.cronjobs);
-    expect(cronjobs).toBeDefined();
+    const module = await import(join(testdirPath, "dist/multi.js"));
+    expect(Object.keys(module)).toEqual(["cronjobs"]);
 
-    expect(cronjobs).toEqual([
+    expect(module.cronjobs).toEqual([
       {
         apiVersion: "batch/v1",
         kind: "CronJob",
