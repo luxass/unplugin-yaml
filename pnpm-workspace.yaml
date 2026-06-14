@@ -9,6 +9,8 @@ packages:
 
 minimumReleaseAgeExclude:
   - "@luxass/utils@2.7.5"
+  # Renovate security update: esbuild@0.28.1
+  - esbuild@0.28.1
 
 catalogs:
   dev:
@@ -18,7 +20,7 @@ catalogs:
     "@rspack/core": 2.0.6
     "@types/node": 25.9.2
     astro: 6.4.5
-    esbuild: 0.28.0
+    esbuild: 0.28.1
     oxfmt: 0.54.0
     oxlint: 1.69.0
     oxlint-tsgolint: 0.23.0
