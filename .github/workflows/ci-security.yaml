@@ -23,4 +23,4 @@ jobs:
       contents: read
       security-events: write
       id-token: write
-    uses: luxass/shared-workflows/.github/workflows/reusable-ci-security.yaml@ce9e8e27eebe8940214594f75f503742a4db8150 # v0.6.0
+    uses: luxass/shared-workflows/.github/workflows/reusable-ci-security.yaml@b55f08ac1aca5a4a3ae198bd8a7197c0157b3ef7 # v0.10.0

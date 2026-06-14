@@ -1,29 +1,19 @@
 {
-  "name": "@unplugin-yaml/rspack-example",
+  "name": "@unplugin-yaml/rspack",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development rspack serve",
-    "build": "NODE_ENV=production rspack build",
-    "typecheck": "vue-tsc --noEmit"
-  },
-  "dependencies": {
-    "shiki": "catalog:example",
-    "vue": "catalog:example",
-    "vue-router": "catalog:example"
+    "dev": "rspack dev",
+    "build": "rspack build",
+    "preview": "rspack preview",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@rspack/cli": "catalog:example",
     "@rspack/core": "catalog:dev",
-    "@tailwindcss/postcss": "catalog:example",
-    "autoprefixer": "catalog:example",
-    "postcss": "catalog:example",
-    "postcss-loader": "catalog:example",
-    "rspack-vue-loader": "catalog:example",
-    "tailwindcss": "catalog:example",
-    "ts-node": "catalog:example",
+    "@rspack/dev-server": "catalog:example",
     "typescript": "catalog:dev",
-    "unplugin-yaml": "workspace:*",
-    "vue-tsc": "catalog:types"
+    "unplugin-yaml": "workspace:*"
   }
 }

@@ -40,10 +40,16 @@ async function webpack(config: Configuration, testdirPath: string): Promise<null
     compiler.run((err, stats) => {
       if (err) {
         reject(err);
+        return;
       }
 
       if (!stats) {
         reject(new Error("webpack stats not available"));
+        return;
+      }
+
+      if (stats.hasErrors()) {
+        reject(new Error(stats.toString("errors-only")));
         return;
       }
 
@@ -52,7 +58,7 @@ async function webpack(config: Configuration, testdirPath: string): Promise<null
   });
 }
 
-describe("rspack", () => {
+describe("webpack", () => {
   it("expect yaml imports to be json objects", async () => {
     const testdirPath = await testdir.from(join(import.meta.dirname, "fixtures/basic"));
 
@@ -66,8 +72,8 @@ describe("rspack", () => {
       testdirPath,
     );
 
-    const module = await import(join(testdirPath, "dist/bundle.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "dist/bundle.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const matchedCfg = {
       pluginDir: "./plugins",
@@ -92,8 +98,8 @@ describe("rspack", () => {
       testdirPath,
     );
 
-    const module = await import(join(testdirPath, "dist/bundle.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "dist/bundle.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const expectedString = dedent`
       pluginDir: ./plugins
@@ -135,10 +141,10 @@ describe("rspack", () => {
       testdirPath,
     );
 
-    const config = await import(join(testdirPath, "dist/bundle.js")).then((m) => m.config);
-    expect(config).toBeDefined();
+    const module = await import(join(testdirPath, "dist/bundle.js"));
+    expect(Object.keys(module)).toEqual(["config"]);
 
-    expect(config).toEqual({
+    expect(module.config).toEqual({
       this: "transformed",
     });
   });
@@ -160,10 +166,10 @@ describe("rspack", () => {
       testdirPath,
     );
 
-    const cronjobs = await import(join(testdirPath, "dist/bundle.js")).then((m) => m.cronjobs);
-    expect(cronjobs).toBeDefined();
+    const module = await import(join(testdirPath, "dist/bundle.js"));
+    expect(Object.keys(module)).toEqual(["cronjobs"]);
 
-    expect(cronjobs).toEqual([
+    expect(module.cronjobs).toEqual([
       {
         apiVersion: "batch/v1",
         kind: "CronJob",

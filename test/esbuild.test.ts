@@ -22,8 +22,8 @@ describe("esbuild", () => {
       plugins: [YAMLPlugin()],
     });
 
-    const module = await import(join(testdirPath, "output.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "output.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const matchedCfg = {
       pluginDir: "./plugins",
@@ -49,8 +49,8 @@ describe("esbuild", () => {
       plugins: [YAMLPlugin()],
     });
 
-    const module = await import(join(testdirPath, "output-raw.js")).then((m) => m);
-    expect(module).toBeDefined();
+    const module = await import(join(testdirPath, "output-raw.js"));
+    expect(Object.keys(module)).toEqual(["yaml", "yml"]);
 
     const expectedString = dedent`
       pluginDir: ./plugins
@@ -93,10 +93,10 @@ describe("esbuild", () => {
       ],
     });
 
-    const config = await import(join(testdirPath, "output-transform.js")).then((m) => m.config);
-    expect(config).toBeDefined();
+    const module = await import(join(testdirPath, "output-transform.js"));
+    expect(Object.keys(module)).toEqual(["config"]);
 
-    expect(config).toEqual({
+    expect(module.config).toEqual({
       this: "transformed",
     });
   });
@@ -119,10 +119,10 @@ describe("esbuild", () => {
       ],
     });
 
-    const cronjobs = await import(join(testdirPath, "output-multi.js")).then((m) => m.cronjobs);
-    expect(cronjobs).toBeDefined();
+    const module = await import(join(testdirPath, "output-multi.js"));
+    expect(Object.keys(module)).toEqual(["cronjobs"]);
 
-    expect(cronjobs).toEqual([
+    expect(module.cronjobs).toEqual([
       {
         apiVersion: "batch/v1",
         kind: "CronJob",

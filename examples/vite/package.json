@@ -1,0 +1,17 @@
+{
+  "name": "@unplugin-yaml/vite",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "catalog:dev",
+    "unplugin-yaml": "workspace:*",
+    "vite": "catalog:dev"
+  }
+}

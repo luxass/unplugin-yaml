@@ -61,9 +61,8 @@
     "lint:fix": "oxlint --fix",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "play:vite-vue": "pnpm run --filter @unplugin-yaml/vite-vue-example dev",
-    "play:vite-react": "pnpm run --filter @unplugin-yaml/vite-react-example dev",
-    "play:rspack": "pnpm run --filter @unplugin-yaml/rspack-example dev",
+    "play:vite": "pnpm --filter @unplugin-yaml/vite dev",
+    "play:rspack": "pnpm --filter @unplugin-yaml/rspack dev",
     "typecheck": "tsc --noEmit && pnpm -r typecheck"
   },
   "dependencies": {
@@ -76,7 +75,8 @@
     "@nuxt/kit": "catalog:dev",
     "@nuxt/schema": "catalog:dev",
     "@rspack/core": "catalog:dev",
-    "@types/node": "catalog:types",
+    "@types/node": "catalog:dev",
+    "astro": "catalog:dev",
     "esbuild": "catalog:dev",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
@@ -92,15 +92,15 @@
     "webpack": "catalog:dev"
   },
   "peerDependencies": {
-    "@nuxt/kit": "catalog:peer",
-    "@nuxt/schema": "catalog:peer",
-    "@rspack/core": "catalog:peer",
-    "astro": "catalog:peer",
-    "esbuild": "catalog:peer",
-    "rolldown": "catalog:peer",
-    "rollup": "catalog:peer",
-    "vite": "catalog:peer",
-    "webpack": "catalog:peer"
+    "@nuxt/kit": "^3.0.0 || ^4.0.0",
+    "@nuxt/schema": "^3.0.0 || ^4.0.0",
+    "@rspack/core": "^1.1.8 || ^2.0.0",
+    "astro": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+    "esbuild": ">=0.19.12 <1",
+    "rolldown": "^1.0.0",
+    "rollup": ">=4 <5",
+    "vite": "^6.0.0 || ^7.0.0 || ^8.0.0",
+    "webpack": "^5.73.0"
   },
   "peerDependenciesMeta": {
     "@nuxt/kit": {
@@ -134,5 +134,5 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "pnpm@11.0.8"
+  "packageManager": "pnpm@11.5.2"
 }
