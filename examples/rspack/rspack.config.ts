@@ -1,41 +1,31 @@
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
 import { defineConfig } from "@rspack/cli";
-import type { RspackPluginFunction, SwcLoaderOptions } from "@rspack/core";
 import { rspack } from "@rspack/core";
-import { VueLoaderPlugin } from "rspack-vue-loader";
 import yaml from "unplugin-yaml/rspack";
 
+const projectDir = dirname(fileURLToPath(import.meta.url));
+
 // Target browsers, see: https://github.com/browserslist/browserslist
-const targets = ["last 2 versions", "> 0.2%", "not dead", "Firefox ESR"];
+const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"];
 
 export default defineConfig({
+  context: projectDir,
   entry: {
     main: "./src/main.ts",
   },
   resolve: {
-    extensions: ["...", ".ts", ".vue"],
+    extensions: ["...", ".ts"],
   },
-  plugins: [
-    yaml(),
-    new VueLoaderPlugin() as RspackPluginFunction,
-    new rspack.HtmlRspackPlugin({
-      template: "./index.html",
-    }),
-    new rspack.DefinePlugin({
-      __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__: false,
-    }),
-  ],
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: "rspack-vue-loader",
-        options: {
-          experimentalInlineMatchResource: true,
-        },
+        test: /\.css$/,
+        type: "css/auto",
       },
       {
-        test: /\.(js|ts)$/,
+        test: /\.ts$/,
         use: [
           {
             loader: "builtin:swc-loader",
@@ -46,19 +36,24 @@ export default defineConfig({
                 },
               },
               env: { targets },
-            } satisfies SwcLoaderOptions,
+            },
           },
         ],
       },
-      {
-        test: /\.svg/,
-        type: "asset/resource",
-      },
-      {
-        test: /\.css$/,
-        use: ["postcss-loader"],
-        type: "css",
-      },
+    ],
+  },
+  plugins: [
+    yaml(),
+    new rspack.HtmlRspackPlugin({
+      template: "./index.html",
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      new rspack.SwcJsMinimizerRspackPlugin(),
+      new rspack.LightningCssMinimizerRspackPlugin({
+        minimizerOptions: { targets },
+      }),
     ],
   },
   experiments: {
