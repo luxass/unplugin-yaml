@@ -17,6 +17,7 @@
     "yaml"
   ],
   "bugs": "https://github.com/luxass/unplugin-yaml/issues",
+  "homepage": "https://github.com/luxass/unplugin-yaml#readme",
   "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
