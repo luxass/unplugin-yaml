@@ -22,8 +22,8 @@ catalogs:
       specifier: 25.9.2
       version: 25.9.2
     astro:
-      specifier: 6.4.5
-      version: 6.4.5
+      specifier: 6.4.6
+      version: 6.4.6
     esbuild:
       specifier: 0.28.0
       version: 0.28.0
@@ -112,7 +112,7 @@ importers:
         version: 25.9.2
       astro:
         specifier: catalog:dev
-        version: 6.4.5(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.61.1)(terser@5.48.0)(yaml@2.8.4)
+        version: 6.4.6(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.61.1)(terser@5.48.0)(yaml@2.8.4)
       esbuild:
         specifier: catalog:dev
         version: 0.28.0
@@ -1711,8 +1711,8 @@ packages:
     resolution: {integrity: sha512-trmleAnZ2PxN/loHWVhhx1qeOHSRXq4TDsBBxq3GqeJitfk3+jTQ+v/C1km/KYq9M7wKqCewMh+/NAvVH7m+bw==}
     engines: {node: '>=20.19.0'}
 
-  astro@6.4.5:
-    resolution: {integrity: sha512-0R7WLD1+WD/mTPcZxyKtcF0CztQi9ahFRtGM7oChJhxjNbr4lSBenxi+mk91k5bPTaUEoZ6edg1fDo2qP8bCwg==}
+  astro@6.4.6:
+    resolution: {integrity: sha512-48OBTBKR9ctbf+DQxpOuxGl8ebfn59zTuNQMBzptmG/Mi/H8IdfMSbJgGuX1I/4U6g9yazG1p4BHlf4+2hWU4Q==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4297,7 +4297,7 @@ snapshots:
       estree-walker: 3.0.3
       pathe: 2.0.3
 
-  astro@6.4.5(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.61.1)(terser@5.48.0)(yaml@2.8.4):
+  astro@6.4.6(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.61.1)(terser@5.48.0)(yaml@2.8.4):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
