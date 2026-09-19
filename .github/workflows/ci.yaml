@@ -4,32 +4,36 @@ on:
   push:
     branches:
       - main
-
   pull_request:
-    branches:
-      - main
+    types:
+      - opened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' &&
+    github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 permissions: {}
 
 jobs:
-  lint:
+  ci:
+    uses: luxass/shared-workflows/.github/workflows/reusable-ci.yaml@a80d13d310b91d509547203435ad21b68ae47ba1 # v0.12.0
     permissions:
       contents: read
-    uses: luxass/shared-workflows/.github/workflows/reusable-ci.yaml@b55f08ac1aca5a4a3ae198bd8a7197c0157b3ef7 # v0.10.0
     with:
-      build-script: "build"
-      lint-script: "lint"
       fmt: true
       fmt-script: "fmt:check"
-      typecheck-script: "typecheck"
 
   test:
-    permissions:
-      contents: read
+    name: "test (node: ${{ matrix.node }})"
     strategy:
       matrix:
-        node: [22, 24]
+        node: [24, 26]
       fail-fast: false
-    uses: luxass/shared-workflows/.github/workflows/reusable-test.yaml@b55f08ac1aca5a4a3ae198bd8a7197c0157b3ef7 # v0.10.0
+    uses: luxass/shared-workflows/.github/workflows/reusable-test.yaml@a80d13d310b91d509547203435ad21b68ae47ba1 # v0.12.0
+    permissions:
+      contents: read
     with:
       node-version: ${{ matrix.node }}
+      pre-test-script: "build"
