@@ -24,11 +24,7 @@ npm i -D unplugin-yaml
 import YAMLPlugin from "unplugin-yaml/vite";
 
 export default defineConfig({
-  plugins: [
-    YAMLPlugin({
-      /* options */
-    }),
-  ],
+  plugins: [YAMLPlugin({/* options */})],
 });
 ```
 
@@ -42,11 +38,7 @@ export default defineConfig({
 import YAMLPlugin from "unplugin-yaml/rollup";
 
 export default {
-  plugins: [
-    YAMLPlugin({
-      /* options */
-    }),
-  ],
+  plugins: [YAMLPlugin({/* options */})],
 };
 ```
 
@@ -59,11 +51,7 @@ export default {
 // webpack.config.js
 module.exports = {
   /* ... */
-  plugins: [
-    require("unplugin-yaml/webpack").default({
-      /* options */
-    }),
-  ],
+  plugins: [require("unplugin-yaml/webpack").default({/* options */})],
 };
 ```
 
@@ -75,14 +63,7 @@ module.exports = {
 ```ts
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: [
-    [
-      "unplugin-yaml/nuxt",
-      {
-        /* options */
-      },
-    ],
-  ],
+  modules: [["unplugin-yaml/nuxt", {/* options */}]],
 });
 ```
 
@@ -98,11 +79,7 @@ import YAMLPlugin from "unplugin-yaml/astro";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    YAMLPlugin({
-      /* options */
-    }),
-  ],
+  integrations: [YAMLPlugin({/* options */})],
 });
 ```
 
@@ -118,11 +95,7 @@ import YAMLPlugin from "unplugin-yaml/esbuild";
 
 build({
   /* ... */
-  plugins: [
-    YAMLPlugin({
-      /* options */
-    }),
-  ],
+  plugins: [YAMLPlugin({/* options */})],
 });
 ```
 
@@ -159,11 +132,7 @@ import YAMLPlugin from "unplugin-yaml/rolldown";
 
 export default defineConfig({
   input: "./index.js",
-  plugins: [
-    YAMLPlugin({
-      /* options */
-    }),
-  ],
+  plugins: [YAMLPlugin({/* options */})],
 });
 ```
 
