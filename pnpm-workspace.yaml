@@ -17,30 +17,30 @@ catalogs:
     "@luxass/utils": 2.7.5
     "@nuxt/kit": 4.5.2
     "@nuxt/schema": 4.5.2
-    "@rspack/core": 2.2.4
-    "@types/node": 26.5.1
-    astro: 7.3.2
+    "@rspack/core": 2.2.8
+    "@types/node": 26.6.4
+    astro: 7.3.5
     esbuild: 0.28.2
-    oxfmt: 0.68.0
+    oxfmt: 0.71.0
     oxlint: 1.83.0
-    oxlint-tsgolint: 7.0.2001
-    publint: 0.3.24
-    rolldown: 1.2.8
-    rollup: 4.63.3
+    oxlint-tsgolint: 7.0.2003
+    publint: 0.3.25
+    rolldown: 1.2.12
+    rollup: 4.64.0
     tsdown: 0.23.0
     typescript: 7.0.2
     vite: 8.3.0
     vitest: 5.0.0
-    vitest-testdirs: 4.4.3
-    webpack: 5.111.0
+    vitest-testdirs: 4.5.1
+    webpack: 5.111.1
 
   example:
-    "@rspack/cli": 2.2.4
+    "@rspack/cli": 2.2.8
     "@rspack/dev-server": 2.2.1
 
   runtime:
     "@rollup/pluginutils": 5.4.0
-    unplugin: 3.3.0
+    unplugin: 3.4.0
     yaml: 2.9.1
 
 onlyBuiltDependencies:
