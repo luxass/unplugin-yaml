@@ -28,7 +28,7 @@ jobs:
     name: "test (node: ${{ matrix.node }})"
     strategy:
       matrix:
-        node: [ 24, 26 ]
+        node: [24, 26]
       fail-fast: false
     uses: luxass/shared-workflows/.github/workflows/reusable-test.yaml@9770f7268daf358179c45895de8becc2e8525984 # v0.14.0
     permissions:
