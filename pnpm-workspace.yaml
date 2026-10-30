@@ -15,31 +15,31 @@ minimumReleaseAgeExclude:
 catalogs:
   dev:
     "@luxass/utils": 2.7.5
-    "@nuxt/kit": 4.6.1
-    "@nuxt/schema": 4.6.1
-    "@rspack/core": 2.2.8
+    "@nuxt/kit": 4.6.2
+    "@nuxt/schema": 4.6.2
+    "@rspack/core": 2.2.9
     "@types/node": 26.6.5
-    astro: 7.3.8
+    astro: 7.4.2
     esbuild: 0.28.2
-    oxfmt: 0.72.0
+    oxfmt: 0.74.0
     oxlint: 1.87.0
-    oxlint-tsgolint: 7.0.2004
+    oxlint-tsgolint: 7.0.2005
     publint: 0.3.25
-    rolldown: 1.2.13
-    rollup: 4.64.5
-    tsdown: 0.23.1
+    rolldown: 1.2.15
+    rollup: 4.65.0
+    tsdown: 0.23.2
     typescript: 7.0.2
     vite: 8.3.4
     vitest: 5.0.3
-    vitest-testdirs: 4.5.1
-    webpack: 5.111.1
+    vitest-testdirs: 4.5.2
+    webpack: 5.112.2
 
   example:
-    "@rspack/cli": 2.2.8
+    "@rspack/cli": 2.2.9
     "@rspack/dev-server": 2.2.1
 
   runtime:
-    "@rollup/pluginutils": 5.4.0
+    "@rollup/pluginutils": 5.5.1
     unplugin: 3.4.0
     yaml: 2.9.1
 
