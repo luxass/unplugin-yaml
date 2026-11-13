@@ -11,6 +11,8 @@ minimumReleaseAgeExclude:
   - "@luxass/utils@2.7.5"
   # Renovate security update: pnpm@11.8.0
   - pnpm@11.8.0
+  # Renovate security update: astro@7.4.7
+  - astro@7.4.7
 
 catalogs:
   dev:
@@ -19,7 +21,7 @@ catalogs:
     "@nuxt/schema": 4.6.1
     "@rspack/core": 2.2.8
     "@types/node": 26.6.5
-    astro: 7.3.8
+    astro: 7.4.7
     esbuild: 0.28.2
     oxfmt: 0.72.0
     oxlint: 1.87.0
