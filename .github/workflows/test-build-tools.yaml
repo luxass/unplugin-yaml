@@ -47,7 +47,7 @@ jobs:
           - { name: vite, version: 7.3.5 }
           - { name: vite, version: 6.4.3 }
 
-    uses: luxass/shared-workflows/.github/workflows/reusable-test-build-tools.yaml@9770f7268daf358179c45895de8becc2e8525984 # v0.14.0
+    uses: luxass/shared-workflows/.github/workflows/reusable-test-build-tools.yaml@411fe8f8a0a53eab5153356ac5e0f174cd245eb2 # v0.17.1
     with:
       tool-name: ${{ matrix.tool.name }}
       tool-version: ${{ matrix.tool.version }}
